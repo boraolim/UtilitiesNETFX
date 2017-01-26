@@ -1,0 +1,1746 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:Utilities.AssemblyInfo">
+            <summary>
+            Gets the values from the AssemblyInfo.cs file for the current executing assembly
+            </summary>
+            <example>        
+            string company = AssemblyInfo.Company;
+            string product = AssemblyInfo.Product;
+            string copyright = AssemblyInfo.Copyright;
+            string trademark = AssemblyInfo.Trademark;
+            string title = AssemblyInfo.Title;
+            string description = AssemblyInfo.Description;
+            string configuration = AssemblyInfo.Configuration;
+            string fileversion = AssemblyInfo.FileVersion;
+            Version version = AssemblyInfo.Version;
+            string versionFull = AssemblyInfo.VersionFull;
+            string versionMajor = AssemblyInfo.VersionMajor;
+            string versionMinor = AssemblyInfo.VersionMinor;
+            string versionBuild = AssemblyInfo.VersionBuild;
+            string versionRevision = AssemblyInfo.VersionRevision;
+            </example>
+        </member>
+        <member name="T:Utilities.AssemblyInfoCalling">
+            <summary>
+            Gets the values from the AssemblyInfo.cs file for the previous assembly
+            </summary>
+            <example>
+            AssemblyInfoCalling assembly = new AssemblyInfoCalling();
+            string company1 = assembly.Company;
+            string product1 = assembly.Product;
+            string copyright1 = assembly.Copyright;
+            string trademark1 = assembly.Trademark;
+            string title1 = assembly.Title;
+            string description1 = assembly.Description;
+            string configuration1 = assembly.Configuration;
+            string fileversion1 = assembly.FileVersion;
+            Version version1 = assembly.Version;
+            string versionFull1 = assembly.VersionFull;
+            string versionMajor1 = assembly.VersionMajor;
+            string versionMinor1 = assembly.VersionMinor;
+            string versionBuild1 = assembly.VersionBuild;
+            string versionRevision1 = assembly.VersionRevision;
+            </example>
+        </member>
+        <member name="M:Utilities.AssemblyInfoCalling.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Utilities.AssemblyInfoCalling"/> class.
+            </summary>
+            <param name="traceLevel">The trace level needed to get correct assembly 
+            - will need to adjust based on where you put these classes in your project(s).</param>
+        </member>
+        <member name="M:Utilities.AssemblyInfoCalling.GetCallingAssemblyAttribute``1(System.Func{``0,System.String})">
+            <summary>
+            Gets the calling assembly attribute.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <example>return GetCallingAssemblyAttribute&lt;AssemblyCompanyAttribute&gt;(a => a.Company);</example>
+            <returns></returns>
+        </member>
+        <member name="M:Utilities.AssemblyInfoCalling.GetAssembly(System.Int32)">
+            <summary>
+            Go through the stack and gets the assembly
+            </summary>
+            <param name="stackTraceLevel">The stack trace level.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Utilities.DbContexto">
+            <summary>
+            Objeto interno 'DbContexto' del tipo Entity Framework CodeFirst para la ejecución de consultas SQL nativas en Base de Datos.
+            </summary>
+        </member>
+        <member name="M:Utilities.DbContexto.#ctor(System.String)">
+            <summary>
+            Constructor del objeto 'DbContexto'.
+            </summary>
+            <param name="nameOrConnectionString">Nombre de la cadena de conexión a la Base de Datos.</param>
+        </member>
+        <member name="M:Utilities.DbContexto.Finalize">
+            <summary>
+            Destructor del objeto 'Contexto'.
+            </summary>
+        </member>
+        <member name="T:Utilities.DetailLOG">
+            <summary>
+            Clase auxiliar 'DetailLOG' para el objeto 'LOGFiles' que registra la lista de eventos.
+            </summary>
+        </member>
+        <member name="M:Utilities.DetailLOG.#ctor">
+            <summary>
+            Constructor del objeto 'DetailLOG'.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Id">
+            <summary>
+            Identificador del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Fecha">
+            <summary>
+            Fecha actual del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.TipoEvento">
+            <summary>
+            Tipo de información del evento (o tipo de evento).
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Numero">
+            <summary>
+            Número del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Comentario">
+            <summary>
+            Comentario del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Valor">
+            <summary>
+            Valor. Si el evento realiza una función que devuelve datos, colocar el valor devuelto a este atributo en formato de cadena de texto.
+            </summary>
+        </member>
+        <member name="T:Utilities.OrdinalProperty">
+            <summary>
+            Clase 'OrdinalProperty' que contiene la información de los objetos genéricos de las clases comunes.
+            </summary>
+        </member>
+        <member name="P:Utilities.OrdinalProperty.Atributo">
+            <summary>
+            Nombre del atributo.
+            </summary>
+        </member>
+        <member name="P:Utilities.OrdinalProperty.Tipo">
+            <summary>
+            Tipo de dato del atributo.
+            </summary>
+        </member>
+        <member name="P:Utilities.OrdinalProperty.Orden">
+            <summary>
+            Orden o posición del atributo.
+            </summary>
+        </member>
+        <member name="T:Utilities.Patrones">
+            <summary>
+            Clase 'Patrones' que contiene valores definidos para la validacion de expresiones por medio de expresiones regulares.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.ClavePrivadaRSA">
+            <summary>
+            Clave privada RSA.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.ClavePublicaRSA">
+            <summary>
+            Clave publica RSA.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronCadenaSinCarEsp">
+            <summary>
+            Patron de cadena sin caracteres especiales.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronDecimal">
+            <summary>
+            Patron numerico decimal.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronEntero">
+            <summary>
+            Patron numerico entero.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronFecha1">
+            <summary>
+            Patron fecha
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronFecha2">
+            <summary>
+            Patron fecha version 2.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronFecha3">
+            <summary>
+            Patron fecha version 3.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronIP">
+            <summary>
+            Patron direccion IP.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronURL">
+            <summary>
+            Patron direccion URL.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronFTP">
+            <summary>
+            Patron direccion FTP.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.PatronCorreoElectronico">
+            <summary>
+            Patrón correo electronico.
+            </summary>
+        </member>
+        <member name="F:Utilities.Patrones.SemillaGUID">
+            <summary>
+            Identificador único para el cifrado Rijndael.
+            </summary>
+        </member>
+        <member name="T:Utilities.ColumnAttribute">
+            <summary>
+            Clase 'ColumAttribute' que especifica los atributos de un campo.
+            </summary>
+        </member>
+        <member name="T:Utilities.TextFileReader">
+            <summary>
+            Clase 'TextFileReader' para la lectura de archivos de texto y CSV delimitado.
+            </summary>
+        </member>
+        <member name="T:Utilities.TextFileReader`1">
+            <summary>
+            Clase 'TextFileReader' para la lectura de archivos de texto y CSV delimitado para tipos genericos.
+            </summary>
+        </member>
+        <member name="T:Utilities.UTF8StringWriter">
+            <summary>
+            Clase 'UTF8StringWriter' para la serialización de valores XML en codificación UTF-8.
+            </summary>
+        </member>
+        <member name="P:Utilities.UTF8StringWriter.Encoding">
+            <summary>
+            Propiedad de lectura que convierte el formato de codificación a UTF-8.
+            </summary>
+        </member>
+        <member name="T:Utilities.UtilitiesException">
+            <summary>
+            Clase 'UtilitiesException' para el manejo de control de excepciones de la librería 'Utilities'.
+            </summary>
+        </member>
+        <member name="M:Utilities.UtilitiesException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Utilities.UtilitiesException"/> class.
+            </summary>
+        </member>
+        <member name="M:Utilities.UtilitiesException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Utilities.UtilitiesException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Utilities.UtilitiesException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Utilities.UtilitiesException"/> class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:Utilities.UtilitiesException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor needed for serialization when exception propagates from a remoting server to the client.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Utilities.CustomSessionProviderSQLServer.#ctor">
+            <summary>
+            Constructor del objeto.
+            </summary>
+        </member>
+        <member name="M:Utilities.CustomSessionProviderSQLServer.Finalize">
+            <summary>
+            Destructor del objeto.
+            </summary>
+        </member>
+        <member name="P:Utilities.CustomSessionProviderSQLServer.ApplicationName">
+            <summary>
+            Propiedad que guarda el nombre de la aplicación web.
+            </summary>
+        </member>
+        <member name="T:Utilities.Correo">
+            <summary>
+            Clase 'Correo' para el envio de correo electrónico.
+            </summary>
+        </member>
+        <member name="M:Utilities.Correo.#ctor">
+            <summary>
+            Constructor del objeto 'Correo'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'Correo'.</remarks>
+        </member>
+        <member name="M:Utilities.Correo.Finalize">
+            <summary>
+            Destructor del objeto 'Correo'.
+            </summary>
+        </member>
+        <member name="P:Utilities.Correo.Remitente">
+            <summary>
+            Propiedad que muestra la dirección de correo electrónico del remitente.
+            </summary>
+            <value></value>
+            <returns>Obtiene la dirección de correo electrónico del remitente.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.Destinatario">
+            <summary>
+            Propiedad que muestra la dirección de correo electrónico del destinatario.
+            </summary>
+            <value></value>
+            <returns>Obtiene la dirección de correo electrónico del destinatario.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.Asunto">
+            <summary>
+            Propiedad que muestra el título del correo electrónico o asunto.
+            </summary>
+            <value></value>
+            <returns>Obtiene el título del correo electrónico o asunto.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.Contenido">
+            <summary>
+            Propiedad que muestra el contenido del correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene el contenido del correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.ServidorCorreo">
+            <summary>
+            Propiedad que muestra el nombre del servidor de correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del servidor de correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.UsuarioCorreo">
+            <summary>
+            Propiedad que muestra el nombre del usuario del servidor de correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del usuario del servidor de correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.ContraseniaCorreo">
+            <summary>
+            Propiedad que muestra la contraseña del usuario del servidor de correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene muestra la contraseña del usuario del servidor de correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.PuertoSMTP">
+            <summary>
+            Propiedad que muestra el número del puerto de salida del servidor de correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene el número del puerto de salida del servidor de correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.IsBodyHTML">
+            <summary>
+            Propiedad que indica si el correo electrónico puede usar el formato HTML.
+            </summary>
+            <value></value>
+            <returns>Obtiene el status que indica si el correo electrónico puede usar el formato HTML.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.IsFileAdjunt">
+            <summary>
+            Propiedad que indica si el correo electrónico puede adjuntar archivos.
+            </summary>
+            <value></value>
+            <returns>Obtiene el status que indica si el correo electrónico puede adjuntar archivos.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.Priority">
+            <summary>
+            Propiedad que indica la prioridad del correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene el status que indica la prioridad del correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.ArchivoAdjunto">
+            <summary>
+            Propiedad que muestra el nombre del archivo adjunto en el correo electrónico.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del archivo adjunto en el correo electrónico.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.HabilitarSSL">
+            <summary>
+            Propiedad que muestra si se puede habilitar la opcion SSL de correo.
+            </summary>
+            <value></value>
+            <returns>Devuelve un booleano que indica si se puede habilitar la capa SSL en el correo.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Correo.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.Correo.ClearAttributes">
+            <summary>
+            Función que realiza la limpieza de los objetos administrador (los atributos de la clase).
+            </summary>
+        </member>
+        <member name="M:Utilities.Correo.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.Correo.SendMail">
+            <summary>
+            Función que envia un correo electrónico (sin parámetros).
+            </summary>
+            <remarks>Realiza el proceso de envio de correo electrónico.</remarks>
+        </member>
+        <member name="T:Utilities.CriptografiaRSA">
+            <summary>
+            Clase 'CriptografiaRSA' para el cifrado de información bajo el algoritmo de encriptamiento RSA.
+            </summary>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.#ctor">
+            <summary>
+            Constructor del objeto 'CriptografiaRSA'.
+            </summary>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.#ctor(System.String,System.String)">
+            <summary>
+            Constructor del objeto 'CriptografiaRSA'.
+            </summary>
+            <param name="strClavePublica">Clave pública o semilla externa.</param>
+            <param name="strClavePrivada">Clave privada o semilla interna.</param>
+            <remarks>Inicia los atributos del objeto 'CriptografiaRSA'.</remarks>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.#ctor(System.String,System.String,System.Int16)">
+            <summary>
+            Constructor del objeto 'CriptografiaRSA'.
+            </summary>
+            <param name="strClavePublica">Clave pública o semilla externa.</param>
+            <param name="strClavePrivada">Clave privada o semilla interna.</param>
+            <param name="iKeySize">Tamaño de longitud de cifrado.</param>
+            <remarks>Inicia los atributos del objeto 'CriptografiaRSA'.</remarks>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.Finalize">
+            <summary>
+            Destructor del objeto 'CriptografiaRSA'.
+            </summary>
+        </member>
+        <member name="P:Utilities.CriptografiaRSA.ClavePublica">
+            <summary>
+            Propiedad que devuelve la clave publica generada en _ObjRSA.
+            </summary>
+            <value></value>
+            <returns>Obtiene la clave pública generada por _ObjRSA.</returns>
+            <remarks>Propiedad importante para mostrar la clave pública generada por _ObjRSA</remarks>
+        </member>
+        <member name="P:Utilities.CriptografiaRSA.ClavePrivada">
+            <summary>
+            Propiedad que devuelve la clave privada generada en _ObjRSA.
+            </summary>
+            <value></value>
+            <returns>Obtiene la clave privada generada por _ObjRSA.</returns>
+            <remarks>Propiedad importante para mostrar la clave privada generada por _ObjRSA</remarks>
+        </member>
+        <member name="P:Utilities.CriptografiaRSA.ValorDescifrado">
+            <summary>
+            Propiedad que devuelve una cadena descifrada por _ObjRSA.
+            </summary>
+            <value></value>
+            <returns>Obtiene la cadena descifrada por _ObjRSA.</returns>
+            <remarks>Propiedad importante para mostrar un valor descifrado por _ObjRSA</remarks>
+        </member>
+        <member name="P:Utilities.CriptografiaRSA.Cadena">
+            <summary>
+            Propiedad que almacena la cadena que se va a cifrar por el cifrado RSA.
+            </summary>
+            <value></value>
+            <returns>Muestra el valor de la cadena de texto antes de cifrar.</returns>
+        </member>
+        <member name="P:Utilities.CriptografiaRSA.ValorCifrado">
+            <summary>
+            Propiedad que almacena el arreglo de Bytes que se va a descifrar por el cifrado RSA.
+            </summary>
+            <value></value>
+            <returns>Muestra el valor del arreglo de Bytes descifrado y convertido finalmente en cadena de texto despues de descifrar.</returns>
+        </member>
+        <member name="P:Utilities.CriptografiaRSA.KeySize">
+            <summary>
+            Propiedad que almacena la longitud de cifrado en bits para el cifrado RSA.
+            </summary>
+            <value></value>
+            <returns>Muestra la longitud de cifrado en bits para el cifrado RSA.</returns>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.ClearAttributes">
+            <summary>
+            Función que realiza la limpieza de los objetos administrador (los atributos de la clase).
+            </summary>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.GenerarClaves">
+            <summary>
+            Genera claves privadas y publicas por medio del algoritmo _ObjRSA.
+            </summary>
+            <remarks>Genera las claves privada y pública y las asigna a los atributos de lectura ClavePublica y ClavePrivada.</remarks>
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.Encriptar(System.Boolean)">
+             <summary>
+             Realiza el cifrado de cadenas de texto.
+             </summary>
+             <param name="IsKeyPrivate">Indica si se realiza el cifrado con clave privada (true) o clave publica (false).</param>
+            
+        </member>
+        <member name="M:Utilities.CriptografiaRSA.Desencriptar">
+             <summary>
+             Funcion que desencripta un valor cifrado por RSA y que lo regresa a su cadena original.
+             </summary>
+            
+        </member>
+        <member name="T:Utilities.FTP">
+            <summary>
+            Clase 'FTP' para el subida y descarga de archivos via FTP.
+            </summary>
+        </member>
+        <member name="M:Utilities.FTP.#ctor">
+            <summary>
+            Constructor del objeto 'FTP'.
+            </summary>
+        </member>
+        <member name="M:Utilities.FTP.Finalize">
+            <summary>
+            Destructor del objeto 'FTP'.
+            </summary>
+        </member>
+        <member name="P:Utilities.FTP.RecursoOrigen">
+            <summary>
+            Propiedad que muestra la fuente de origen de datos para enviarlo a un FTP.
+            </summary>
+            <value></value>
+            <returns>Obtiene la fuente de origen de datos para enviarlo a un FTP.</returns>
+        </member>
+        <member name="P:Utilities.FTP.DestinoFTP">
+            <summary>
+            Propiedad que muestra la ruta FTP donde se desea enviar un archivo.
+            </summary>
+            <value></value>
+            <returns>Obtiene la ruta FTP donde se desea enviar un archivo.</returns>
+        </member>
+        <member name="P:Utilities.FTP.UsuarioFTP">
+            <summary>
+            Propiedad que muestra el usuario para acceder al recurso FTP.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del usuario para acceder al recurso FTP.</returns>
+        </member>
+        <member name="P:Utilities.FTP.ContrasenaFTP">
+            <summary>
+            Propiedad que muestra la contraseña para acceder al recurso FTP.
+            </summary>
+            <value></value>
+            <returns>Obtiene la contraseña para acceder al recurso FTP.</returns>
+        </member>
+        <member name="P:Utilities.FTP.ArchivoOrigen">
+            <summary>
+            Propiedad que muestra el nombre del archivo que se va a transferir al FTP.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del archivo que se va a transferir al FTP.</returns>
+        </member>
+        <member name="M:Utilities.FTP.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.FTP.ClearAttributes">
+            <summary>
+            Función que realiza la limpieza de los objetos administrador (los atributos de la clase).
+            </summary>
+        </member>
+        <member name="M:Utilities.FTP.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.FTP.UploadFileToFTP">
+            <summary>
+             Función que realiza el envio de archivos vía FTP.
+             <remarks>Realiza la operación de envio de archivos a una dirección FTP remota.</remarks>
+            </summary>
+        </member>
+        <member name="T:Utilities.JSONSerializacion`1">
+            <summary>
+            Clase 'JSONSerializacion' para el manejo de conversion de tipos genericos a JSON.
+            </summary>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.#ctor">
+            <summary>
+            Constructor del objeto 'JSONSerializacion'.
+            </summary>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.Finalize">
+            <summary>
+            Destructor del objeto 'JSONSerializacion'.
+            </summary>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.JSONSerialize(`0)">
+            <summary>
+            Función para convertir un objeto al tipo JSON por medio de serialización.
+            </summary>
+            <param name="obj">Objeto cualquiera</param>
+            <returns>Devuelve un string con el formato JSON del objeto serializado.</returns>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.JSONDeserialize(System.String,System.Boolean)">
+            <summary>
+            Función para convertir un valor JSON a un tipo de dato.
+            </summary>
+            <param name="JSONDoc">Cadena JSON en formato string.</param>
+            <param name="AcceptSerializeSettings">Flag que indica si acepta valores nulos.</param>
+            <returns>Devuelve el objeto serializado en formato JSON.</returns>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.WriteToJsonFile(System.String,`0,System.Boolean)">
+            <summary>
+            Escribe la instancia de objeto determinada en un archivo con formato JSON.
+            </summary>
+            <param name="strNameFile">La ruta del archivo para escribir la instancia del objeto y su contenido.</param>
+            <param name="objectToWrite">La instancia de objeto para escribir en el archivo.</param>
+            <param name="append">Si es falso el archivo se sobrescribe si ya existe. De ser cierto el contenido se añadirá al archivo.</param>
+        </member>
+        <member name="M:Utilities.JSONSerializacion`1.ReadFromJsonFile(System.String)">
+            <summary>
+            Lee una instancia de objeto desde un archivo con formato JSON.
+            </summary>
+            <param name="strNameFile">La ruta del archivo a leer la instancia del objeto que contiene información del mismo.</param>
+            <returns>Devuelve una nueva instancia del objeto una vez leído desde el archivo XML.</returns>
+        </member>
+        <member name="T:Utilities.LOGFiles">
+            <summary>
+            Clase 'LOGFiles' para el manejo de archivos LOG.
+            </summary>
+        </member>
+        <member name="M:Utilities.LOGFiles.#ctor">
+            <summary>
+            Constructor del objeto 'LOGFiles'.
+            </summary>
+        </member>
+        <member name="M:Utilities.LOGFiles.#ctor(System.String)">
+            <summary>
+            Constructor del objeto 'LOGFiles'.
+            </summary>
+            <param name="strFolderLog">Nombre de la carpeta donde se escribirá el archivo LOG.</param>
+        </member>
+        <member name="M:Utilities.LOGFiles.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor del objeto 'LOGFiles'.
+            </summary>
+            <param name="strFolderLog">Nombre de la carpeta donde se escribirá el archivo LOG.</param>
+            <param name="strAplicacion">Nombre de la aplicación del cual se registra el archivo LOG.</param>
+            <param name="strModulo">Nombre del módulo que se va a aplicar el log.</param>
+            <param name="strFuncion">Nombre de la función que se va a aplicar el log.</param>
+            <param name="strArchivoLOG">Nombre del archivo LOG donde se guarda la información del log de sucesos.</param>
+            <param name="strEmpresa">Nombre de la empresa donde se guarda el archivo log.</param>
+        </member>
+        <member name="M:Utilities.LOGFiles.Finalize">
+            <summary>
+            Destructor del objeto 'LOGFiles'.
+            </summary>
+        </member>
+        <member name="P:Utilities.LOGFiles.HostName">
+            <summary>
+            Propiedad que muestra el nombre del equipo.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del equipo.</returns>
+        </member>
+        <member name="P:Utilities.LOGFiles.AccountDomain">
+            <summary>
+            Usuario de la sesión activa de Windows.
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.FolderLog">
+            <summary>
+            Propiedad que muestra la ruta de la carpeta donde se almacenara el archivo Log.
+            </summary>
+            <value></value>
+            <returns>Obtiene la ruta de la carpeta donde se almacenara el archivo Log.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.ArchivoLog">
+            <summary>
+            Propiedad que muestra el nombre del archivo Log.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del archivo Log.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.Aplicacion">
+            <summary>
+            Propiedad que obtiene el nombre de la aplicación que maneja el archivo Log.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre de la aplicación que maneja el archivo Log.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.Modulo">
+            <summary>
+            Propiedad que obtiene el nombre del módulo de la aplicación que maneja el archivo Log.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del módulo de la aplicación que maneja el archivo Log.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.Funcion">
+            <summary>
+            Propiedad que obtiene el nombre de la función que maneja el archivo Log.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre de la función que maneja el archivo Log.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.Empresa">
+            <summary>
+            Propiedad que obtiene el nombre de la compañía que se escribirá en el archivo Log. Si no se especifica el nombre, el valor es Default.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre de la compañía que se escribirá en el archivo Log.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.Fecha">
+            <summary>
+            Propiedad que obtiene la fecha actual de generación del archivo LOG.
+            </summary>
+            <value></value>
+            <returns>Obtiene la fecha actual en que se generó el archivo LOG.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.LOGFiles.ListEvents">
+            <summary>
+            Propiedad que muestra el nombre de la lista de eventos generados en el LOG.
+            </summary>
+            <returns>Obtiene la lista de mensajes contenidos en el archivo LOG.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.LOGFiles.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.LOGFiles.ClearAttributes">
+            <summary>
+            Función que realiza la limpieza de los objetos administrador (los atributos de la clase).
+            </summary>
+        </member>
+        <member name="M:Utilities.LOGFiles.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.LOGFiles.SetLog(Utilities.LOGFiles)">
+             <summary>
+             Función pública que escribe la información en una linea de texto dentro del archivo Log.
+             </summary>
+             <param name="obj">Instancia del objeto 'LOGFiles'.</param>
+             <remarks>Escribe de manera directa la información en una linea de texto dentro del archivo Log (sin parámetros).</remarks>
+            
+        </member>
+        <member name="T:Utilities.RijndaelManagedEncryption">
+            <summary>
+            Clase 'RijndaelManagedEncryption' para el cifrado de información bajo el algoritmo de encriptamiento Rijndael.
+            </summary>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.#ctor">
+            <summary>
+            Constructor del objeto 'RijndaelManagedEncryption'.
+            </summary>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.Finalize">
+            <summary>
+            Destructor del objeto 'RijndaelManagedEncryption'.
+            </summary>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.EncryptRijndael(System.String,System.String)">
+            <summary>
+            Realiza el cifrado de cadenas de texto por el algoritmo Rijndael.
+            </summary>
+            <param name="Cadena">Cadena cifrada en Base64.</param>
+            <param name="SemillaGUID">La semilla GUID.</param>
+            <returns>Devuelve una cadena descifrada.</returns>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.DecryptRijndael(System.String,System.String)">
+            <summary>
+            Funcion que desencripta un valor cifrado por Rijndael y que lo regresa a su cadena original.
+            </summary>
+            <param name="Cadena">Cadena cifrada en Base64.</param>
+            <param name="SemillaGUID">La semilla GUID.</param>
+            <returns>Devuelve una cadena descifrada.</returns>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.IsBase64String(System.String)">
+            <summary>
+            Función que valida si una cadena cifrada está codificada en Base64.
+            </summary>
+            <param name="strBase64String">La cadena cifrada en Base64,</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utilities.RijndaelManagedEncryption.NewRijndaelManaged(System.String)">
+            <summary>
+            Función que crea una nueva clase RijndaelManaged para inicializarla.
+            </summary>
+            <param name="SemillaGUID">La semilla GUID.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Utilities.Tool">
+            <summary>
+            Clase 'Tool' para las funciones especificas del programador.
+            </summary>
+        </member>
+        <member name="M:Utilities.Tool.#ctor">
+            <summary>
+            Constructor del objeto 'Tool'.
+            </summary>
+        </member>
+        <member name="M:Utilities.Tool.Finalize">
+            <summary>
+            Destructor del objeto 'Tool'.
+            </summary>
+        </member>
+        <member name="M:Utilities.Tool.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.Tool.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.Tool.ToDateUniversal(System.DateTime)">
+            <summary>
+            Devuelve una fecha con el formato universal.
+            </summary>
+            <param name="oDate">Fecha</param>
+            <remarks>Convierte la fecha en fecha con formato universal devuelta como cadena de texto.</remarks>
+        </member>
+        <member name="M:Utilities.Tool.ToDateUniversalPrimerMinuto(System.DateTime)">
+            <summary>
+            Devuelve una fecha con el formato universal con el primer minuto del dia..
+            </summary>
+            <param name="oDate">Fecha con el primer minuto del dia.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Tool.ToDateUniversalUltimoMinuto(System.DateTime)">
+            <summary>
+            Devuelve una fecha con el formato universal con el ultimo minuto del dia.
+            </summary>
+            <param name="oDate">Fecha</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Tool.ToObjectDateTime(System.DateTime)">
+            <summary>
+            Devuelve una fecha como tipo object.
+            </summary>
+            <param name="oDate">Fecha devuelta como tipo 'object'.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Tool.ToObjectDateTimePrimerMinuto(System.DateTime)">
+            <summary>
+            Devuelve una fecha como tipo object con el primer minuto.
+            </summary>
+            <param name="oDate">Fecha con el primer minuto devuelta como tipo 'object'..</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Tool.ToObjectDateTimeUltimoMinuto(System.DateTime)">
+            <summary>
+            Devuelve una fecha como tipo object con el último minuto.
+            </summary>
+            <param name="oDate">Fecha con el último minuto devuelta como tipo 'object'..</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Tool.ToDateTime(System.String)">
+            <summary>
+            Convierte una cadena de texto en formato fecha. Si la cadena contiene el formato de fecha, lo convierte al tipo 'DateTime'.
+            En caso contrario, devuelve un valor nulo.
+            </summary>
+            <param name="dateString">Fecha en formato cadena de texto.</param>
+        </member>
+        <member name="M:Utilities.Tool.ToBigInt(System.String)">
+            <summary>
+            Función que convierte un string a formato entero para valores enteros grandes.
+            </summary>
+            <param name="sValor">Cadena de texto a convertir a formato entero.</param>
+            <returns>Retorna un valor decimal que puede ser convertido al tipo entero grandes.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ToInteger(System.String)">
+            <summary>
+            Función que convierte un string a formato entero para valores enteros normales.
+            </summary>
+            <param name="sValor">Cadena de texto a convertir a formato entero.</param>
+            <returns>Retorna un valor decimal que puede ser convertido al tipo entero normales.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ToShort(System.String)">
+            <summary>
+            Función que convierte un string a formato entero para valores enteros cortos.
+            </summary>
+            <param name="sValor">Cadena de texto a convertir a formato entero.</param>
+            <returns>Retorna un valor decimal que puede ser convertido al tipo entero corto.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ToSingle(System.String)">
+            <summary>
+            Función que convierte un string a formato decimal para valores reales (flotantes).
+            </summary>
+            <param name="sValor">Cadena de texto a convertir al tipo de dato númerico flotante.</param>
+            <returns>Retorna un valor decimal que puede ser convertido al tipo de dato reale (flotantes).</returns>
+        </member>
+        <member name="M:Utilities.Tool.ToDouble(System.String)">
+            <summary>
+            Función que convierte un string a formato decimal para valores reales (doble precision).
+            </summary>
+            <param name="sValor">Cadena de texto a convertir al tipo de dato númerico real.</param>
+            <returns>Retorna un valor decimal que puede ser convertido al tipo de dato reale (doble precision).</returns>
+        </member>
+        <member name="M:Utilities.Tool.ToReal(System.String)">
+            <summary>
+            Función que convierte un string a formato decimal para valores reales (monetarios).
+            </summary>
+            <param name="sValor">Cadena de texto a convertir a formato moneda.</param>
+            <returns>Retorna un valor decimal que puede ser convertido al tipo real (monetarios).</returns>
+        </member>
+        <member name="M:Utilities.Tool.CheckRegularExpression(System.String,System.String)">
+            <summary>
+            Función que evalua una expresión regular.
+            </summary>
+            <param name="strValor">Un valor en cadena de texto.</param>
+            <param name="Patron">El patrón de validación de una cadena.</param>
+            <returns>Retorna 'True' si la cadena cumple con el patrón de formato. 'False' en caso contrario.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ClearString(System.String)">
+            <summary>
+            Funcion que elimina caracteres extraños de una variable string.
+            </summary>
+            <param name="strIn">Cadena a evaluar.</param>
+            <returns>Devuelve una cadena sin caracteres extraños.</returns>
+        </member>
+        <member name="M:Utilities.Tool.GetDataTable(System.Data.DataTable,System.Int32,System.Int32)">
+            <summary>
+            Función que particiona un DataTable existente en multiples DataTables.
+            </summary>
+            <param name="oDt">El objeto DataTable.</param>
+            <param name="iCurrentPage">Número de pagina del DataTable.</param>
+            <param name="iPageSize">_intNumberErr de registros por pagina.</param>
+            <returns>Devuelve el objeto DataTable que en realidad es una partición del DataTable original.</returns>
+        </member>
+        <member name="M:Utilities.Tool.OpenFileByProcess(System.String)">
+            <summary>
+            Funcion que abre un archivo para un programa asociado.
+            </summary>
+            <param name="StrNameFile">Nombre del archivo que se desea abrir.</param>
+            <remarks>Al abrir el archivo, ejecuta el programa asociado al archivo.</remarks>
+        </member>
+        <member name="M:Utilities.Tool.DestroyProcess(System.String)">
+            <summary>
+            Función que mata procesos activos del Sistema.
+            </summary>
+            <param name="StrNameProcess">Nombre del proceso que se desea eliminar.</param>
+            <remarks>Destruye el proceso que se está ejecutándose en el Administrador de Procesos de Windows.</remarks>
+        </member>
+        <member name="M:Utilities.Tool.ListToCSV``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Funcion que exporta un DataTable a un archivo CSV.
+            </summary>
+            <param name="oList">Objeto lista generica.</param>
+            <param name="strNameFile">Nombre del archivo en formato CSV.</param>
+            <remarks>Convierte la información de una lista generica a un archivo de texto plano en formato CSV.</remarks>
+        </member>
+        <member name="M:Utilities.Tool.FileToArrayBytes(System.String)">
+            <summary>
+            Convierte el contenido de un archivo a una cadena de bytes.
+            </summary>
+            <param name="strFileName">Nombre del archivo.</param>
+            <returns>Devuelve un arreglo de bytes del archivo seleccionado.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ArrayBytesToFile(System.Byte[],System.String)">
+            <summary>
+            Convierte el contenido de un arreglo de bytes a un archivo destino.
+            </summary>
+            <param name="ArrayByte">Arreglo de bytes del archivo de origen.</param>
+            <param name="strFileName">Destino del archivo donde se va a crear.</param>
+        </member>
+        <member name="M:Utilities.Tool.ListToExcel``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Función que exporta una lista generica a un archivo de Excel.
+            </summary>
+            <param name="oList">Objeto Lista generica.</param>
+            <param name="strNameFile">Archivo de Excel.</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.Tool.LocalIPAddress">
+            <summary>
+            Obtiene la dirección IPv4 del equipo local conectado en red.
+            </summary>
+            <returns>La dirección IPv4 del equipo local.</returns>
+        </member>
+        <member name="M:Utilities.Tool.GetUserDomain">
+            <summary>
+            Obtiene el usuario de dominio actual.
+            </summary>
+            <returns>Devuelve un string con el nombre de usuario actual.</returns>
+        </member>
+        <member name="M:Utilities.Tool.GetMachineName">
+            <summary>
+            Obtiene el nombre del equipo actual.
+            </summary>
+            <returns>Devuelve un string con el nombre del equipo actual.</returns>
+        </member>
+        <member name="M:Utilities.Tool.GetMachineNameByIP(System.String)">
+            <summary>
+            Obtiene el nombre del equipo actual por medio de la dirección IPv4.
+            </summary>
+            <param name="strIPv4">Dirección IPv4 de la red corporativa</param>
+            <returns>Devuelve un string con el nombre del equipo actual.</returns>
+        </member>
+        <member name="M:Utilities.Tool.RandomString(System.Int32)">
+            <summary>
+            Obtiene una cadena aleatoria de caracteres.
+            </summary>
+            <param name="length">Longitud de la cadena.</param>
+            <returns>Devuelve un string con una cadena aleatoria de caracteres.</returns>
+        </member>
+        <member name="M:Utilities.Tool.SelectWeeksYear(System.Int16,System.Int16)">
+            <summary>
+            Muestra la lista de las semanas completas de un año y mes en cuestión.
+            </summary>
+            <param name="Annio">Año actual u año.</param>
+            <param name="Mes">Mes actual o mes del año.</param>
+            <returns>Devuelve una lista generica dinamica con todas las semanas del mes actual y año actual, con su día de inicio y día final. Se toma como inicio el primer día del año en cuestión.</returns>
+        </member>
+        <member name="M:Utilities.Tool.GetOrdinalFields``1(``0)">
+            <summary>
+            Muestra la lista de atributos de una clase genérica.
+            </summary>
+            <param name="Obj">La clase genérica.</param>
+            <returns>Devuelve una lista generica con toda la información de los atributos de la clase con su número ordinal respectivo.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ToDataTable``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            Convierte un objeto del tipo Lista Genérica a un objeto DataTable.
+            </summary>
+            <param name="data">Lista generica a convertir.</param>
+            <returns>Devuelve un objeto DataTable con toda la información de la lista genérica de origen.</returns>
+        </member>
+        <member name="T:Utilities.XMLFiles">
+            <summary>
+            Clase 'XMLFiles' para el manejo de archivos de configuración XML.
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLFiles.#ctor">
+            <summary>
+            Inicia el objeto 'XMLFiles'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'XMLFiles'.</remarks>
+        </member>
+        <member name="M:Utilities.XMLFiles.#ctor(System.String)">
+            <summary>
+            Inicia el objeto 'XMLFiles'.
+            </summary>
+            <param name="strFolderXML">Nombre de la carpeta donde se almacenará el archivo XML.</param>
+            <remarks>Inicia los atributos del objeto 'XMLFiles'.</remarks>
+        </member>
+        <member name="M:Utilities.XMLFiles.#ctor(System.String,System.String)">
+            <summary>
+            Inicia el objeto 'XMLFiles'.
+            </summary>
+            <param name="strFolderXML">Nombre de la carpeta donde se almacenará el archivo XML.</param>
+            <param name="strFileXML">Nombre del archivo XML.</param>
+            <remarks>Inicia los atributos del objeto 'XMLFiles'.</remarks>
+        </member>
+        <member name="M:Utilities.XMLFiles.Finalize">
+            <summary>
+            Destructor del objeto 'XMLFiles'.
+            </summary>
+        </member>
+        <member name="P:Utilities.XMLFiles.ArchivoXML">
+            <summary>
+            Propiedad que muestra el nombre del archivo de configuración.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del archivo de configuración.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.XMLFiles.FolderXML">
+            <summary>
+            Propiedad que muestra la ruta de la carpeta donde se almacenara el archivo de configuración.
+            </summary>
+            <value></value>
+            <returns>Obtiene la ruta de la carpeta donde se almacenara el archivo de configuración.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.XMLFiles.AutoGuardar">
+            <summary>
+            Propiedad que define si el archivo XML puede autoguardarse cuando se realizan operaciones de Modificación/Eliminación/Creación de valores de configuración.
+            </summary>
+            <value></value>
+            <returns>Obtiene un valor booleano que indica si el archivo XML se guada automáticamente o no.</returns>
+        </member>
+        <member name="P:Utilities.XMLFiles.Seccion">
+            <summary>
+            Propiedad que muestra el nombre de una sección del archivo de configuración.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre de una sección del archivo de configuración.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.XMLFiles.Clave">
+            <summary>
+            Propiedad que muestra la clave de una sección en el archivo de configuración.
+            </summary>
+            <value></value>
+            <returns>Obtiene la clave de una sección en el archivo de configuración.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.XMLFiles.Valor">
+            <summary>
+            Propiedad que muestra el valor correspondiente de la clave de una sección en el archivo de configuración XML.
+            </summary>
+            <value></value>
+            <returns>Obtiene el valor correspondiente de la clave de una sección en el archivo de configuración XML.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.XMLFiles.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLFiles.ClearAttributes">
+            <summary>
+            Función que realiza la limpieza de los objetos administrador (los atributos de la clase).
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLFiles.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.XMLFiles.XMLWriteKey(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Función que determina si un valor se guarda en el archivo de configuracion XML.
+            </summary>
+            <param name="strSeccion">Nombre de la sección.</param>
+            <param name="strClave">Nombre de la clave.</param>
+            <param name="strValor">Valor de la clave.</param>
+            <param name="Autocifrar">Opcion de aplicar cifrado al valor de la clave.</param>
+            <remarks>Escribe el valor en el archivo de configuracion XML.</remarks>
+        </member>
+        <member name="M:Utilities.XMLFiles.XMLReadKey(System.String,System.String,System.String@,System.Boolean)">
+            <summary>
+            Función que devuelve el valor de una clave de un archivo de configuración XML.
+            </summary>
+            <param name="strSeccion">Nombre de la sección.</param>
+            <param name="strClave">Nombre de la clave asociada a la sección.</param>
+            <param name="strValor">Parámetro por referencia que guarda el valor de la clave.</param>
+            <param name="Autocifrar">Opcion de aplicar cifrado al valor de la clave.</param>
+            <remarks>Si existe la clave, se recupera el valor seleccionado del archivo de configuración.</remarks>
+        </member>
+        <member name="M:Utilities.XMLFiles.Secciones">
+            <summary>
+            Devuelve una colección de tipo Dictionary con las claves y valores de la sección indicada.
+            </summary>
+            <returns>Una colección de tipo List(Of String) con las secciones del fichero de configuración.</returns>
+        </member>
+        <member name="M:Utilities.XMLFiles.Claves(System.String)">
+             <summary>
+             Devuelve una colección de tipo Dictionary con las claves y valores de la sección indicada.
+             </summary>
+             <param name="strSeccion">La sección de la que queremos obtener las claves y valores.</param>
+             <returns>Una colección de tipo Dictionary(Of String, String) con las claves y valores.</returns>
+             <remarks></remarks>
+            
+        </member>
+        <member name="M:Utilities.XMLFiles.GetXML(System.Boolean)">
+            <summary>
+            Devuelve una colección de tipo List con las secciones del fichero de configuración.
+            </summary>
+            <param name="Autocifrar">Opcion de aplicar cifrado al valor de la clave.</param>
+            <returns>Un DataTable con las secciones del archivo de configuración XML.</returns>
+        </member>
+        <member name="T:Utilities.XMLSerializacion`1">
+            <summary>
+            Clase 'XMLSerializacion' para el manejo de archivos de configuración XML.
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.#ctor">
+            <summary>
+            Constructor del objeto 'XMLSerializacion'.
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.Finalize">
+            <summary>
+            Destructor del objeto 'XMLSerializacion'.
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.XmlSerialize(`0)">
+            <summary>
+            Función para convertir un objeto al tipo XML por medio de serialización.
+            </summary>
+            <param name="obj">Objeto cualquiera</param>
+            <returns>Devuelve un string con el formato XML del objeto serializado.</returns>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.XmlDeserialize(System.String)">
+            <summary>
+            Función para convertir un valor XML a un tipo de dato.
+            </summary>
+            <param name="xmlDoc">Cadena XML en formato string.</param>
+            <returns>Devuelve el objeto serializado en formato XML.</returns>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.WriteToXmlFile(System.String,`0,System.Boolean)">
+            <summary>
+            Escribe la instancia de objeto determinada en un archivo XML.
+            </summary>
+            <param name="strNameFile">La ruta del archivo para escribir la instancia del objeto y su contenido.</param>
+            <param name="objectToWrite">La instancia de objeto para escribir en el archivo.</param>
+            <param name="append">Si es falso el archivo se sobrescribe si ya existe. De ser cierto el contenido se añadirá al archivo.</param>
+        </member>
+        <member name="M:Utilities.XMLSerializacion`1.ReadFromXmlFile(System.String)">
+            <summary>
+            Lee una instancia de objeto desde un archivo XML.
+            </summary>
+            <param name="strNameFile">La ruta del archivo a leer la instancia del objeto que contiene información del mismo.</param>
+            <returns>Devuelve una nueva instancia del objeto una vez leído desde el archivo XML.</returns>
+        </member>
+        <member name="T:Utilities.ZIPFiles">
+            <summary>
+            Clase 'LOGFiles' para el manejo de archivos LOG.
+            </summary>
+        </member>
+        <member name="M:Utilities.ZIPFiles.#ctor">
+            <summary>
+            Constructor del objeto 'ZIPFiles'.
+            </summary>
+        </member>
+        <member name="M:Utilities.ZIPFiles.#ctor(System.String)">
+            <summary>
+            Constructor del objeto 'ZIPFiles'.
+            </summary>
+            <param name="strFolderINI">Nombre de la carpeta donde se escribirá el archivo ZIP.</param>
+        </member>
+        <member name="M:Utilities.ZIPFiles.Finalize">
+            <summary>
+            Destructor del objeto 'ZIPFiles'.
+            </summary>
+        </member>
+        <member name="P:Utilities.ZIPFiles.FolderZIP">
+            <summary>
+            Propiedad que muestra la ruta de la carpeta donde se almacenara el archivo ZIP.
+            </summary>
+            <value></value>
+            <returns>Obtiene la ruta de la carpeta donde se almacenara el archivo ZIP.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Utilities.ZIPFiles.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.ZIPFiles.ClearAttributes">
+            <summary>
+            Función que realiza la limpieza de los objetos administrador (los atributos de la clase).
+            </summary>
+        </member>
+        <member name="M:Utilities.ZIPFiles.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.ZIPFiles.SetZip(System.String,System.Collections.ArrayList)">
+            <summary>
+            Agrega una lista de archivos a un archivo ZIP.
+            </summary>
+            <param name="strArchivoZipDestino">Ubicación de la carpeta.</param>
+            <param name="CollectionFile">Lista de archivos.</param>
+        </member>
+        <member name="M:Utilities.ZIPFiles.GetZip(System.String,System.String)">
+            <summary>
+            Extrae el contenido de un archivo ZIP.
+            </summary>
+            <param name="strArchivoZipOrigen">Archivo ZIP que se desea extraer la información.</param>
+            <param name="strCarpetaDestino">Carpeta destino donde se enviará el contenido del archivo zip de origen.</param>
+        </member>
+        <member name="T:Utilities.bootgridResults`1">
+            <summary>
+            Estructura 'bootgridResults' para el componente web 'bootgrid'.
+            </summary>
+        </member>
+        <member name="P:Utilities.bootgridResults`1.current">
+            <summary>
+            Atributo de número de página.
+            </summary>
+        </member>
+        <member name="P:Utilities.bootgridResults`1.rowCount">
+            <summary>
+            Atributo de total de registros por página.
+            </summary>
+        </member>
+        <member name="P:Utilities.bootgridResults`1.total">
+            <summary>
+            Atributo de total de registros del catálogo.
+            </summary>
+        </member>
+        <member name="P:Utilities.bootgridResults`1.rows">
+            <summary>
+            Atributo de la estructura interna de las filas.
+            </summary>
+        </member>
+        <member name="T:Utilities.DataTablesResult`1">
+            <summary>
+            Estructura 'DataTablesResult' para el componente web 'jquery DataTables'.
+            </summary>
+        </member>
+        <member name="P:Utilities.DataTablesResult`1.draw">
+            <summary>
+            Atributo de número de página.
+            </summary>
+        </member>
+        <member name="P:Utilities.DataTablesResult`1.recordsFiltered">
+            <summary>
+            Atributo de total de registros por página.
+            </summary>
+        </member>
+        <member name="P:Utilities.DataTablesResult`1.recordsTotal">
+            <summary>
+            Atributo de total de registros del catálogo.
+            </summary>
+        </member>
+        <member name="P:Utilities.DataTablesResult`1.data">
+            <summary>
+            Atributo de la estructura interna de las filas.
+            </summary>
+        </member>
+        <member name="T:Utilities.jqGridRow`1">
+            <summary>
+            Estructura 'jqGridRow' para la estructura de una fila en el componente jqGrid.
+            </summary>
+        </member>
+        <member name="F:Utilities.jqGridRow`1.id">
+            <summary>
+            Identificador de la fila.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqGridRow`1.cell">
+            <summary>
+            Array de contenido de la fila.
+            </summary>
+        </member>
+        <member name="T:Utilities.jqGridResults`1">
+            <summary>
+            Estructura 'jqGridResults' para el componente jqGrid.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqGridResults`1.page">
+            <summary>
+            Atributo de número de página.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqGridResults`1.total">
+            <summary>
+            Atributo de total de registros por página.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqGridResults`1.records">
+            <summary>
+            Atributo de total de registros del catálogo.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqGridResults`1.rows">
+            <summary>
+            Atributo de la estructura interna de las filas.
+            </summary>
+        </member>
+        <member name="P:Utilities.jQueryGrid`1.total">
+            <summary>
+            Atributo de total de registros del catálogo.
+            </summary>
+        </member>
+        <member name="P:Utilities.jQueryGrid`1.records">
+            <summary>
+            Atributo de la estructura interna de las filas.
+            </summary>
+        </member>
+        <member name="T:Utilities.WhereClauseGenerator">
+            <summary>
+            Clase 'WhereClauseGenerator' para el armado de sentencias dinamicas SQL para la consulta a Base de Datos por medio del modelo ORM/Data.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereClauseGenerator.FormatMappingToDynamicLinq">
+            <summary>
+            Array de cadenas strings para los identificadores de condicion para Linq.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereClauseGenerator.FormatMappingToEF">
+            <summary>
+            Array de cadenas strings para los identificadores de condicion para Entity Framework (Correcto).
+            </summary>
+        </member>
+        <member name="M:Utilities.WhereClauseGenerator.#ctor">
+            <summary>
+            Constructor del objeto 'WhereClauseGenerator'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'WhereClauseGenerator'.</remarks>
+        </member>
+        <member name="M:Utilities.WhereClauseGenerator.Finalize">
+            <summary>
+            Destructor del objeto 'WhereClasueGenerator'.
+            </summary>
+        </member>
+        <member name="M:Utilities.WhereClauseGenerator.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.WhereClauseGenerator.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.WhereClauseGenerator.ParserFilterToDynamicLinq(Utilities.WhereFilter,System.Type)">
+            <summary>
+            Genera un string con parametros de consulta a una tabla o entidad de la Base de Datos (para Dynamic Query Linq).
+            </summary>
+            <param name="Filtro">Objeto del tipo 'Filter'.</param>
+            <param name="T">Estructura interna del tipo de dato</param>
+            <returns>Una cadena que contiene el filtro armado en base a los atributos internos del objeto. Si no hay criterio de busqueda armado devuelve 'nulo' o 'vacio' debido
+                     a que no hay reglas o condiciones o bien una regla o condición contiene operadores incorrectos, según el tipo de dato del atributo o campo.</returns>
+        </member>
+        <member name="M:Utilities.WhereClauseGenerator.ParserFilterToEntityFramework(Utilities.WhereFilter,System.Type)">
+            <summary>
+            Genera un string con parametros de consulta a una tabla o entidad de la Base de Datos (para Entity Framework).
+            </summary>
+            <param name="Filtro">Objeto del tipo 'Filter'.</param>
+            <param name="T">Estructura interna del tipo de dato</param>
+            <returns>Una cadena que contiene el filtro armado en base a los atributos internos del objeto. Si no hay criterio de busqueda armado devuelve 'nulo' o 'vacio' debido
+                     a que no hay reglas o condiciones o bien una regla o condición contiene operadores incorrectos, según el tipo de dato del atributo o campo.</returns>
+        </member>
+        <member name="T:Utilities.WhereFilter">
+            <summary>
+            Clase 'WhereFilter' para la generación de criterios de consulta.
+            </summary>
+        </member>
+        <member name="P:Utilities.WhereFilter.groupOp">
+            <summary>
+            Propiedad que almacena el nombre del operador booleano de decisión.
+            </summary>
+        </member>
+        <member name="P:Utilities.WhereFilter.rules">
+            <summary>
+            Propiedad que almacena el arreglo de reglas de condición WHERE.
+            </summary>
+        </member>
+        <member name="T:Utilities.WhereRule">
+            <summary>
+            Clase 'WhereRule' para la generación de condiciones o reglas de consulta.
+            </summary>
+        </member>
+        <member name="P:Utilities.WhereRule.field">
+            <summary>
+            Propiedad que almacena el nombre del campo de la tabla.
+            </summary>
+        </member>
+        <member name="P:Utilities.WhereRule.op">
+            <summary>
+            Propiedad que almacena el operador de condición de consulta.
+            </summary>
+        </member>
+        <member name="P:Utilities.WhereRule.data">
+            <summary>
+            Propiedad que almacena el valor del campo para la condición de consulta.
+            </summary>
+        </member>
+        <member name="T:Utilities.DataAccess">
+            <summary>
+            Clase 'DataAccess' para la ejecucíón de sentencias nativas SQL vía Entity Framework.
+            </summary>
+        </member>
+        <member name="M:Utilities.DataAccess.#ctor">
+            <summary>
+            Constructor del objeto 'DataAccess'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'DataAccess'.</remarks>
+        </member>
+        <member name="M:Utilities.DataAccess.Finalize">
+            <summary>
+            Destructor del objeto 'DataAccess'.
+            </summary>
+        </member>
+        <member name="M:Utilities.DataAccess.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.DataAccess.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.DataAccess.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.DataAccess.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="T:Utilities.GroupOp">
+            <summary>
+            Enumeración 'GroupOp' para almacenar los valores booleanos de decisión.
+            </summary>
+        </member>
+        <member name="F:Utilities.GroupOp.AND">
+            <summary>
+            Operador AND
+            </summary>
+        </member>
+        <member name="F:Utilities.GroupOp.OR">
+            <summary>
+            Operador OR
+            </summary>
+        </member>
+        <member name="T:Utilities.OperacionSQL">
+            <summary>
+            Enumeración 'OperacionSQL' para almacenar los tipos de operaciones de Base de Datos.
+            </summary>
+        </member>
+        <member name="F:Utilities.OperacionSQL.Create">
+            <summary>
+            Operación 'Create'.
+            </summary>
+        </member>
+        <member name="F:Utilities.OperacionSQL.Retrieve">
+            <summary>
+            Operación 'Retrieve'.
+            </summary>
+        </member>
+        <member name="F:Utilities.OperacionSQL.Update">
+            <summary>
+            Operacion 'Update'.
+            </summary>
+        </member>
+        <member name="F:Utilities.OperacionSQL.Delete">
+            <summary>
+            Operación 'Delete'.
+            </summary>
+        </member>
+        <member name="F:Utilities.OperacionSQL.Custom">
+            <summary>
+            Operación generica.
+            </summary>
+        </member>
+        <member name="T:Utilities.PrioridadCorreo">
+            <summary>
+            Enumeración 'PrioridadCorreo' que indica la prioridad del correo.
+            </summary>
+        </member>
+        <member name="F:Utilities.PrioridadCorreo.Ninguna">
+            <summary>
+            Prioridad ninguna.
+            </summary>
+        </member>
+        <member name="F:Utilities.PrioridadCorreo.Normal">
+            <summary>
+            Prioridad normal.
+            </summary>
+        </member>
+        <member name="F:Utilities.PrioridadCorreo.Baja">
+            <summary>
+            Prioridad Baja.
+            </summary>
+        </member>
+        <member name="F:Utilities.PrioridadCorreo.Alta">
+            <summary>
+            Prioridad Alta.
+            </summary>
+        </member>
+        <member name="T:Utilities.TipoInformacion">
+            <summary>
+            Enumeración 'TipoInformacion' que indica los tipos de errores que se pueden registrar en el LOG.
+            </summary>
+        </member>
+        <member name="F:Utilities.TipoInformacion.Informacion">
+            <summary>
+            Status = Información.
+            </summary>
+        </member>
+        <member name="F:Utilities.TipoInformacion.Advertencia">
+            <summary>
+            Status = Advertencia.
+            </summary>
+        </member>
+        <member name="F:Utilities.TipoInformacion.Falla">
+            <summary>
+            Status = Falla.
+            </summary>     
+        </member>
+        <member name="F:Utilities.TipoInformacion.ErrorProceso">
+            <summary>
+            Status = ErrorProceso.
+            </summary>
+        </member>
+        <member name="T:Utilities.WhereConditions">
+            <summary>
+            Enumeración 'WhereConditions' para almacenar los valores de condicion para la clausula WHERE del lenguaje SQL.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.eq">
+            <summary>
+            Condicion IGUAL.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.ne">
+            <summary>
+            Condicion DISTINTO o NO IGUAL.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.lt">
+            <summary>
+            Condición MENOR.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.le">
+            <summary>
+            Condición MENOR QUE.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.gt">
+            <summary>
+            Condición MAYOR.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.ge">
+            <summary>
+            Condición MAYOR IGUAL QUE.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.bw">
+            <summary>
+            Condicion EMPIEZA CON.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.bn">
+            <summary>
+            Condición NO EMPIEZA CON.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.ew">
+            <summary>
+            Condición TERMINA EN.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.en">
+            <summary>
+            Condición NO TERMINA EN.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.cn">
+            <summary>
+            Condición CONTIENE.
+            </summary>
+        </member>
+        <member name="F:Utilities.WhereConditions.nc">
+            <summary>
+            Condición NO CONTIENE.
+            </summary>
+        </member>
+    </members>
+</doc>
