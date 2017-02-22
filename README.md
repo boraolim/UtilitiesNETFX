@@ -1,6 +1,10 @@
 # UtilitiesNETFX - Librería de funciones del programador para .NET.
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6 y Xamarin Mono 4.2.3/4.4.0 en adelante.
 
+#Detalle de la versión 1.0.2.7951 (22/02/2017)
+* Adición de la clase 'BaseHandler' para el manejo de controladores genericos ASHX de ASP.NET 4.0/4.5, emulando el patrón Modelo-Vista-Controlador.
+
+
 #Requisitos de compilación y ejecución.
 * El ensamblado para la versión de Microsoft .NET Framework 4.0 solo puede ejecutarse en equipos que tengan instalado Microsoft .NET Framework 4.0 en el equipo local con Windows (Windows XP SP3/Vista/Seven/Windows 8/Windows 10 en adelante, Windows Server 2003/Windows Server 2008/Windows Server 2012 en adelante) y en Visual Studio 2010 en todas sus ediciones.
 * El ensamblado para la versión de Microsoft .NET Framework 4.5 solo puede ejecutarse en equipos que tengan instalado Microsoft .NET Framework 4.5/4.6 en el equipo local con Windows (Windows Vista/Seven/Windows 8/Windows 10 en adelante, Windows Server 2008/Windows Server 2012 en adelante) y en Visual Studio 2012/2013/2015 en todas sus ediciones.
@@ -20,4 +24,4 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
 <strong>Versión:</strong> 1.0.2.7951<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 29 de enero de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 22 de febrero de 2017. Ciudad de M&eacute;xico.
