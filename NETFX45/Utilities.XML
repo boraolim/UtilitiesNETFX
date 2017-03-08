@@ -1092,6 +1092,16 @@
             <param name="data">Lista generica a convertir.</param>
             <returns>Devuelve un objeto DataTable con toda la información de la lista genérica de origen.</returns>
         </member>
+        <member name="M:Utilities.Tool.ConvertFileEncoding(System.String,System.String,System.Text.Encoding,System.Text.Encoding)">
+            <summary>
+            Convierte un archivo a una codificación de texto especifica.
+            </summary>
+            <param name="ArchivoOrigen">Nombre del archivo de origen.</param>
+            <param name="ArchivoDestino">Nombre del archivo destino.</param>
+            <param name="sourceEncoding">Codificación de origen.</param>
+            <param name="destEncoding">Codificación destino.</param>
+            <remarks></remarks>
+        </member>
         <member name="T:Utilities.UTF8StringWriter">
             <summary>
             Clase 'UTF8StringWriter' para la serialización de valores XML en codificación UTF-8.

@@ -24,4 +24,4 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
 <strong>Versión:</strong> 1.0.2.7951<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 22 de febrero de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 8 de marzo de 2017. Ciudad de M&eacute;xico.

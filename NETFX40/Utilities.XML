@@ -310,12 +310,28 @@
             <returns>Obtiene la dirección de correo electrónico del remitente.</returns>
             <remarks></remarks>
         </member>
+        <member name="P:Utilities.Correo.NombreRemitente">
+            <summary>
+            Propiedad que muestra el nombre del remitente que se va a desplegar en el correo electrónico del destinatario, una vez recibido.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del remitente que se va a desplegar en el correo electrónico del destinatario, una vez recibido.</returns>
+            <remarks></remarks>
+        </member>
         <member name="P:Utilities.Correo.Destinatario">
             <summary>
             Propiedad que muestra la dirección de correo electrónico del destinatario.
             </summary>
             <value></value>
             <returns>Obtiene la dirección de correo electrónico del destinatario.</returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:Utilities.Correo.NombreDestinatario">
+            <summary>
+            Propiedad que muestra el nombre del destinatario que se va a desplegar en el correo electrónico del destinatario, una vez enviado.
+            </summary>
+            <value></value>
+            <returns>Obtiene el nombre del destinatario que se va a desplegar en el correo electrónico del destinatario, una vez enviado.</returns>
             <remarks></remarks>
         </member>
         <member name="P:Utilities.Correo.Asunto">
@@ -1095,6 +1111,16 @@
             <param name="data">Lista generica a convertir.</param>
             <returns>Devuelve un objeto DataTable con toda la información de la lista genérica de origen.</returns>
         </member>
+        <member name="M:Utilities.Tool.ConvertFileEncoding(System.String,System.String,System.Text.Encoding,System.Text.Encoding)">
+            <summary>
+            Convierte un archivo a una codificación de texto especifica.
+            </summary>
+            <param name="ArchivoOrigen">Nombre del archivo de origen.</param>
+            <param name="ArchivoDestino">Nombre del archivo destino.</param>
+            <param name="sourceEncoding">Codificación de origen.</param>
+            <param name="destEncoding">Codificación destino.</param>
+            <remarks></remarks>
+        </member>
         <member name="T:Utilities.XMLFiles">
             <summary>
             Clase 'XMLFiles' para el manejo de archivos de configuración XML.
@@ -1344,6 +1370,78 @@
             </summary>
             <param name="strArchivoZipOrigen">Archivo ZIP que se desea extraer la información.</param>
             <param name="strCarpetaDestino">Carpeta destino donde se enviará el contenido del archivo zip de origen.</param>
+        </member>
+        <member name="M:Utilities.AjaxCallSignature.ProcessProperty(System.String,System.Type,System.String)">
+             <summary>
+            
+             </summary>
+             <param name="propertyName"></param>
+             <param name="propertyType"></param>
+             <param name="parentNamespace">represents the full path of the parent node of the input parameter</param>
+             <returns></returns>
+        </member>
+        <member name="M:Utilities.AjaxCallSignature.HydrateValue(System.String,System.Type,System.String)">
+            <summary>
+            Hydrates CLR primitive types
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Utilities.AjaxCallSignature.HydrateClass(System.String,System.Type,System.String)">
+            <summary>
+            Hydrates complex types
+            </summary>
+        </member>
+        <member name="T:Utilities.RequireAuthenticationAttribute">
+            <summary>
+            Use this attribute to decorate the handler methods that need explicit authentication configuration.
+            If this attibute is set to true it will validate if the user is authenticated.
+            </summary>
+        </member>
+        <member name="M:Utilities.BaseHandler.OnMethodInvoke(Utilities.OnMethodInvokeArgs)">
+            <summary>
+            Intercept the execution right before the handler method is called
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Utilities.BaseHandler.AfterMethodInvoke(System.Object)">
+            <summary>
+            Intercept the execution right after the handler method is called
+            </summary>
+        </member>
+        <member name="M:Utilities.BaseHandler.HandleRequest">
+            <summary>
+            Method used to handle the request as a normal ASHX.
+            To use this method just pass handlerequest=true on the request query string.
+            </summary>
+        </member>
+        <member name="M:Utilities.BaseHandler.DefaultContentType">
+            <summary>
+            Returns the default content type returned by the handler.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Utilities.BaseHandler.SkipDefaultSerialization">
+            <summary>
+            Setting this to false will make the handler to respond with exacly what the called method returned.
+            If true the handler will try to serialize the content based on the ContentType set.
+            </summary>
+        </member>
+        <member name="P:Utilities.BaseHandler.SkipContentTypeEvaluation">
+            <summary>
+            Setting this to true will avoid the handler to change the content type wither to its default value or to its specified value on the request.
+            This is useful if you're handling the request yourself and need to specify it yourself.
+            </summary>
+        </member>
+        <member name="M:Utilities.BaseHandler.Help">
+            <summary>
+            Prints an help page discribing the available methods on this handler.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Utilities.ResponseContentTypes">
+            <summary>
+            Represent the list of supported response content types
+            </summary>
         </member>
         <member name="T:Utilities.bootgridResults`1">
             <summary>
