@@ -1030,11 +1030,12 @@
             <param name="ArrayByte">Arreglo de bytes del archivo de origen.</param>
             <param name="strFileName">Destino del archivo donde se va a crear.</param>
         </member>
-        <member name="M:Utilities.Tool.ListToExcel``1(System.Collections.Generic.List{``0},System.String)">
+        <member name="M:Utilities.Tool.ListToExcel``1(System.Collections.Generic.List{``0},System.String,System.String)">
             <summary>
             Función que exporta una lista generica a un archivo de Excel.
             </summary>
             <param name="oList">Objeto Lista generica.</param>
+            <param name="strNameWorkSheet">Nombre de la hoja de Excel.</param>
             <param name="strNameFile">Archivo de Excel.</param>
             <remarks></remarks>
         </member>
