@@ -11,6 +11,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>Adición de la clase 'ContainsSwith' para la emulación de la sentencia clave 'switch(x)... case' en C# para cadenas de carácteres.</li>
   <li>Correcciones en la clase 'Utilities.CustomSessionProviderSQLServer' para el proveedor genérico de estado de sesión para Microsoft SQL Server.</li>
   <li>Correcciones en la clase 'Tool', función 'ListToCSV' al momento de exportar listas genericas a formato de archivo de texto plano CSV.</li>
+  <li>Correccion y optimización del proceso de exportación de listas genéricas a Microsoft Excel.</li>  
 </ul>
 
 
@@ -37,4 +38,4 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
 <strong>Versión:</strong> 1.0.3.2730<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 28 de marzo de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 30 de marzo de 2017. Ciudad de M&eacute;xico.
