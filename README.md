@@ -1,17 +1,18 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6 y Xamarin Mono 4.2.3/4.4.0 en adelante.
 
-<h2>Detalle de la versión 1.0.2.7951 (08/03/2017)</h2>
+<h2>Detalle de la versión 1.0.3.7951 (17/05/2017)</h2>
 <ul type="square">
   <li>Adición de la clase 'BaseHandler' para el manejo de controladores genericos ASHX de ASP.NET 4.0/4.5, emulando el patrón Modelo-Vista-Controlador.</li>
 </ul>
 
-<h2>Detalle de la versión 1.0.3.2730 (28/03/2017)</h2>
+<h2>Detalle de la versión 1.0.3.2730 (17/05/2017)</h2>
 <ul type="square">
+  <li>Adición del m&eacute;todo 'ToCollection<T>' en la clase 'Tool' para la conversión explicita de listas genéricas a colecciones genéricas.</li>
   <li>Adición de la clase 'ContainsSwith' para la emulación de la sentencia clave 'switch(x)... case' en C# para cadenas de carácteres.</li>
   <li>Correcciones en la clase 'Utilities.CustomSessionProviderSQLServer' para el proveedor genérico de estado de sesión para Microsoft SQL Server.</li>
   <li>Correcciones en la clase 'Tool', función 'ListToCSV' al momento de exportar listas genericas a formato de archivo de texto plano CSV.</li>
-  <li>Correccion y optimización del proceso de exportación de listas genéricas a Microsoft Excel.</li>  
+  <li>Correccion y optimización del proceso de exportación de listas genéricas a Microsoft Excel.</li>
 </ul>
 
 
@@ -38,4 +39,4 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
 <strong>Versión:</strong> 1.0.3.2730<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 30 de marzo de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 17 de mayo de 2017. Ciudad de M&eacute;xico.

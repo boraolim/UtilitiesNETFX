@@ -1122,6 +1122,13 @@
             <param name="destEncoding">Codificación destino.</param>
             <remarks></remarks>
         </member>
+        <member name="M:Utilities.Tool.ToCollection``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Convierte un archivo a una codificación de texto especifica.
+            </summary>
+            <param name="items">La lista generica en cuestión.</param>
+            <remarks>Devuelve una colección generica convertida.</remarks>
+        </member>
         <member name="T:Utilities.XMLFiles">
             <summary>
             Clase 'XMLFiles' para el manejo de archivos de configuración XML.
