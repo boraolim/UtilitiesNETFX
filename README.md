@@ -1,6 +1,11 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6 y Xamarin Mono 4.2.3/4.4.0 en adelante.
 
+<h2>Detalle de la versión 1.0.3.7951 (28/07/2017)</h2>
+<ul type="square">
+  <li>Adici&oacute;n del m&eacute;todo 'RandomRoulette' para la generación de números aleatorios en la clase 'Tool'.</li>
+</ul>
+
 <h2>Detalle de la versión 1.0.3.7951 (17/05/2017)</h2>
 <ul type="square">
   <li>Adición de la clase 'BaseHandler' para el manejo de controladores genericos ASHX de ASP.NET 4.0/4.5, emulando el patrón Modelo-Vista-Controlador.</li>
@@ -24,7 +29,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>Funciona al 100% para los servidores web Internet Information Services (Windows Server) y Apache Web Server (Linux Ubuntu Server con Mono ya configurado).</li>
 </ul>
 
-<p>Para su correcta ejecución en Microsoft Visual Studio, es necesario que se tenga con los siguientes paquetes Nuget para su correcta ejecución (se pueden bajar por medio de la <strong>Consola de Administración de Paquetes</strong> de Visual Studio o bien desde la opci&oacute;n <strong>Administrar los paquetes Nuget para la soluci&oacute;n</strong> de la opci&oacute;n <strong>Administrador de Paquetes Nuget</strong>, del men&uacute; <strong>Herramientas</strong> del mismo Visual Studio):</p>
+<p>Para su correcta ejecución en Microsoft Visual Studio y en ambiente de Producci&oacute;n/Pruebas, es necesario que se tenga con los siguientes paquetes Nuget para su correcta ejecución (se pueden bajar por medio de la <strong>Consola de Administración de Paquetes</strong> de Visual Studio o bien desde la opci&oacute;n <strong>Administrar los paquetes Nuget para la soluci&oacute;n</strong> de la opci&oacute;n <strong>Administrador de Paquetes Nuget</strong>, del men&uacute; <strong>Herramientas</strong> del mismo Visual Studio):</p>
 
 <ul type="square">
   <li>Entity Framework 6.1.3.</li>
@@ -39,4 +44,4 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
 <strong>Versión:</strong> 1.0.3.2730<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 17 de mayo de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 28 de julio de 2017. Ciudad de M&eacute;xico.

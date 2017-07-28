@@ -1110,6 +1110,13 @@
             <param name="items">La lista generica en cuestión.</param>
             <remarks>Devuelve una colección generica convertida.</remarks>
         </member>
+        <member name="M:Utilities.Tool.RandomRoulette(System.Int32,System.Int32)">
+            <summary>
+            Función que genera un numero aleatorio.
+            </summary>
+            <param name="Inicio">Valor de inicio.</param>
+            <param name="Final">Valor final.</param>
+        </member>
         <member name="T:Utilities.UTF8StringWriter">
             <summary>
             Clase 'UTF8StringWriter' para la serialización de valores XML en codificación UTF-8.
