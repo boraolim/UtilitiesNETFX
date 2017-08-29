@@ -216,6 +216,31 @@
             Identificador único para el cifrado Rijndael.
             </summary>
         </member>
+        <member name="F:Utilities.Credits.AuthorName">
+            <summary>
+            Defino aquí el nombre del autor de la librería.
+            </summary>
+        </member>
+        <member name="F:Utilities.Credits.Version">
+            <summary>
+            Versión del ensamblado.
+            </summary>
+        </member>
+        <member name="F:Utilities.Credits.Email">
+            <summary>
+            Correo electrónico del autor.
+            </summary>
+        </member>
+        <member name="F:Utilities.Credits.Repository">
+            <summary>
+            Información del repositorio de origen.
+            </summary>
+        </member>
+        <member name="F:Utilities.Credits.Advertencia">
+            <summary>
+            Advertencia de uso legal.
+            </summary>
+        </member>
         <member name="T:Utilities.UtilitiesException">
             <summary>
             Clase 'UtilitiesException' para el manejo de control de excepciones de la librería 'Utilities'.
