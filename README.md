@@ -1,6 +1,11 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6 y Xamarin Mono 4.2.3/4.4.0 en adelante.
 
+<h2>Detalle de la versión 1.0.5.3491 (26/10/2017)</h2>
+<ul type="square">
+  <li>Adecuación de la clase 'DataAccess' a la versión reciente de EntityFramework 6.2.0.</li>
+</ul>
+
 <h2>Detalle de la versión 1.0.4.6973 (29/08/2017)</h2>
 <ul type="square">
   <li>Correcciones adicionales para optimización de funciones.</li>
@@ -37,7 +42,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <p>Para su correcta ejecución en Microsoft Visual Studio y en ambiente de Producci&oacute;n/Pruebas, es necesario que se tenga con los siguientes paquetes Nuget para su correcta ejecución (se pueden bajar por medio de la <strong>Consola de Administración de Paquetes</strong> de Visual Studio o bien desde la opci&oacute;n <strong>Administrar los paquetes Nuget para la soluci&oacute;n</strong> de la opci&oacute;n <strong>Administrador de Paquetes Nuget</strong>, del men&uacute; <strong>Herramientas</strong> del mismo Visual Studio):</p>
 
 <ul type="square">
-  <li>Entity Framework 6.1.3.</li>
+  <li>Entity Framework 6.2.0.</li>
   <li>DotNet Zip 1.10.1.</li>
   <li>Iesi Collections 4.0.2.</li>
   <li>Document OpenXML SDK 2.5.</li>
@@ -47,6 +52,6 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
-<strong>Versión:</strong> 1.0.3.2730<br/>
+<strong>Versión:</strong> 1.0.5.3491<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 29 de agosto de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 26 de octubre de 2017. Ciudad de M&eacute;xico.
