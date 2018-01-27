@@ -241,31 +241,6 @@
             Propiedad de lectura que convierte el formato de codificación a UTF-8.
             </summary>
         </member>
-        <member name="F:Utilities.Credits.AuthorName">
-            <summary>
-            Defino aquí el nombre del autor de la librería.
-            </summary>
-        </member>
-        <member name="F:Utilities.Credits.Version">
-            <summary>
-            Versión del ensamblado.
-            </summary>
-        </member>
-        <member name="F:Utilities.Credits.Email">
-            <summary>
-            Correo electrónico del autor.
-            </summary>
-        </member>
-        <member name="F:Utilities.Credits.Repository">
-            <summary>
-            Información del repositorio de origen.
-            </summary>
-        </member>
-        <member name="F:Utilities.Credits.Advertencia">
-            <summary>
-            Advertencia de uso legal.
-            </summary>
-        </member>
         <member name="T:Utilities.UtilitiesException">
             <summary>
             Clase 'UtilitiesException' para el manejo de control de excepciones de la librería 'Utilities'.
@@ -1153,13 +1128,6 @@
             </summary>
             <param name="items">La lista generica en cuestión.</param>
             <remarks>Devuelve una colección generica convertida.</remarks>
-        </member>
-        <member name="M:Utilities.Tool.RandomRoulette(System.Int32,System.Int32)">
-            <summary>
-            Función que genera un numero aleatorio.
-            </summary>
-            <param name="Inicio">Valor de inicio.</param>
-            <param name="Final">Valor final.</param>
         </member>
         <member name="T:Utilities.XMLFiles">
             <summary>
