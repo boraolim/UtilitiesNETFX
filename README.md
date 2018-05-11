@@ -1,6 +1,11 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6/4.7 y Xamarin Mono 4.2.3 en adelante.
 
+<h2>Detalle de la versión 1.0.5.5678 (10/05/2018)</h2>
+<ul type="square">
+  <li>Optimizaci&oacute;n de c&oacute;digo fuente.</li>
+</ul>
+
 <h2>Detalle de la versión 1.0.5.5678 (27/01/2018)</h2>
 <ul type="square">
   <li>Incorporación de la clase <strong>CSVReader</strong> para realizar funciones de lectura y escritura de archivos del tipo CSV.</li>
@@ -48,15 +53,15 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 
 <ul type="square">
   <li>Entity Framework 6.2.0.</li>
-  <li>DotNet Zip 1.10.1.</li>
-  <li>Iesi Collections 4.0.3.</li>
+  <li>DotNet Zip 1.11.0.</li>
+  <li>Iesi Collections 4.0.4.</li>
   <li>Document OpenXML SDK 2.5.</li>
   <li>SpreadSheetLight 3.4.9.</li>
-  <li>NewtonSoft 10.0.3.</li>
+  <li>NewtonSoft 11.0.2.</li>
 </ul>  
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
 <strong>Versión:</strong> 1.0.5.5678<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 27 de enero de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 10 de mayo de 2017. Ciudad de M&eacute;xico.
