@@ -1110,6 +1110,14 @@
             <param name="items">La lista generica en cuestión.</param>
             <remarks>Devuelve una colección generica convertida.</remarks>
         </member>
+        <member name="M:Utilities.Tool.DataReaderMapToList``1(System.Data.IDataReader)">
+            <summary>
+            Convierte un objeto IDataReader en una lista genérica.
+            </summary>
+            <typeparam name="T">Tipo generico.</typeparam>
+            <param name="dr">El objeto DataReader</param>
+            <returns>Devuelve el contenido del objeto IDataReader a una lista generica.</returns>
+        </member>
         <member name="T:Utilities.UTF8StringWriter">
             <summary>
             Clase 'UTF8StringWriter' para la serialización de valores XML en codificación UTF-8.
@@ -1370,7 +1378,7 @@
             <param name="strArchivoZipOrigen">Archivo ZIP que se desea extraer la información.</param>
             <param name="strCarpetaDestino">Carpeta destino donde se enviará el contenido del archivo zip de origen.</param>
         </member>
-        <member name="M:Utilities.AjaxCallSignature.ProcessProperty(System.String,System.Type,System.String)">
+        <member name="M:Utilities.WebHandlerExtensions.AjaxCallSignature.ProcessProperty(System.String,System.Type,System.String)">
              <summary>
             
              </summary>
@@ -1379,63 +1387,63 @@
              <param name="parentNamespace">represents the full path of the parent node of the input parameter</param>
              <returns></returns>
         </member>
-        <member name="M:Utilities.AjaxCallSignature.HydrateValue(System.String,System.Type,System.String)">
+        <member name="M:Utilities.WebHandlerExtensions.AjaxCallSignature.HydrateValue(System.String,System.Type,System.String)">
             <summary>
             Hydrates CLR primitive types
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Utilities.AjaxCallSignature.HydrateClass(System.String,System.Type,System.String)">
+        <member name="M:Utilities.WebHandlerExtensions.AjaxCallSignature.HydrateClass(System.String,System.Type,System.String)">
             <summary>
             Hydrates complex types
             </summary>
+        </member>
+        <member name="M:Utilities.WebHandlerExtensions.BaseHandler.OnMethodInvoke(Utilities.OnMethodInvokeArgs)">
+            <summary>
+            Intercept the execution right before the handler method is called
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Utilities.WebHandlerExtensions.BaseHandler.AfterMethodInvoke(System.Object)">
+            <summary>
+            Intercept the execution right after the handler method is called
+            </summary>
+        </member>
+        <member name="M:Utilities.WebHandlerExtensions.BaseHandler.HandleRequest">
+            <summary>
+            Method used to handle the request as a normal ASHX.
+            To use this method just pass handlerequest=true on the request query string.
+            </summary>
+        </member>
+        <member name="M:Utilities.WebHandlerExtensions.BaseHandler.DefaultContentType">
+            <summary>
+            Returns the default content type returned by the handler.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Utilities.WebHandlerExtensions.BaseHandler.SkipDefaultSerialization">
+            <summary>
+            Setting this to false will make the handler to respond with exacly what the called method returned.
+            If true the handler will try to serialize the content based on the ContentType set.
+            </summary>
+        </member>
+        <member name="P:Utilities.WebHandlerExtensions.BaseHandler.SkipContentTypeEvaluation">
+            <summary>
+            Setting this to true will avoid the handler to change the content type wither to its default value or to its specified value on the request.
+            This is useful if you're handling the request yourself and need to specify it yourself.
+            </summary>
+        </member>
+        <member name="M:Utilities.WebHandlerExtensions.BaseHandler.Help">
+            <summary>
+            Prints an help page discribing the available methods on this handler.
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Utilities.RequireAuthenticationAttribute">
             <summary>
             Use this attribute to decorate the handler methods that need explicit authentication configuration.
             If this attibute is set to true it will validate if the user is authenticated.
             </summary>
-        </member>
-        <member name="M:Utilities.BaseHandler.OnMethodInvoke(Utilities.OnMethodInvokeArgs)">
-            <summary>
-            Intercept the execution right before the handler method is called
-            </summary>
-            <param name="e"></param>
-        </member>
-        <member name="M:Utilities.BaseHandler.AfterMethodInvoke(System.Object)">
-            <summary>
-            Intercept the execution right after the handler method is called
-            </summary>
-        </member>
-        <member name="M:Utilities.BaseHandler.HandleRequest">
-            <summary>
-            Method used to handle the request as a normal ASHX.
-            To use this method just pass handlerequest=true on the request query string.
-            </summary>
-        </member>
-        <member name="M:Utilities.BaseHandler.DefaultContentType">
-            <summary>
-            Returns the default content type returned by the handler.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="P:Utilities.BaseHandler.SkipDefaultSerialization">
-            <summary>
-            Setting this to false will make the handler to respond with exacly what the called method returned.
-            If true the handler will try to serialize the content based on the ContentType set.
-            </summary>
-        </member>
-        <member name="P:Utilities.BaseHandler.SkipContentTypeEvaluation">
-            <summary>
-            Setting this to true will avoid the handler to change the content type wither to its default value or to its specified value on the request.
-            This is useful if you're handling the request yourself and need to specify it yourself.
-            </summary>
-        </member>
-        <member name="M:Utilities.BaseHandler.Help">
-            <summary>
-            Prints an help page discribing the available methods on this handler.
-            </summary>
-            <returns></returns>
         </member>
         <member name="T:Utilities.ResponseContentTypes">
             <summary>
@@ -1713,6 +1721,203 @@
             <summary>
             Propiedad que guarda el nombre de la aplicación web.
             </summary>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.#ctor">
+            <summary>
+            Constructor del objeto 'MySQLConnectionDB'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'MySQLConnectionDB'.</remarks>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.Finalize">
+            <summary>
+            Destructor del objeto 'MySQLConnectionDB'.
+            </summary>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.ExecuteQuery(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="Parametros">Lista de parametros en formato JSON.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetData``1(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="Parametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="T:Utilities.PostgreSQLConnectionDB">
+            <summary>
+            Clase 'PostgreSQLConnection' para la ejecucíón de sentencias nativas SQL vía Proveedor generico de PostgreSQL.
+            </summary>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.#ctor">
+            <summary>
+            Constructor del objeto 'PostgreSQLConnection'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'PostgreSQLConnection'.</remarks>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.Finalize">
+            <summary>
+            Destructor del objeto 'PostgreSQLConnection'.
+            </summary>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.ExecuteQuery(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="Parametros">Lista de parametros en formato JSON.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.GetData``1(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="Parametros">Lista de parametros en formato JSON.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.#ctor">
+            <summary>
+            Constructor del objeto 'SQLServerConnectionDB'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'SQLServerConnectionDB'.</remarks>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.Finalize">
+            <summary>
+            Destructor del objeto 'SQLServerConnectionDB'.
+            </summary>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.ExecuteQuery(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="Parametros">Lista de parametros en formato JSON.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetData``1(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="Parametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
         <member name="T:Utilities.GroupOp">
             <summary>

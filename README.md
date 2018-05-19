@@ -1,6 +1,13 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6/4.7 y Xamarin Mono 4.2.3 en adelante.
 
+<h2>Detalle de la versión 1.0.6.2391 (19/05/2018)</h2>
+<ul type="square">
+  <li>Clase <strong>SQLConnectionDB</strong> para conexiones y consultas a Microsoft SQL Server.</li>
+  <li>Clase <strong>MySQLConnectionDB</strong> para conexiones y consultas a MySQL/MariaDB Server.</li>
+  <li>Clase <strong>PostgreSQLConnectionDB</strong> para conexiones y consultas a PostgreSQL Server.</li>
+</ul>
+
 <h2>Detalle de la versión 1.0.5.5678 (10/05/2018)</h2>
 <ul type="square">
   <li>Optimizaci&oacute;n de c&oacute;digo fuente.</li>
@@ -58,10 +65,14 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>Document OpenXML SDK 2.5.</li>
   <li>SpreadSheetLight 3.4.9.</li>
   <li>NewtonSoft 11.0.2.</li>
+  <li>MpgSQL 3.2.7. (Para la version de la librería en NETFX 4.5)</li>
+  <li>MpgSQL 2.2.7. (Para la version de la librería en NETFX 4.0)</li>
+  <li>MySQL.Data 6.9.12.0. (Para la version de la librería en NETFX 4.0/NETFX 4.5)</li>
+  <li>System.Threading.Tasks.Extensions 4.3.0.0. (Para la version de la librería en NETFX 4.5)</li>
 </ul>  
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
-<strong>Versión:</strong> 1.0.5.5678<br/>
+<strong>Versión:</strong> 1.0.6.2391<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 10 de mayo de 2017. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 19 de mayo de 2018. Ciudad de M&eacute;xico.
