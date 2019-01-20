@@ -1,5 +1,12 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
-Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6/4.7 y Xamarin Mono 4.2.3 en adelante.
+Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6/4.7 y Xamarin Mono 4.4.0 en adelante.
+
+<h2>Detalle de la versión 1.0.7.8941 (20/01/2019)</h2>
+<ul type="square">
+  <li>Ajuste a las clases <strong>SQLConnectionDB</strong> y <strong>MySQLConnectionDB</strong> para aceptar par&aacute;metros de manera din&aacute;mica para las consultas a SQL Server y MySQL/MariaDB Server.</li>
+  <li>Clase <strong>PDFHelper</strong> y <strong>CompatiblePDF</strong> para la generaci&oacute; de documentos PDF. Se pueden guardar archivos de imagenes o PDF para unirlos en un solo archivo PDF final. Tambi&eacute;n permite insertar texto en formato HTML5/CSS3 para la generaci&oacute;n de archivos PDF.</li>
+  <li>Otros ajustes adicionales.</li>
+</ul>
 
 <h2>Detalle de la versión 1.0.6.2391 (19/05/2018)</h2>
 <ul type="square">
@@ -60,19 +67,24 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 
 <ul type="square">
   <li>Entity Framework 6.2.0.</li>
-  <li>DotNet Zip 1.11.0.</li>
+  <li>DotNet Zip 1.13.0.</li>
   <li>Iesi Collections 4.0.4.</li>
   <li>Document OpenXML SDK 2.5.</li>
   <li>SpreadSheetLight 3.4.9.</li>
-  <li>NewtonSoft 11.0.2.</li>
-  <li>MpgSQL 3.2.7. (Para la version de la librería en NETFX 4.5)</li>
-  <li>MpgSQL 2.2.7. (Para la version de la librería en NETFX 4.0)</li>
-  <li>MySQL.Data 6.9.12.0. (Para la version de la librería en NETFX 4.0/NETFX 4.5)</li>
-  <li>System.Threading.Tasks.Extensions 4.3.0.0. (Para la version de la librería en NETFX 4.5)</li>
+  <li>NewtonSoft 12.0.1.</li>
+  <li>PDFsharp 1.32.3057.0.</li>
+  <li>iTextSharp 5.5.13.</li>
+  <li>iTextsharp.XMLWorker 5.5.13.</li>
+  <li>NgSQL 4.0.3. (Para la versión de la librería en NETFX 4.5)</li>
+  <li>NgSQL 2.2.7. (Para la versión de la librería en NETFX 4.0)</li>
+  <li>MySQL.Data 6.9.12.0. (Para la versión de la librería en NETFX 4.0/NETFX 4.5)</li>
+  <li>System.Runtime.CompilerServices.Unsafe 4.5.2. (Para la versión de la librería en NETFX 4.5)</li>
+  <li>System.Threading.Tasks.Extensions 4.5.2. (Para la versión de la librería en NETFX 4.5)</li>
+  <li>System.ValueTuple 4.5.0. (Para la versión de la librería en NETFX 4.5)</li>
 </ul>  
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
-<strong>Versión:</strong> 1.0.6.2391<br/>
+<strong>Versión:</strong> 1.0.7.8941<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 19 de mayo de 2018. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 20 de enero de 2019. Ciudad de M&eacute;xico.
