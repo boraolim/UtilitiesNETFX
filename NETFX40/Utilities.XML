@@ -1573,11 +1573,6 @@
             Clase abstracta llamada PDF Helper para funciones auxiliares.
             </summary>
         </member>
-        <member name="M:Utilities.PdfHelper.#cctor">
-            <summary>
-            Constructor del objeto de la clase PDFHelper.
-            </summary>
-        </member>
         <member name="M:Utilities.PdfHelper.#ctor">
             <summary>
             Constructor del objeto de la clase PDFHelper.
@@ -1608,14 +1603,22 @@
             <param name="width">Ancho de la imagen.</param>
             <param name="deleteImage">Flag de eliminación de archivos temporales, al momento de generar el documento PDF.</param>
         </member>
-        <member name="M:Utilities.PdfHelper.SaveHTMLAsPDF(Utilities.InformacionArchivoPDF,System.String,System.String,System.Boolean)">
+        <member name="M:Utilities.PdfHelper.SaveHTMLAsPDF(Utilities.InformacionArchivoPDF,System.String,System.String)">
             <summary>
             Función que guarda una cadena de texto HTML/CSS3 en un archivo PDF.
             </summary>
             <param name="InfoPDF">Objeto del tipo 'InformacionArchivoPDF'.</param>
             <param name="HTMLString">Cadena de texto HTML5/CSS3.</param>
             <param name="pdfFileFinalName">Archivo final de documento portable PDF.</param>
-            <param name="deleteImage">Flag de eliminación de archivos temporales, al momento de generar el documento PDF.</param>
+        </member>
+        <member name="M:Utilities.PdfHelper.SaveHTMLCSS3AsPDF(Utilities.InformacionArchivoPDF,System.String,System.String,System.String)">
+            <summary>
+            Función que guarda una cadena de texto HTML/CSS3 en un archivo PDF.
+            </summary>
+            <param name="InfoPDF">Objeto del tipo 'InformacionArchivoPDF'.</param>
+            <param name="HTMLString">Cadena de texto HTML5.</param>
+            <param name="CSS3String">Cadena de texto CSS3.</param>
+            <param name="pdfFileFinalName">Archivo final de documento portable PDF.</param>
         </member>
         <member name="M:Utilities.PdfHelper.ConcatenatePDF(Utilities.InformacionArchivoPDF,System.Collections.Generic.List{System.String},System.String,System.Boolean)">
             <summary>
@@ -1631,6 +1634,15 @@
             Función que obtiene el arrego en bytes el formato previo de un archivo PDF para guardar una cadena HTML5/CSS3.
             </summary>
             <param name="HTML5String">Cadena de texto HTML5/CSS3.</param>
+            <remarks>Fuente: https://stackoverflow.com/questions/25164257/how-to-convert-html-to-pdf-using-itextsharp </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Utilities.PdfHelper.PdfSharpConvert(System.String,System.String)">
+            <summary>
+            Función que obtiene el arrego en bytes el formato previo de un archivo PDF para guardar una cadena HTML5/CSS3.
+            </summary>
+            <param name="HTML5String">Cadena de texto HTML5.</param>
+            <param name="CSS3String">Cadena de texto CSS3.</param>
             <remarks>Fuente: https://stackoverflow.com/questions/25164257/how-to-convert-html-to-pdf-using-itextsharp </remarks>
             <returns></returns>
         </member>
