@@ -4,7 +4,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <h2>Detalle de la versión 1.0.8.4549 (14/04/2019)</h2>
 <ul type="square">
   <li>Funciones de conversi&oacute;n de objetos DataTable y DataReader a formato JSON en el m&oacute;dulo <strong>Tool.</strong></li>
-  <li>Ajuste a las clases <strong>SQLConnectionDB,</strong> <strong>PostgreSQLConnectionDB</strong> y <strong>MySQLConnectionDB</strong> para aceptar par&aacute;metros de manera din&aacute;mica para las consultas a SQL Server, MySQL/MariaDB Server y PostgreSQL.</li>
+  <li>Ajuste a las clases <strong>SQLConnectionDB,</strong> <strong>PostgreSQLConnectionDB</strong> y <strong>MySQLConnectionDB</strong> para devolver las consultas del tipo SELECT a SQL Server, MySQL/MariaDB Server y PostgreSQL en formato JSON.</li>
   <li>Otros ajustes adicionales.</li>
 </ul>
 
@@ -69,10 +69,8 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>Funciona al 100% para los servidores web Internet Information Services (Windows Server 2008 en adelante).</li>
 </ul>
 
-<p>Para su correcta ejecución en Microsoft Visual Studio y en ambiente de Producci&oacute;n/Pruebas, es necesario que se tenga con los siguientes paquetes Nuget para su correcta ejecución (se pueden bajar por medio de la <strong>Consola de Administración de Paquetes</strong> de Visual Studio o bien desde la opci&oacute;n <strong>Administrar los paquetes Nuget para la soluci&oacute;n</strong> de la opci&oacute;n <strong>Administrador de Paquetes Nuget</strong>, del men&uacute; <strong>Herramientas</strong> del mismo Visual Studio):</p>
-
 <h2>¡Buenas noticias!</h2>
-<p>Ya se puede descargar directamente desde la Consola de Adminitraci&oacute;n de Paquetes de Visual Studio (a partir de la versi&oacute;n 2010 de Microsoft Visual Studio ejecutando los siguientes comandos:</p>
+<p>Ya se puede descargar directamente desde la Consola de Adminitraci&oacute;n de Paquetes de Visual Studio (a partir de la versi&oacute;n 2010 de Microsoft Visual Studio) ejecutando los siguientes comandos:</p>
 
 <p>Para .NET Framework versi&oacute;n 4.5 y superior (Visual Studio 2012 en adelante):</p>
 <pre>Install-Package Utilities.dll</pre>
@@ -80,7 +78,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <p>Para .NET Framework versi&oacute;n 4.0 (Visual Studio 2010 SP1 en adelante):</p>
 <pre>Install-Package Utilities.NETFX40.dll</pre>
 
-<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute; para .NET Core 2.0 multiplataforma en adelante.</strong></p>
+<p>Al instalarlo directamente en Visual Studio, se instalan autom&aacuteticamente las siguientes dependencias necesarias para su correcta ejecuci&oacute;n:</p>
 
 <ul type="square">
   <li>Entity Framework 6.2.0.</li>
@@ -99,6 +97,8 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>System.Threading.Tasks.Extensions 4.5.2. (Para la versión de la librería en NETFX 4.5)</li>
   <li>System.ValueTuple 4.5.0. (Para la versión de la librería en NETFX 4.5)</li>
 </ul>  
+
+<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute; para .NET Core 2.0 multiplataforma en adelante.</strong></p>
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
