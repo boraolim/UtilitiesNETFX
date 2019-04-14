@@ -1226,6 +1226,20 @@
             <param name="strSentenciaSQL">Sentencia SQL.</param>
             <returns></returns>
         </member>
+        <member name="M:Utilities.Tool.DataTableToJSON(System.Data.DataTable)">
+            <summary>
+            Funcion que convierte un objeto DataTable en cadena de texto JSON.
+            </summary>
+            <param name="DtTable">El objeto DataTable.</param>
+            <returns>Devuelve un string en formato JSON del objeto DataTable.</returns>
+        </member>
+        <member name="M:Utilities.Tool.DataReaderToJSON(System.Data.IDataReader)">
+            <summary>
+            Funcion que convierte un objeto DataReader en una cadena de texto JSON.
+            </summary>
+            <param name="DrReader">El objeto IDataReader</param>
+            <returns>Devuelve un string en formato JSON del objeto DataTable.</returns>
+        </member>
         <member name="T:Utilities.XMLFiles">
             <summary>
             Clase 'XMLFiles' para el manejo de archivos de configuración XML.
@@ -1568,6 +1582,16 @@
             uses itextsharp 4.1.6 to convert any pdf to 1.4 compatible pdf, called instead of PdfReader.open
             </summary>
         </member>
+        <member name="M:Utilities.GenerarPDF.#ctor">
+            <summary>
+            Constructor del objeto de la clase PDFHelper.
+            </summary>
+        </member>
+        <member name="P:Utilities.GenerarPDF.Instance">
+            <summary>
+            Inyeccion de dependencias.
+            </summary>
+        </member>
         <member name="T:Utilities.PdfHelper">
             <summary>
             Clase abstracta llamada PDF Helper para funciones auxiliares.
@@ -1603,15 +1627,16 @@
             <param name="width">Ancho de la imagen.</param>
             <param name="deleteImage">Flag de eliminación de archivos temporales, al momento de generar el documento PDF.</param>
         </member>
-        <member name="M:Utilities.PdfHelper.SaveHTMLAsPDF(Utilities.InformacionArchivoPDF,System.String,System.String)">
+        <member name="M:Utilities.PdfHelper.SaveHTMLAsPDF(Utilities.InformacionArchivoPDF,System.String,System.String,System.Boolean)">
             <summary>
             Función que guarda una cadena de texto HTML/CSS3 en un archivo PDF.
             </summary>
             <param name="InfoPDF">Objeto del tipo 'InformacionArchivoPDF'.</param>
             <param name="HTMLString">Cadena de texto HTML5/CSS3.</param>
             <param name="pdfFileFinalName">Archivo final de documento portable PDF.</param>
+            <param name="DeleteFile">Flag que indica si el archivo de paso se elimina o no.</param>
         </member>
-        <member name="M:Utilities.PdfHelper.SaveHTMLCSS3AsPDF(Utilities.InformacionArchivoPDF,System.String,System.String,System.String)">
+        <member name="M:Utilities.PdfHelper.SaveHTMLCSS3AsPDF(Utilities.InformacionArchivoPDF,System.String,System.String,System.String,System.Boolean)">
             <summary>
             Función que guarda una cadena de texto HTML/CSS3 en un archivo PDF.
             </summary>
@@ -1619,6 +1644,7 @@
             <param name="HTMLString">Cadena de texto HTML5.</param>
             <param name="CSS3String">Cadena de texto CSS3.</param>
             <param name="pdfFileFinalName">Archivo final de documento portable PDF.</param>
+            <param name="DeleteFile">Flag que indica si el archivo de paso se elimina o no.</param>
         </member>
         <member name="M:Utilities.PdfHelper.ConcatenatePDF(Utilities.InformacionArchivoPDF,System.Collections.Generic.List{System.String},System.String,System.Boolean)">
             <summary>
@@ -1635,7 +1661,7 @@
             </summary>
             <param name="HTML5String">Cadena de texto HTML5/CSS3.</param>
             <remarks>Fuente: https://stackoverflow.com/questions/25164257/how-to-convert-html-to-pdf-using-itextsharp </remarks>
-            <returns></returns>
+            <returns>Devuelve el arreglo en bytes del molde previo al archivo PDF.</returns>
         </member>
         <member name="M:Utilities.PdfHelper.PdfSharpConvert(System.String,System.String)">
             <summary>
@@ -1644,7 +1670,7 @@
             <param name="HTML5String">Cadena de texto HTML5.</param>
             <param name="CSS3String">Cadena de texto CSS3.</param>
             <remarks>Fuente: https://stackoverflow.com/questions/25164257/how-to-convert-html-to-pdf-using-itextsharp </remarks>
-            <returns></returns>
+            <returns>Devuelve el arreglo en bytes del molde previo al archivo PDF.</returns>
         </member>
         <member name="T:Utilities.bootgridResults`1">
             <summary>
@@ -1947,6 +1973,27 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
         <member name="T:Utilities.PostgreSQLConnectionDB">
             <summary>
             Clase 'PostgreSQLConnection' para la ejecucíón de sentencias nativas SQL vía Proveedor generico de PostgreSQL.
@@ -2016,6 +2063,16 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
+        <member name="M:Utilities.PostgreSQLConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
         <member name="M:Utilities.SQLServerConnectionDB.#ctor">
             <summary>
             Constructor del objeto 'SQLServerConnectionDB'.
@@ -2079,6 +2136,27 @@
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
         <member name="T:Utilities.GroupOp">
             <summary>

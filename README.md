@@ -1,5 +1,12 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
-Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5/4.6/4.7 y Xamarin Mono 4.4.0 en adelante.
+Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5 en adelante.
+
+<h2>Detalle de la versión 1.0.8.4549 (14/04/2019)</h2>
+<ul type="square">
+  <li>Funciones de conversi&oacute;n de objetos DataTable y DataReader a formato JSON en el m&oacute;dulo <strong>Tool.</strong></li>
+  <li>Ajuste a las clases <strong>SQLConnectionDB,</strong> <strong>PostgreSQLConnectionDB</strong> y <strong>MySQLConnectionDB</strong> para aceptar par&aacute;metros de manera din&aacute;mica para las consultas a SQL Server, MySQL/MariaDB Server y PostgreSQL.</li>
+  <li>Otros ajustes adicionales.</li>
+</ul>
 
 <h2>Detalle de la versión 1.0.7.8941 (26/01/2019)</h2>
 <ul type="square">
@@ -59,11 +66,21 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 <ul type="square">
   <li>El ensamblado para la versión de Microsoft .NET Framework 4.0 solo puede ejecutarse en equipos que tengan instalado Microsoft .NET Framework 4.0 en el equipo local con Windows (Windows XP SP3/Vista/Seven/Windows 8/Windows 10 en adelante, Windows Server 2003/Windows Server 2008/Windows Server 2012 en adelante) y en Visual Studio 2010 en todas sus ediciones.</li>
   <li>El ensamblado para la versión de Microsoft .NET Framework 4.5 solo puede ejecutarse en equipos que tengan instalado Microsoft .NET Framework 4.5/4.6/4.7 en el equipo local con Windows (Windows Vista/Seven/Windows 8/Windows 10 en adelante, Windows Server 2008/Windows Server 2012 en adelante) y en Visual Studio 2012/2013/2015 en todas sus ediciones.</li>
-  <li>Ambos ensamblados se ejecutan sin problemas en el compilador Mono 4.2.3 en adelante.</li>
-  <li>Funciona al 100% para los servidores web Internet Information Services (Windows Server) y Apache Web Server (Linux Ubuntu Server con Mono ya configurado).</li>
+  <li>Funciona al 100% para los servidores web Internet Information Services (Windows Server 2008 en adelante).</li>
 </ul>
 
 <p>Para su correcta ejecución en Microsoft Visual Studio y en ambiente de Producci&oacute;n/Pruebas, es necesario que se tenga con los siguientes paquetes Nuget para su correcta ejecución (se pueden bajar por medio de la <strong>Consola de Administración de Paquetes</strong> de Visual Studio o bien desde la opci&oacute;n <strong>Administrar los paquetes Nuget para la soluci&oacute;n</strong> de la opci&oacute;n <strong>Administrador de Paquetes Nuget</strong>, del men&uacute; <strong>Herramientas</strong> del mismo Visual Studio):</p>
+
+<h2>¡Buenas noticias!</h2>
+<p>Ya se puede descargar directamente desde la Consola de Adminitraci&oacute;n de Paquetes de Visual Studio (a partir de la versi&oacute;n 2010 de Microsoft Visual Studio ejecutando los siguientes comandos:</p>
+
+<p>Para .NET Framework versi&oacute;n 4.5 y superior (Visual Studio 2012 en adelante):</p>
+<pre>Install-Package Utilities.dll</pre>
+
+<p>Para .NET Framework versi&oacute;n 4.0 (Visual Studio 2010 SP1 en adelante):</p>
+<pre>Install-Package Utilities.NETFX40.dll</pre>
+
+<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute; para .NET Core 2.0 multiplataforma en adelante.</strong></p>
 
 <ul type="square">
   <li>Entity Framework 6.2.0.</li>
@@ -72,10 +89,10 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>Document OpenXML SDK 2.5.</li>
   <li>SpreadSheetLight 3.4.9.</li>
   <li>NewtonSoft 12.0.1.</li>
-  <li>PDFsharp 1.32.3057.0.</li>
-  <li>iTextSharp 5.5.14.</li>
-  <li>iTextsharp.XMLWorker 5.5.14.</li>
-  <li>NgSQL 4.0.3. (Para la versión de la librería en NETFX 4.5)</li>
+  <li>PDFsharp 1.50.5147.0.</li>
+  <li>iTextSharp 5.5.13.</li>
+  <li>iTextsharp.XMLWorker 5.5.13.</li>
+  <li>NgSQL 4.0.6. (Para la versión de la librería en NETFX 4.5)</li>
   <li>NgSQL 2.2.7. (Para la versión de la librería en NETFX 4.0)</li>
   <li>MySQL.Data 6.9.12.0. (Para la versión de la librería en NETFX 4.0/NETFX 4.5)</li>
   <li>System.Runtime.CompilerServices.Unsafe 4.5.2. (Para la versión de la librería en NETFX 4.5)</li>
@@ -85,6 +102,6 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
-<strong>Versión:</strong> 1.0.7.8941<br/>
+<strong>Versión:</strong> 1.0.8.4549<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 26 de enero de 2019. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 14 de abril de 2019. Ciudad de M&eacute;xico.
