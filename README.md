@@ -1,7 +1,7 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5 en adelante.
 
-<h2>Detalle de la versión 1.0.9.0192 (16/04/2019)</h2>
+<h2>Detalle de la versión 1.0.9.0192 (18/04/2019)</h2>
 <ul type="square">
   <li>Ajuste de la función 'GeneratePDFFromFiles' del módulo 'PDFHelper'</li>
   <li>Otros ajustes adicionales.</li>
@@ -104,10 +104,10 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>System.ValueTuple 4.5.0. (Para la versión de la librería en NETFX 4.5)</li>
 </ul>  
 
-<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute;a para .NET Core 2.0 multiplataforma en adelante.</strong></p>
+<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute;a para .NET Core 2.0 multiplataforma en adelante. Puede consultarlo <a href="https://github.com/boraolim/UtilitiesNETFXCore">aqu&iacuteM;.</a></strong></p>
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
-<strong>Versión:</strong> 1.0.8.4549<br/>
+<strong>Versión:</strong> 1.0.9.0192<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 14 de abril de 2019. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 18 de abril de 2019. Ciudad de M&eacute;xico.
