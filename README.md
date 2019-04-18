@@ -104,7 +104,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
   <li>System.ValueTuple 4.5.0. (Para la versión de la librería en NETFX 4.5)</li>
 </ul>  
 
-<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute;a para .NET Core 2.0 multiplataforma en adelante. Puede consultarlo <a href="https://github.com/boraolim/UtilitiesNETFXCore">aqu&iacuteM;.</a></strong></p>
+<p><strong>NOTA: Ya no hay soporte para Mono 4.2 en adelante, debido a que se est&aacute; implementando una versi&oacuten de esta librer&iacute;a para .NET Core 2.0 multiplataforma en adelante. Puede consultarlo <a href="https://github.com/boraolim/UtilitiesNETFXCore">aqu&iacute;.</a></strong></p>
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
