@@ -3,7 +3,7 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 
 <h2>Detalle de la versión 1.0.9.0192 (18/04/2019)</h2>
 <ul type="square">
-  <li>Ajuste de la función 'GeneratePDFFromFiles' del módulo 'PDFHelper'</li>
+  <li>Ajuste de la función <strong>GeneratePDFFromFiles</strong> del módulo <strong>PDFHelper.</strong></li>
   <li>Otros ajustes adicionales.</li>
 </ul>
 
