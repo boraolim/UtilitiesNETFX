@@ -126,6 +126,43 @@
             <param name="stackTraceLevel">The stack trace level.</param>
             <returns></returns>
         </member>
+        <member name="F:Utilities.GlobalApp.FolderApp">
+            <summary>
+            Aqui definimos la variable que va a guardar exactamente el archivo log generado desde el servicio de Windows ya que 
+            si definimos la carpeta en donde se ejecuta el servicio, normalmente se generan los logs en %systemdrive%\system32 y no
+            es aconsejable colocarlos ahí.
+            </summary>
+        </member>
+        <member name="F:Utilities.GlobalApp.FolderLog">
+            <summary>
+            Carpeta LOG de la aplicación.
+            </summary>
+        </member>
+        <member name="F:Utilities.GlobalApp.ConnectionDB">
+            <summary>
+            Variable global que guarda las cadenas de conexión del archivo de configuración de la aplicacion (ConnectionStrings).
+            </summary>
+        </member>
+        <member name="F:Utilities.GlobalApp.ValoresApp">
+            <summary>
+            Variable global que guarda las claves de la seccion de valores de la aplicación (AppSettings).
+            </summary>
+        </member>
+        <member name="F:Utilities.GlobalApp.HostNameServer">
+            <summary>
+            Variable global que guarda el nombre del equipo.
+            </summary>
+        </member>
+        <member name="F:Utilities.GlobalApp.OSVersion">
+            <summary>
+            Variable global que guarda el nombre del sistema operativo del equipo.
+            </summary>
+        </member>
+        <member name="F:Utilities.GlobalApp.NETFXVersion">
+            <summary>
+            Variable global que guarda el detalle de la versión de .NET Framework del equipo.
+            </summary>
+        </member>
         <member name="T:Utilities.OrdinalProperty">
             <summary>
             Clase 'OrdinalProperty' que contiene la información de los objetos genéricos de las clases comunes.
@@ -1583,6 +1620,35 @@
             Inyeccion de dependencias.
             </summary>
         </member>
+        <member name="M:Utilities.GenerarPDF.GeneratePDFFromFiles(Utilities.InformacionArchivoPDF,System.Collections.Generic.List{System.String},System.String,System.Boolean)">
+            <summary>
+            Función que genera un archivo PDF desde un grupo de archivos de imagenes o imagenes digitalizadas, incluyendo un PDF.
+            </summary>
+            <param name="InfoPDF">Clase generica para la información de un archivo PDF.</param>
+            <param name="ListaArchivos">Array de lista de archivos desde la carpeta de origen.</param>
+            <param name="strPDFArchivoFinal">Archivo PDF final que se va a generar.</param>
+            <param name="DeleteFile">Flag que indica si se realiza la eliminación de los archivos de entrada.</param>
+            <remarks>Genera un documento portable final (archivo PDF). Si el proceso es exitoso, genera el archivo PDF. En caso contrario, lanzará una excepción.</remarks>
+        </member>
+        <member name="M:Utilities.GenerarPDF.HTMLToPDF(Utilities.InformacionArchivoPDF,System.String,System.String)">
+            <summary>
+            Función que genera un documento portable PDF por medio de codigo HTML5.
+            </summary>
+            <param name="InfoPDF">Clase generica para la información de un archivo PDF.</param>
+            <param name="HTMLString">Cadena de texto que contiene código HTML.</param>
+            <param name="strPDFArchivoFinal">Archivo PDF final que se va a generar.</param>
+            <remarks>Genera un documento portable final (archivo PDF). Si el proceso es exitoso, genera el archivo PDF. En caso contrario, lanzará una excepción.</remarks>
+        </member>
+        <member name="M:Utilities.GenerarPDF.HTMLToPDF(Utilities.InformacionArchivoPDF,System.String,System.String,System.String)">
+            <summary>
+            Función que genera un documento portable PDF por medio de codigo HTML5.
+            </summary>
+            <param name="InfoPDF">Clase generica para la información de un archivo PDF.</param>
+            <param name="HTMLString">Cadena de texto que contiene código HTML.</param>
+            <param name="CSS3String">Cadena de texto CSS3 para inyectarse al código HTML5.</param>
+            <param name="strPDFArchivoFinal">Archivo PDF final que se va a generar.</param>
+            <remarks>Genera un documento portable final (archivo PDF). Si el proceso es exitoso, genera el archivo PDF. En caso contrario, lanzará una excepción.</remarks>
+        </member>
         <member name="T:Utilities.PdfHelper">
             <summary>
             Clase abstracta llamada PDF Helper para funciones auxiliares.
@@ -2010,6 +2076,91 @@
             <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
         <member name="M:Utilities.MySQLConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.#ctor">
+            <summary>
+            Constructor del objeto 'ODBCConnectionDB'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'ODBCConnectionDB'.</remarks>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.Finalize">
+            <summary>
+            Destructor del objeto 'ODBCConnectionDB'.
+            </summary>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.Dispose">
+            <summary>
+            Método Dispose
+            </summary>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.Dispose(System.Boolean)">
+            <summary>
+            Método virtual para cerrar objetos.
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.ExecuteQuery(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Arreglo de parametros</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.GetData``1(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
             <summary>
             Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
             </summary>
