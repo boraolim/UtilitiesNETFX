@@ -1,10 +1,16 @@
 <h1>UtilitiesNETFX - Librería de funciones del programador para .NET.</h1>
 Librería genérica para las funciones del programador exclusiva para la plataforma de Microsoft .NET Framework 4.0/4.5 en adelante.
 
+<h2>Detalle de la versión 1.0.10.1106 (08/05/2019)</h2>
+<ul type="square">
+  <li>Objetos <strong>colModel</strong>, <strong>formatter</strong> y <strong>jqGridTemplate</strong> para la serialización de la estructura JSON de jqGrid.</li>
+  <li>Otros ajustes adicionales.</li>
+</ul>
+
 <h2>Detalle de la versión 1.0.9.7341 (29/04/2019)</h2>
 <ul type="square">
   <li>Ajuste de la funci&oacute;n <strong> GeneratePDFFromFiles</strong> del m&oacute;dulo <strong>PDFHelper.</strong></li>
-  <li>Incorporaci&oacute; de la clase <strong>ODBCConnectionDB </strong> para conexiones a Bases de Datos via OBDC.</li>
+  <li>Incorporaci&oacute;n de la clase <strong>ODBCConnectionDB </strong> para conexiones a Bases de Datos via OBDC.</li>
   <li>Otros ajustes adicionales.</li>
 </ul>
 
@@ -115,6 +121,6 @@ Librería genérica para las funciones del programador exclusiva para la platafo
 
 <h2>Información adicional</h2>
 <strong>Autor:</strong> OLIMPO BONILLA RAMIREZ.<br/>
-<strong>Versión:</strong> 1.0.9.7341<br/>
+<strong>Versión:</strong> 1.0.10.1106<br/>
 <strong>Correo electronico:</strong> boraolim@hotmail.com <br />
-<strong>Ultima actualización:</strong> 29 de abril de 2019. Ciudad de M&eacute;xico.
+<strong>Ultima actualización:</strong> 8 de mayo de 2019. Ciudad de M&eacute;xico.

@@ -1794,6 +1794,171 @@
             Array de contenido de la fila.
             </summary>
         </member>
+        <member name="T:Utilities.jqgridTemplate`1">
+            <summary>
+            Estructura 'jqGridTemplate' para la estructura final para el componente jqGrid que incluye el array de datos y modelo de columnas.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqgridTemplate`1.colModel">
+            <summary>
+            Array de objetos de columnas.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqgridTemplate`1.data">
+            <summary>
+            Array de datos del componente jqGrid.
+            </summary>
+        </member>
+        <member name="P:Utilities.jqgridTemplate`1.caption">
+            <summary>
+            Título del encabezado de jqGrid.
+            </summary>
+        </member>
+        <member name="T:Utilities.colModel">
+            <summary>
+            Estructura 'colModel' para la estructura de un modelo de columnas en el componente jqGrid.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.name">
+            <summary>
+            Campo o atributo de datos que se asociará la columna del grid.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.label">
+            <summary>
+            Título de la columna del jqGrid.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.width">
+            <summary>
+            Flag que indica el ancho de la columna del jqGrid (por defecto, 150).
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.align">
+            <summary>
+            Flag que indica si la alineación del texto de la columna es a la izquierda, derecha o justificada.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.search">
+            <summary>
+            Flag que indica si la columna es aplicable para búsqueda.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.frozen">
+            <summary>
+            Flag que indica si la columna del grid es congelada o no. 
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.resizable">
+            <summary>
+            Flag que indica si la columna del grid se puede aumentar o reducir su ancho.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.editable">
+            <summary>
+            Flag que indica si la columna del grid es editable.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.hidden">
+            <summary>
+            Flag que indica si la columna se oculta en el desplegado de datos del componente jqGrid.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.sortable">
+            <summary>
+            Flag que indica si la columna es ordenable, es decir, que se le aplicar ordenamiento ascendente o descendente.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.formatter">
+            <summary>
+            Indicador de tipo de formato.
+            </summary>
+        </member>
+        <member name="P:Utilities.colModel.formatoptions">
+            <summary>
+            Objeto 'formatOptions'.
+            </summary>
+        </member>
+        <member name="M:Utilities.colModel.#ctor">
+            <summary>
+            Constructor de la clase 'ColModel'.
+            </summary>
+        </member>
+        <member name="T:Utilities.formatoptions">
+            <summary>
+            Estructura 'formatoptions' para el formato de tipos de datos del módelo de columnas del componente jqGrid.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.decimalSeparator">
+            <summary>
+            String que indica el tipo de separador decimal, si es punto o coma.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.thousandsSeparator">
+            <summary>
+            String que indica el separador de millares, si es punto o coma.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.decimalPlaces">
+            <summary>
+            Entero que indica el número de digitos decimales de precisión.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.defaultValue">
+            <summary>
+            String que indica el valor de defecto para los datos númericos (enteros o reales).
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.prefix">
+            <summary>
+            String que indica el prefijo para los datos númericos (enteros, reales o monetarios).
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.suffix">
+            <summary>
+            String que indica el postfijo para los datos númericos (enteros, reales o monetarios).
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.baseLinkUrl">
+            <summary>
+            String que indica la liga URL de una dirección en internet.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.showAction">
+            <summary>
+            String que indica el Valor adicional que se agrega después de la baseLinkUrl.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.addParam">
+            <summary>
+            String que indica un parámetro adicional que se puede agregar después de la propiedad idName.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.target">
+            <summary>
+            String que indica, Si se establece, se agrega como un atributo adicional.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.idName">
+            <summary>
+            String que indica que es el primer parámetro que se agrega después de showAction. Por defecto, esto es ID.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.disabled">
+            <summary>
+            Flag que indica si un checkbox es habilitado o no.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.srcformat">
+            <summary>
+            Formato de fecha de origen.
+            </summary>
+        </member>
+        <member name="P:Utilities.formatoptions.newformat">
+            <summary>
+            Formato de fecha nuevo.
+            </summary>
+        </member>
         <member name="T:Utilities.jqGridResults`1">
             <summary>
             Estructura 'jqGridResults' para el componente jqGrid.
