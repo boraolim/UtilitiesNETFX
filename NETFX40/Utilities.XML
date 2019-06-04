@@ -1803,22 +1803,22 @@
             Array de contenido de la fila.
             </summary>
         </member>
-        <member name="T:Utilities.jqgridTemplate`1">
+        <member name="T:Utilities.jqgridTemplate">
             <summary>
             Estructura 'jqGridTemplate' para la estructura final para el componente jqGrid que incluye el array de datos y modelo de columnas.
             </summary>
         </member>
-        <member name="P:Utilities.jqgridTemplate`1.colModel">
+        <member name="P:Utilities.jqgridTemplate.colModel">
             <summary>
             Array de objetos de columnas.
             </summary>
         </member>
-        <member name="P:Utilities.jqgridTemplate`1.data">
+        <member name="P:Utilities.jqgridTemplate.data">
             <summary>
             Array de datos del componente jqGrid.
             </summary>
         </member>
-        <member name="P:Utilities.jqgridTemplate`1.caption">
+        <member name="P:Utilities.jqgridTemplate.caption">
             <summary>
             Título del encabezado de jqGrid.
             </summary>
@@ -2199,7 +2199,7 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetDataToJSON(System.String,System.String,System.UInt16,System.Int16)">
+        <member name="M:Utilities.MySQLConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
             <summary>
             Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
             </summary>
@@ -2216,6 +2216,29 @@
             <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
             <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
             <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="strTitulo">Título del reporte.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="strTitulo">Título del reporte.</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>    
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
@@ -2301,6 +2324,29 @@
             <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
             <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
             <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="strTitulo">Título del reporte.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.ODBCConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="strTitulo">Título del reporte.</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>    
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
@@ -2448,7 +2494,7 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJSON(System.String,System.String,System.UInt16,System.Int16)">
+        <member name="M:Utilities.SQLServerConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
             <summary>
             Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
             </summary>
@@ -2465,6 +2511,29 @@
             <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
             <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
             <param name="ListaParametros">Arreglo de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="strTitulo">Título del reporte.</param>
+            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="strTitulo">Título del reporte.</param>
+            <param name="ListaParametros">Arreglo de parámetros.</param>    
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
