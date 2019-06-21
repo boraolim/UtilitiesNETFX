@@ -4,62 +4,6 @@
         <name>Utilities</name>
     </assembly>
     <members>
-        <member name="T:Utilities.DbContexto">
-            <summary>
-            Objeto interno 'DbContexto' del tipo Entity Framework CodeFirst para la ejecución de consultas SQL nativas en Base de Datos.
-            </summary>
-        </member>
-        <member name="M:Utilities.DbContexto.#ctor(System.String)">
-            <summary>
-            Constructor del objeto 'DbContexto'.
-            </summary>
-            <param name="nameOrConnectionString">Nombre de la cadena de conexión a la Base de Datos.</param>
-        </member>
-        <member name="M:Utilities.DbContexto.Finalize">
-            <summary>
-            Destructor del objeto 'Contexto'.
-            </summary>
-        </member>
-        <member name="T:Utilities.DetailLOG">
-            <summary>
-            Clase auxiliar 'DetailLOG' para el objeto 'LOGFiles' que registra la lista de eventos.
-            </summary>
-        </member>
-        <member name="M:Utilities.DetailLOG.#ctor">
-            <summary>
-            Constructor del objeto 'DetailLOG'.
-            </summary>
-        </member>
-        <member name="P:Utilities.DetailLOG.Id">
-            <summary>
-            Identificador del evento.
-            </summary>
-        </member>
-        <member name="P:Utilities.DetailLOG.Fecha">
-            <summary>
-            Fecha actual del evento.
-            </summary>
-        </member>
-        <member name="P:Utilities.DetailLOG.TipoEvento">
-            <summary>
-            Tipo de información del evento (o tipo de evento).
-            </summary>
-        </member>
-        <member name="P:Utilities.DetailLOG.Numero">
-            <summary>
-            Número del evento.
-            </summary>
-        </member>
-        <member name="P:Utilities.DetailLOG.Comentario">
-            <summary>
-            Comentario del evento.
-            </summary>
-        </member>
-        <member name="P:Utilities.DetailLOG.Valor">
-            <summary>
-            Valor. Si el evento realiza una función que devuelve datos, colocar el valor devuelto a este atributo en formato de cadena de texto.
-            </summary>
-        </member>
         <member name="T:Utilities.AssemblyInfo">
             <summary>
             Gets the values from the AssemblyInfo.cs file for the current executing assembly
@@ -125,6 +69,62 @@
             </summary>
             <param name="stackTraceLevel">The stack trace level.</param>
             <returns></returns>
+        </member>
+        <member name="T:Utilities.DbContexto">
+            <summary>
+            Objeto interno 'DbContexto' del tipo Entity Framework CodeFirst para la ejecución de consultas SQL nativas en Base de Datos.
+            </summary>
+        </member>
+        <member name="M:Utilities.DbContexto.#ctor(System.String)">
+            <summary>
+            Constructor del objeto 'DbContexto'.
+            </summary>
+            <param name="nameOrConnectionString">Nombre de la cadena de conexión a la Base de Datos.</param>
+        </member>
+        <member name="M:Utilities.DbContexto.Finalize">
+            <summary>
+            Destructor del objeto 'Contexto'.
+            </summary>
+        </member>
+        <member name="T:Utilities.DetailLOG">
+            <summary>
+            Clase auxiliar 'DetailLOG' para el objeto 'LOGFiles' que registra la lista de eventos.
+            </summary>
+        </member>
+        <member name="M:Utilities.DetailLOG.#ctor">
+            <summary>
+            Constructor del objeto 'DetailLOG'.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Id">
+            <summary>
+            Identificador del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Fecha">
+            <summary>
+            Fecha actual del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.TipoEvento">
+            <summary>
+            Tipo de información del evento (o tipo de evento).
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Numero">
+            <summary>
+            Número del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Comentario">
+            <summary>
+            Comentario del evento.
+            </summary>
+        </member>
+        <member name="P:Utilities.DetailLOG.Valor">
+            <summary>
+            Valor. Si el evento realiza una función que devuelve datos, colocar el valor devuelto a este atributo en formato de cadena de texto.
+            </summary>
         </member>
         <member name="F:Utilities.GlobalApp.FolderApp">
             <summary>
@@ -303,6 +303,31 @@
             Identificador único para el cifrado Rijndael.
             </summary>
         </member>
+        <member name="T:Utilities.ColumnAttribute">
+            <summary>
+            Clase 'ColumAttribute' que especifica los atributos de un campo.
+            </summary>
+        </member>
+        <member name="T:Utilities.TextFileReader">
+            <summary>
+            Clase 'TextFileReader' para la lectura de archivos de texto y CSV delimitado.
+            </summary>
+        </member>
+        <member name="T:Utilities.TextFileReader`1">
+            <summary>
+            Clase 'TextFileReader' para la lectura de archivos de texto y CSV delimitado para tipos genericos.
+            </summary>
+        </member>
+        <member name="T:Utilities.UTF8StringWriter">
+            <summary>
+            Clase 'UTF8StringWriter' para la serialización de valores XML en codificación UTF-8.
+            </summary>
+        </member>
+        <member name="P:Utilities.UTF8StringWriter.Encoding">
+            <summary>
+            Propiedad de lectura que convierte el formato de codificación a UTF-8.
+            </summary>
+        </member>
         <member name="T:Utilities.UtilitiesException">
             <summary>
             Clase 'UtilitiesException' para el manejo de control de excepciones de la librería 'Utilities'.
@@ -332,6 +357,21 @@
             </summary>
             <param name="info"></param>
             <param name="context"></param>
+        </member>
+        <member name="M:Utilities.CustomSessionProviderSQLServer.#ctor">
+            <summary>
+            Constructor del objeto.
+            </summary>
+        </member>
+        <member name="M:Utilities.CustomSessionProviderSQLServer.Finalize">
+            <summary>
+            Destructor del objeto.
+            </summary>
+        </member>
+        <member name="P:Utilities.CustomSessionProviderSQLServer.ApplicationName">
+            <summary>
+            Propiedad que guarda el nombre de la aplicación web.
+            </summary>
         </member>
         <member name="T:Utilities.Correo">
             <summary>
@@ -675,12 +715,6 @@
              <remarks>Realiza la operación de envio de archivos a una dirección FTP remota.</remarks>
             </summary>
         </member>
-        <member name="M:Utilities.FTP.UploadFileToFTPAsync">
-            <summary>
-            Función que realiza el envio de archivos vía FTP vía asincrona.
-            <remarks>Realiza la operación de envio de archivos a una dirección FTP remota de manera asincronica.</remarks>
-            </summary>
-        </member>
         <member name="T:Utilities.JSONSerializacion`1">
             <summary>
             Clase 'JSONSerializacion' para el manejo de conversion de tipos genericos a JSON.
@@ -868,21 +902,6 @@
              <param name="obj">Instancia del objeto 'LOGFiles'.</param>
              <remarks>Escribe de manera directa la información en una linea de texto dentro del archivo Log (sin parámetros).</remarks>
             
-        </member>
-        <member name="T:Utilities.ColumnAttribute">
-            <summary>
-            Clase 'ColumAttribute' que especifica los atributos de un campo.
-            </summary>
-        </member>
-        <member name="T:Utilities.TextFileReader">
-            <summary>
-            Clase 'TextFileReader' para la lectura de archivos de texto y CSV delimitado.
-            </summary>
-        </member>
-        <member name="T:Utilities.TextFileReader`1">
-            <summary>
-            Clase 'TextFileReader' para la lectura de archivos de texto y CSV delimitado para tipos genericos.
-            </summary>
         </member>
         <member name="T:Utilities.RijndaelManagedEncryption">
             <summary>
@@ -1257,16 +1276,6 @@
             </summary>
             <param name="DrReader">El objeto IDataReader</param>
             <returns>Devuelve un string en formato JSON del objeto DataTable.</returns>
-        </member>
-        <member name="T:Utilities.UTF8StringWriter">
-            <summary>
-            Clase 'UTF8StringWriter' para la serialización de valores XML en codificación UTF-8.
-            </summary>
-        </member>
-        <member name="P:Utilities.UTF8StringWriter.Encoding">
-            <summary>
-            Propiedad de lectura que convierte el formato de codificación a UTF-8.
-            </summary>
         </member>
         <member name="T:Utilities.XMLFiles">
             <summary>
@@ -1879,11 +1888,6 @@
             Objeto 'formatOptions'.
             </summary>
         </member>
-        <member name="M:Utilities.colModel.#ctor">
-            <summary>
-            Constructor de la clase 'ColModel'.
-            </summary>
-        </member>
         <member name="T:Utilities.formatoptions">
             <summary>
             Estructura 'formatoptions' para el formato de tipos de datos del módelo de columnas del componente jqGrid.
@@ -2121,16 +2125,6 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
-        <member name="M:Utilities.DataAccess.ExecuteQueryAsync(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno de manera asíncrona.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
         <member name="M:Utilities.DataAccess.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
             <summary>
             Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
@@ -2141,52 +2135,102 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
-        <member name="M:Utilities.DataAccess.GetDataAsync``1(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.CustomSessionProviderSQLServer.#ctor">
-            <summary>
-            Constructor del objeto.
-            </summary>
-        </member>
-        <member name="M:Utilities.CustomSessionProviderSQLServer.Finalize">
-            <summary>
-            Destructor del objeto.
-            </summary>
-        </member>
-        <member name="P:Utilities.CustomSessionProviderSQLServer.ApplicationName">
-            <summary>
-            Propiedad que guarda el nombre de la aplicación web.
-            </summary>
-        </member>
         <member name="M:Utilities.MySQLConnectionDB.#ctor">
+            <summary>
+            Constructor privado del objeto 'MySQLConnectionDB'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'MySQLConnectionDB'.</remarks>
+        </member>
+        <member name="P:Utilities.MySQLConnectionDB.Instance">
             <summary>
             Constructor del objeto 'MySQLConnectionDB'.
             </summary>
             <remarks>Inicia los atributos del objeto 'MySQLConnectionDB'.</remarks>
         </member>
-        <member name="M:Utilities.MySQLConnectionDB.Finalize">
+        <member name="M:Utilities.MySQLConnectionDB.Close">
             <summary>
-            Destructor del objeto 'MySQLConnectionDB'.
+            Cierre del objeto.
             </summary>
         </member>
         <member name="M:Utilities.MySQLConnectionDB.Dispose">
             <summary>
-            Método Dispose
+            Liberación del objeto.
             </summary>
         </member>
-        <member name="M:Utilities.MySQLConnectionDB.Dispose(System.Boolean)">
+        <member name="M:Utilities.MySQLConnectionDB.InitVars">
             <summary>
-            Método virtual para cerrar objetos.
+            Creación de variables locales.
             </summary>
-            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.DestroyVars">
+            <summary>
+            Destrucción de variables locales.
+            </summary>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato set de datos.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetData(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato set de datos.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parametros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataToJSON(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON, con parámetros.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataTojqGridJSON(System.String,System.String,System.UInt16,System.Int16,System.String)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON para jqGrid.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="Titulo">Título del reporte personalizado.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.MySQLConnectionDB.GetDataTojqGridJSON(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16,System.String)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON para jqGrid, con parámetros.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="Titulo">Título del reporte personalizado.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
         </member>
         <member name="M:Utilities.MySQLConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
             <summary>
@@ -2200,103 +2244,113 @@
         </member>
         <member name="M:Utilities.MySQLConnectionDB.ExecuteQuery(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
             <summary>
-            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno con parámetros.
             </summary>
             <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
             <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parametros</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
+        <member name="M:Utilities.OBDCConnectionDB.#ctor">
             <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
+            Constructor privado del objeto 'ODBCConnectionDB'.
             </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+            <remarks>Inicia los atributos del objeto 'ODBCConnectionDB'.</remarks>
         </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetData``1(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <param name="strTitulo">Título del reporte.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.MySQLConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.Collections.Generic.List{MySql.Data.MySqlClient.MySqlParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="strTitulo">Título del reporte.</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>    
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.#ctor">
+        <member name="P:Utilities.OBDCConnectionDB.Instance">
             <summary>
             Constructor del objeto 'ODBCConnectionDB'.
             </summary>
             <remarks>Inicia los atributos del objeto 'ODBCConnectionDB'.</remarks>
         </member>
-        <member name="M:Utilities.ODBCConnectionDB.Finalize">
+        <member name="M:Utilities.OBDCConnectionDB.Close">
             <summary>
-            Destructor del objeto 'ODBCConnectionDB'.
+            Cierre del objeto.
             </summary>
         </member>
-        <member name="M:Utilities.ODBCConnectionDB.Dispose">
+        <member name="M:Utilities.OBDCConnectionDB.Dispose">
             <summary>
-            Método Dispose
+            Liberación del objeto.
             </summary>
         </member>
-        <member name="M:Utilities.ODBCConnectionDB.Dispose(System.Boolean)">
+        <member name="M:Utilities.OBDCConnectionDB.InitVars">
             <summary>
-            Método virtual para cerrar objetos.
+            Creación de variables locales.
             </summary>
-            <param name="disposing"></param>
         </member>
-        <member name="M:Utilities.ODBCConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
+        <member name="M:Utilities.OBDCConnectionDB.DestroyVars">
+            <summary>
+            Destrucción de variables locales.
+            </summary>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato set de datos.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.GetData(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato set de datos.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parametros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.GetDataToJSON(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON, con parámetros.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.GetDataTojqGridJSON(System.String,System.String,System.UInt16,System.Int16,System.String)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON para jqGrid.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="Titulo">Título del reporte personalizado.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.GetDataTojqGridJSON(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16,System.String)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON para jqGrid, con parámetros.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="Titulo">Título del reporte personalizado.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.OBDCConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
             <summary>
             Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
             </summary>
@@ -2306,182 +2360,113 @@
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
-        <member name="M:Utilities.ODBCConnectionDB.ExecuteQuery(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
+        <member name="M:Utilities.OBDCConnectionDB.ExecuteQuery(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
             <summary>
-            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno con parámetros.
             </summary>
             <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
             <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parametros</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.GetData``1(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <param name="strTitulo">Título del reporte.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.ODBCConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Odbc.OdbcParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="strTitulo">Título del reporte.</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>    
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="T:Utilities.PostgreSQLConnectionDB">
-            <summary>
-            Clase 'PostgreSQLConnection' para la ejecucíón de sentencias nativas SQL vía Proveedor generico de PostgreSQL.
-            </summary>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.#ctor">
-            <summary>
-            Constructor del objeto 'PostgreSQLConnection'.
-            </summary>
-            <remarks>Inicia los atributos del objeto 'PostgreSQLConnection'.</remarks>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.Finalize">
-            <summary>
-            Destructor del objeto 'PostgreSQLConnection'.
-            </summary>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.Dispose">
-            <summary>
-            Método Dispose
-            </summary>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.Dispose(System.Boolean)">
-            <summary>
-            Método virtual para cerrar objetos.
-            </summary>
-            <param name="disposing"></param>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.ExecuteQuery(System.String,System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="Parametros">Lista de parametros en formato JSON.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.GetData``1(System.String,System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="Parametros">Lista de parametros en formato JSON.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.PostgreSQLConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
         <member name="M:Utilities.SQLServerConnectionDB.#ctor">
+            <summary>
+            Constructor privado del objeto 'SQLServerConnectionDB'.
+            </summary>
+            <remarks>Inicia los atributos del objeto 'SQLServerConnectionDB'.</remarks>
+        </member>
+        <member name="P:Utilities.SQLServerConnectionDB.Instance">
             <summary>
             Constructor del objeto 'SQLServerConnectionDB'.
             </summary>
             <remarks>Inicia los atributos del objeto 'SQLServerConnectionDB'.</remarks>
         </member>
-        <member name="M:Utilities.SQLServerConnectionDB.Finalize">
+        <member name="M:Utilities.SQLServerConnectionDB.Close">
             <summary>
-            Destructor del objeto 'SQLServerConnectionDB'.
+            Cierre del objeto.
             </summary>
         </member>
         <member name="M:Utilities.SQLServerConnectionDB.Dispose">
             <summary>
-            Método Dispose
+            Liberación del objeto.
             </summary>
         </member>
-        <member name="M:Utilities.SQLServerConnectionDB.Dispose(System.Boolean)">
+        <member name="M:Utilities.SQLServerConnectionDB.InitVars">
             <summary>
-            Método virtual para cerrar objetos.
+            Creación de variables locales.
             </summary>
-            <param name="disposing"></param>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.DestroyVars">
+            <summary>
+            Destrucción de variables locales.
+            </summary>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato set de datos.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetData(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato set de datos.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parametros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJSON(System.String,System.String,System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON, con parámetros.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataTojqGridJSON(System.String,System.String,System.UInt16,System.Int16,System.String)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON para jqGrid.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="Titulo">Título del reporte personalizado.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
+        </member>
+        <member name="M:Utilities.SQLServerConnectionDB.GetDataTojqGridJSON(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16,System.String)">
+            <summary>
+            Función que ejecuta una sentencia SQL del tipo SELECT o rutina sin parámetros con registros de retorno en formato de texto JSON para jqGrid, con parámetros.
+            </summary>
+            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
+            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
+            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
+            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
+            <param name="Titulo">Título del reporte personalizado.</param>
+            <returns>Devuelve una cadena de texto en formato JSON si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción (cadena de texto vacía).</returns>
         </member>
         <member name="M:Utilities.SQLServerConnectionDB.ExecuteQuery(System.String,System.String,System.UInt16,System.Int16)">
             <summary>
@@ -2495,79 +2480,14 @@
         </member>
         <member name="M:Utilities.SQLServerConnectionDB.ExecuteQuery(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
             <summary>
-            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE con un arreglo parámetros con registros de retorno.
+            Función que ejecuta una sentencia SQL del tipo INSERT, UPDATE o DELETE sin parámetros con registros de retorno con parámetros.
             </summary>
             <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
             <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parametros.</param>
+            <param name="ListaParametros">Lista de parámetros.</param>
             <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
             <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
             <returns>Devuelve un entero que indica el número de registros afectados, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetData``1(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetData``1(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una colección generica con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetData(System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJSON(System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <param name="strTitulo">Título del reporte.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
-        </member>
-        <member name="M:Utilities.SQLServerConnectionDB.GetDataToJqGrid(System.String,System.String,System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter},System.UInt16,System.Int16)">
-            <summary>
-            Función que ejecuta una sentencia SQL del tipo SELECT sin parámetros con registros de retorno y devuelve el resultado en formato JSON para jqGridModel.
-            </summary>
-            <param name="NameConnectionString">Nombre de la cadena de conexión tomada desde el archivo de configuración.</param>
-            <param name="strSentenciaSQL">Sentencia SQL a ejecutar</param>
-            <param name="strTitulo">Título del reporte.</param>
-            <param name="ListaParametros">Arreglo de parámetros.</param>    
-            <param name="CommandTimeOut">Tiempo de ejecución de la consulta en segundos</param>
-            <param name="Intentos">Número de intentos de ejecución de la consulta.</param>
-            <returns>Devuelve una cadena de texto en formato JSON con los datos traidos de la consulta SELECT ejecutada, si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
         <member name="T:Utilities.GroupOp">
             <summary>
@@ -2728,6 +2648,1393 @@
             <summary>
             Condición NO CONTIENE.
             </summary>
+        </member>
+        <member name="T:Utilities.FieldType">
+            <summary>
+              Indicates whether text fields are delimited or fixed width.
+            </summary>
+        </member>
+        <member name="F:Utilities.FieldType.Delimited">
+            <summary>
+              Indicates that the fields are delimited.
+            </summary>
+        </member>
+        <member name="F:Utilities.FieldType.FixedWidth">
+            <summary>
+              Indicates that the fields are fixed width.
+            </summary>
+        </member>
+        <member name="T:Utilities.GenericParser">
+            <summary>
+            The <see cref="T:Utilities.GenericParser"/> class is designed to be a flexible and efficient manner
+            of parsing various flat files formats.
+            </summary>
+            <threadsafety static="false" instance="false"/>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultMaxBufferSize">
+            <summary>
+              Defines the default max buffer size (4096).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultMaxRows">
+            <summary>
+              Defines the max rows value (0 = no limit).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultSkipStartingDataRows">
+            <summary>
+              Defines the number of skip starting data rows (0).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultExpectedColumnCount">
+            <summary>
+              Defines the number of expected columns (0 = no limit).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultFirstRowHasHeader">
+            <summary>
+              Defines the default first row has a header (false).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultTrimResults">
+            <summary>
+              Defines the default value for trim results (false).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaulStripControlCharacters">
+            <summary>
+              Defines the default value for stripping control characters (false).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaulSkipEmptyRows">
+            <summary>
+              Defines the default value for skipping empty rows (true).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultTextFieldType">
+            <summary>
+              Defines the default value for text field type (Delimited).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultFirstRowSetsExpectedColumnCount">
+            <summary>
+              Defines the default for first row sets the expected column count (false).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultColumnDelimiter">
+            <summary>
+              Defines the default column delimiter (',').
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultTextQualifier">
+            <summary>
+              Defines the default text qualifier ('\"').
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.DefaultCommentCharacter">
+            <summary>
+              Defines the default comment row character ('#').
+            </summary>
+        </member>
+        <member name="T:Utilities.GenericParser.RowType">
+            <summary>
+              Indicates the current type of row being processed.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.RowType.Unknown">
+            <summary>
+              The row type is unknown and needs to be determined.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.RowType.CommentRow">
+            <summary>
+              The row type is a comment row and can be ignored.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.RowType.HeaderRow">
+            <summary>
+              The row type is a header row to name the columns.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.RowType.SkippedRow">
+            <summary>
+              The row type is a skipped row that is not intended to be extracted.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.RowType.DataRow">
+            <summary>
+              The row type is data row that is intended to be extracted.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser.CloneArray``1(``0[])">
+            <summary>
+              Clones the provided array in a type-friendly way.
+            </summary>
+            <typeparam name="T">The type of the array to clone.</typeparam>
+            <param name="array">The array to clone.</param>
+            <returns>The cloned version of the array.</returns>
+        </member>
+        <member name="M:Utilities.GenericParser.#ctor">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParser"/> with the default settings.
+            </summary>
+            <remarks>
+              When using this constructor, the datasource must be set prior to using the parser
+              (using <see cref="M:Utilities.GenericParser.SetDataSource(System.String)"/>), otherwise an exception will be thrown.
+            </remarks>
+        </member>
+        <member name="M:Utilities.GenericParser.#ctor(System.String)">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParser"/> and sets the initial datasource
+              as the file referenced by the string passed in.
+            </summary>
+            <param name="strFileName">The file name to set as the initial datasource.</param>
+            <exception cref="T:System.ArgumentNullException">Supplying <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">Supplying a filename to a file that does not exist.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParser.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParser"/> and sets the initial datasource
+              as the file referenced by the string passed in with the provided encoding.
+            </summary>
+            <param name="strFileName">The file name to set as the initial datasource.</param>
+            <param name="encoding">The <see cref="T:System.Text.Encoding"/> of the file being referenced.</param>
+            <exception cref="T:System.ArgumentNullException">Supplying <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">Supplying a filename to a file that does not exist.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParser.#ctor(System.IO.TextReader)">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParser"/> and sets the initial datasource
+              as the <see cref="T:System.IO.TextReader"/> passed in.
+            </summary>
+            <param name="txtReader">The <see cref="T:System.IO.TextReader"/> containing the data to be parsed.</param>
+            <exception cref="T:System.ArgumentNullException">Supplying <see langword="null"/>.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.IsDisposed">
+            <summary>
+               Gets whether or not the instance has been disposed of.
+            </summary>
+            <value>
+              <para>
+                <see langword="true"/> - Indicates the instance has be disposed of.
+              </para>
+              <para>
+                <see langword="false"/> - Indicates the instance has not be disposed of.
+              </para>
+            </value>
+        </member>
+        <member name="P:Utilities.GenericParser.ColumnWidths">
+            <summary>
+              Gets or sets an integer array indicating the number of characters needed for each column.
+            </summary>
+            <value>An int[] containing the number of spaces for each column.</value>
+            <remarks>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+              <para>
+                By setting this property, the <see cref="P:Utilities.GenericParser.TextFieldType"/> and <see cref="P:Utilities.GenericParser.ExpectedColumnCount"/> are automatically updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">Passing in an empty array or an
+            array of values that have a number less than one.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.MaxBufferSize">
+            <summary>
+              Gets or sets the maximum size of the internal buffer used to cache the data.
+            </summary>
+            <value>The maximum size of the internal buffer to cache data from the datasource.</value>
+            <remarks>
+              <para>
+                Maintaining the smallest number possible here improves memory usage, but
+                trades it off for higher CPU usage. The <see cref="P:Utilities.GenericParser.MaxBufferSize"/> must
+                be at least the size of one column of data, plus the Max(column delimiter
+                width, row delimiter width).
+              </para>
+              <para>
+                Default: 4096
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.ArgumentOutOfRangeException">Setting the value to something less than one.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.MaxRows">
+            <summary>
+              Gets or sets the maximum number of rows to parse.
+            </summary>
+            <value>The maximum number of rows to parse.</value>
+            <remarks>
+              <para>
+                Setting the value to zero will cause all of the rows to be returned.
+              </para>
+             <para>
+               Default: 0
+             </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.SkipStartingDataRows">
+            <summary>
+              Gets or sets the number of rows of data to ignore at the start of the file.
+            </summary>
+            <value>The number of data rows to initially skip in the datasource.</value>
+            <remarks>
+              <para>
+                The header row (if present) and comment rows will not be taken into account
+                when determining the number of rows to skip. Setting the value to zero will
+                cause no rows to be ignored.
+              </para>
+              <para>
+                Default: 0
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.DataRowNumber">
+            <summary>
+              Gets or sets the number of rows of data that have currently been parsed.
+            </summary>
+            <value>The number of rows of data that have been parsed.</value>
+            <remarks>The DataRowNumber property is read-only.</remarks>
+        </member>
+        <member name="P:Utilities.GenericParser.FileRowNumber">
+            <summary>
+              Gets or sets how many rows in the file have been parsed.
+            </summary>
+            <value>The number of rows in the file that have been parsed.</value>
+            <remarks>The <see cref="P:Utilities.GenericParser.FileRowNumber"/> property is read-only and includes all
+            rows possible (header, comment, and data).</remarks>
+        </member>
+        <member name="P:Utilities.GenericParser.ExpectedColumnCount">
+            <summary>
+              Gets or sets the expected number of columns to find in the data.  If
+              the number of columns differs, an exception will be thrown.
+            </summary>
+            <value>The number of columns expected per row of data.</value>
+            <remarks>
+              <para>
+                Setting the value to zero will cause the <see cref="T:Utilities.GenericParser"/> to ignore
+                the column count in case the number changes per row.
+              </para>
+              <para>
+                Default: 0
+              </para>
+              <para>
+                By setting this property, the <see cref="P:Utilities.GenericParser.TextFieldType"/> and <see cref="P:Utilities.GenericParser.ColumnWidths"/>
+                are automatically updated.
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.FirstRowHasHeader">
+            <summary>
+              Gets or sets whether or not the first row of data in the file contains
+              the header information.
+            </summary>
+            <value>
+              <para>
+                <see langword="true"/> - Header found on first 'data row'.
+              </para>
+              <para>
+                <see langword="false"/> - Header row does not exist.
+              </para>
+            </value>
+            <remarks>
+              <para>
+                Default: <see langword="false"/>
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.TrimResults">
+            <summary>
+              Gets or sets whether or not to trim the values for each column.
+            </summary>
+            <value>
+              <para>
+                <see langword="true"/> - Indicates to trim the resulting strings.
+              </para>
+              <para>
+                <see langword="false"/> - Indicates to not trim the resulting strings.
+              </para>
+            </value>
+            <remarks>
+              <para>
+                Trimming only occurs on the strings if they are not text qualified.
+                So by placing values in quotes, it preserves all whitespace within
+                quotes.
+              </para>
+              <para>
+                Default: <see langword="false"/>
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.StripControlChars">
+            <summary>
+              Gets or sets whether or not to strip control characters out of the input.
+            </summary>
+            <value>
+              <para>
+                <see langword="true"/> - Indicates to remove control characters from the input.
+              </para>
+              <para>
+                <see langword="false"/> - Indicates to leave control characters in the input.
+              </para>
+            </value>
+            <remarks>
+              <para>
+                Setting this to <see langword="true"/> can cause a performance boost.
+              </para>
+              <para>
+                Default: <see langword="false"/>
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.SkipEmptyRows">
+            <summary>
+              Gets or sets whether or not to skip empty rows in the input.
+            </summary>
+            <value>
+              <para>
+                <see langword="true"/> - Indicates to skip empty rows in the input.
+              </para>
+              <para>
+                <see langword="false"/> - Indicates to include empty rows in the input.
+              </para>
+            </value>
+            <remarks>
+              <para>
+                Default: <see langword="true"/>
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.IsCurrentRowEmpty">
+            <summary>
+              Gets whether or not the current row is an empty row.
+            </summary>
+        </member>
+        <member name="P:Utilities.GenericParser.TextFieldType">
+            <summary>
+              Gets or sets the <see cref="T:Utilities.FieldType"/> of the data encoded in the rows.
+            </summary>
+            <remarks>
+              <para>
+                By setting <see cref="P:Utilities.GenericParser.ColumnWidths"/>, this property is automatically set.
+              </para>
+              <para>
+                Default: <see cref="F:Utilities.FieldType.Delimited"/>
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.FirstRowSetsExpectedColumnCount">
+            <summary>
+              Gets or sets the number of columns in the header/first data row determines
+              the expected number of columns in the data.
+            </summary>
+            <value>
+              <para>
+                <see langword="true"/> - Indicates the data's column count should match the header/first data row's column count.
+              </para>
+              <para>
+                <see langword="false"/> - Indicates the data's column count does not necessarily match the header/first data row's column count.
+              </para>
+            </value>
+            <remarks>
+              <para>
+                If set to <see langword="true"/>, <see cref="T:Utilities.FieldType"/> will automatically be set to <see langword="false"/>.
+              </para>
+              <para>
+                Default: <see langword="false"/>
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.State">
+            <summary>
+              Gets the <see cref="T:Utilities.ParserState"/> value indicating the current
+              internal state of the parser.
+            </summary>
+            <value>The <see cref="P:Utilities.GenericParser.State"/> property is read-only and is used to return
+            information about the internal state of the parser.</value>
+        </member>
+        <member name="P:Utilities.GenericParser.ColumnDelimiter">
+            <summary>
+              Gets or sets the character used to match the end of a column of data.
+            </summary>
+            <value>Contains the character used to delimit a column.</value>
+            <remarks>
+              <para>
+                By setting this property, the <see cref="P:Utilities.GenericParser.TextFieldType"/> is automatically
+                updated. This is only meaningful when performing delimited parsing.
+              </para>
+              <para>
+                Default: ','
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.TextQualifier">
+            <summary>
+              Gets or sets the character that is used to enclose a string that would otherwise
+              be potentially trimmed (Ex. "  this  ").
+            </summary>
+            <value>
+              The character used to enclose a string, so that row/column delimiters are ignored
+              and whitespace is preserved.
+            </value>
+            <remarks>
+              <para>
+                The Text Qualifiers must be present at the beginning and end of the column to
+                have them properly removed from the ends of the string.  Furthermore, for a
+                string that has been enclosed with the text qualifier, if the text qualifier is
+                doubled up inside the string, the characters will be treated as an escape for
+                the literal character of the text qualifier (ie. "This""Test" will translate
+                with only one double quote inside the string).
+              </para>
+              <para>
+                Setting this to <see langword="null"/> can cause a performance boost, if none of the values are
+                expected to require escaping.
+              </para>
+              <para>
+                Default: '\"'
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.EscapeCharacter">
+            <summary>
+              Gets or sets the character that is used to escape a character (Ex. "\"This\"").
+            </summary>
+            <value>The character used to escape row/column delimiters and the text qualifier.</value>
+            <remarks>
+              <para>
+                Upon parsing the file, the escaped characters will be stripped out, leaving
+                the desired character in place.  To produce the escaped character, use the
+                escaped character twice (Ex. \\).  Text qualifiers are already assumed to be
+                escaped if used twice.
+              </para>
+              <para>
+                Setting this to <see langword="null"/> can cause a performance boost, if none of the values are
+                expected to require escaping.
+              </para>
+              <para>
+                Default: null
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.CommentCharacter">
+            <summary>
+              Gets or sets the character that is used to mark the beginning of a row that contains
+              purely comments and that should not be parsed.
+            </summary>
+            <value>
+              The character used to indicate the current row is to be ignored as a comment.
+            </value>
+            <remarks>
+              <para>
+                Default: '#'
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParser.Item(System.Int32)">
+            <summary>
+              Gets the data found in the current row of data by the column index.
+            </summary>
+            <value>The value of the column at the given index.</value>
+            <param name="intColumnIndex">The index of the column to retreive.</param>
+            <remarks>
+              If the column is outside the bounds of the columns found or the column
+              does not possess a name, it will return <see langword="null"/>.
+            </remarks>
+        </member>
+        <member name="P:Utilities.GenericParser.Item(System.String)">
+            <summary>
+              Gets the data found in the current row of data by the column name.
+            </summary>
+            <value>The value of the column with the given column name.</value>
+            <param name="strColumnName">The name of the column to retreive.</param>
+            <remarks>
+              If the header has yet to be parsed (or no header exists), the property will
+              return <see langword="null"/>.
+            </remarks>
+        </member>
+        <member name="P:Utilities.GenericParser.ColumnCount">
+            <summary>
+              Gets the number of columns found in the current row.
+            </summary>
+            <value>The number of data columns found in the current row.</value>
+            <remarks>The <see cref="P:Utilities.GenericParser.ColumnCount"/> property is read-only.  The number of columns per row can differ, if allowed.</remarks>
+        </member>
+        <member name="P:Utilities.GenericParser.LargestColumnCount">
+            <summary>
+              Gets the largest column count found thusfar from parsing.
+            </summary>
+            <value>The largest column count found thusfar from parsing.</value>
+            <remarks>The <see cref="P:Utilities.GenericParser.LargestColumnCount"/> property is read-only. The LargestColumnCount can increase due to rows with additional data.</remarks>
+        </member>
+        <member name="M:Utilities.GenericParser.SetDataSource(System.String)">
+            <summary>
+              Sets the file as the datasource.
+            </summary>
+            <remarks>
+              If the parser is currently parsing a file, all data associated
+              with the previous file is lost and the parser is reset back to
+              its initial values.
+            </remarks>
+            <param name="strFileName">The <see cref="T:System.String"/> containing the name of the file
+            to set as the data source.</param>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                  p.SetDataSource(@"C:\MyData.txt");
+              </code>
+            </example>
+            <exception cref="T:System.ArgumentNullException">Supplying <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">Supplying a filename to a file that does not exist.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParser.SetDataSource(System.String,System.Text.Encoding)">
+            <summary>
+              Sets the file as the datasource using the provided encoding.
+            </summary>
+            <remarks>
+              If the parser is currently parsing a file, all data associated
+              with the previous file is lost and the parser is reset back to
+              its initial values.
+            </remarks>
+            <param name="strFileName">The <see cref="T:System.String"/> containing the name of the file
+            to set as the data source.</param>
+            <param name="encoding">The <see cref="T:System.Text.Encoding"/> of the file being referenced.</param>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                  p.SetDataSource(@"C:\MyData.txt", Encoding.ASCII);
+              </code>
+            </example>
+            <exception cref="T:System.ArgumentNullException">Supplying <see langword="null"/>.</exception>
+            <exception cref="T:System.ArgumentException">Supplying a filename to a file that does not exist.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParser.SetDataSource(System.IO.TextReader)">
+            <summary>
+              Sets the <see cref="T:System.IO.TextReader"/> as the datasource.
+            </summary>
+            <param name="txtReader">The <see cref="T:System.IO.TextReader"/> that contains the data to be parsed.</param>
+            <remarks>
+              If the parser is currently parsing a file, all data associated with the
+              previous file is lost and the parser is reset back to its initial values.
+            </remarks>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                  using (StreamReader srReader = new StreamReader(@"C:\MyData.txt"))
+                    p.SetDataSource(srReader);
+              </code>
+            </example>
+            <exception cref="T:System.ArgumentNullException">Supplying <see langword="null"/>.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParser.Read">
+            <summary>
+              <para>
+                Parses the data-source till it arrives at one row of data.
+              </para>
+            </summary>
+            <returns>
+              <para>
+                <see langword="true"/> - Successfully parsed a new data row.
+              </para>
+              <para>
+                <see langword="false"/> - No new data rows were found.
+              </para>
+            </returns>
+            <remarks>
+              <para>
+                If it finds a header, and its expecting a header row, it will not stop
+                at the row and continue on till it has found a row of data.
+              </para>
+              <para>
+                Internally, the header row is treated as a data row, but will not cause
+                the parser to stop after finding it.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">
+              Attempting to read without properly setting up the <see cref="T:Utilities.GenericParser"/>.
+            </exception>
+            <exception cref="T:Utilities.ParsingException">
+              Thrown in the situations where the <see cref="T:Utilities.GenericParser"/> cannot continue
+              due to a conflict between the setup and the data being parsed.
+            </exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser(@"C:\MyData.txt"))
+                {
+                  while(p.Read())
+                  {
+                    // Put code here to retrieve results of the read.
+                  }
+                }
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Load(System.Xml.XmlReader)">
+            <summary>
+            Loads the configuration of the <see cref="T:Utilities.GenericParser"/> object from an <see cref="T:System.Xml.XmlReader"/>.
+            </summary>
+            <param name="xrConfigXmlFile">The <see cref="T:System.Xml.XmlReader"/> containing the XmlConfig file to load configuration from.</param>
+            <exception cref="T:System.ArgumentException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentNullException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentNullException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentOutOfRangeException"/> could be thrown.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (FileStream fs = new FileStream(@"C:\MyData.txt", FileMode.Open))
+                  using (XmlTextReader xmlTextReader = new XmlTextReader(fs))
+                    using (GenericParser p = new GenericParser())
+                      p.Load(xmlTextReader);
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Load(System.IO.TextReader)">
+            <summary>
+            Loads the configuration of the <see cref="T:Utilities.GenericParser"/> object from an <see cref="T:System.IO.TextReader"/>.
+            </summary>
+            <param name="trConfigXmlFile">The <see cref="T:System.IO.TextReader"/> containing the XmlConfig file to load configuration from.</param>
+            <exception cref="T:System.ArgumentException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentNullException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentNullException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentOutOfRangeException"/> could be thrown.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (StreamReader sr = new StreamReader(@"C:\MyData.txt"))
+                  using (GenericParser p = new GenericParser())
+                    p.Load(sr);
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Load(System.IO.Stream)">
+            <summary>
+            Loads the configuration of the <see cref="T:Utilities.GenericParser"/> object from an <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="sConfigXmlFile">The <see cref="T:System.IO.Stream"/> containing the XmlConfig file to load configuration from.</param>
+            <exception cref="T:System.ArgumentException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentNullException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentNullException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentOutOfRangeException"/> could be thrown.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (FileStream fs = new FileStream(@"C:\MyData.txt", FileMode.Open))
+                  using (GenericParser p = new GenericParser())
+                    p.Load(fs);
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Load(System.String)">
+            <summary>
+            Loads the configuration of the <see cref="T:Utilities.GenericParser"/> object from a file on the file system.
+            </summary>
+            <param name="strConfigXmlFile">The full path to the XmlConfig file on the file system.</param>
+            <exception cref="T:System.ArgumentException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentNullException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentNullException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentOutOfRangeException"/> could be thrown.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                  p.Load(@"C:\MyData.txt");
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Load(System.Xml.XmlDocument)">
+             <summary>
+             Loads the configuration of the <see cref="T:Utilities.GenericParser"/> object from an <see cref="T:System.Xml.XmlDocument"/>.
+             </summary>
+             <param name="xmlConfig">The <see cref="T:System.Xml.XmlDocument"/> object containing the configuration information.</param>
+             <exception cref="T:System.ArgumentException">In the event that the XmlConfig file contains a value that is invalid,
+             an <see cref="T:System.ArgumentException"/> could be thrown.</exception>
+             <exception cref="T:System.ArgumentNullException">In the event that the XmlConfig file contains a value that is invalid,
+             an <see cref="T:System.ArgumentNullException"/> could be thrown.</exception>
+             <exception cref="T:System.ArgumentOutOfRangeException">In the event that the XmlConfig file contains a value that is invalid,
+             an <see cref="T:System.ArgumentOutOfRangeException"/> could be thrown.</exception>
+             <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+             <example>
+               <code lang="C#" escaped="true">
+                 XmlDocument xmlConfig = new XmlDocument();
+                 xmlConfig.Load(strConfigXmlFile);
+            
+                 using (GenericParser p = new GenericParser())
+                   p.Load(xmlConfig);
+               </code>
+             </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Save(System.Xml.XmlWriter)">
+            <summary>
+              Saves the configuration to a <see cref="T:System.Xml.XmlWriter"/>.
+            </summary>
+            <param name="xwXmlConfig">The XmlWriter to save the the <see cref="T:System.Xml.XmlDocument"/> to.</param>
+            <example>
+              <code lang="C#" escaped="true">
+                using (XmlTextWriter xwXmlConfig = new XmlTextWriter(@"C:\MyData.txt", Encoding.Default))
+                  using (GenericParser p = new GenericParser())
+                    p.Save(xwXmlConfig);
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Save(System.IO.TextWriter)">
+            <summary>
+              Saves the configuration to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <param name="twXmlConfig">The TextWriter to save the <see cref="T:System.Xml.XmlDocument"/> to.</param>
+            <example>
+              <code lang="C#" escaped="true">
+                using (StringWriter sw = new StringWriter())
+                  using (GenericParser p = new GenericParser())
+                    p.Save(sw);
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Save(System.IO.Stream)">
+            <summary>
+              Saves the configuration to a <see cref="T:System.IO.Stream"/>.
+            </summary>
+            <param name="sXmlConfig">The stream to save the <see cref="T:System.Xml.XmlDocument"/> to.</param>
+            <example>
+              <code lang="C#" escaped="true">
+                using (FileStream fs = new FileStream(@"C:\MyData.txt", FileMode.Create))
+                  using (GenericParser p = new GenericParser())
+                    p.Save(fs);
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Save(System.String)">
+            <summary>
+              Saves the configuration to the file system.
+            </summary>
+            <param name="strConfigXmlFile">The file name to save the <see cref="T:System.Xml.XmlDocument"/> to.</param>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                  p.Load(@"C:\MyData.txt");
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Save">
+            <summary>
+              Saves the configuration to an <see cref="T:System.Xml.XmlDocument"/>.
+            </summary>
+            <returns>The <see cref="T:System.Xml.XmlDocument"/> containing the configuration information.</returns>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                  XmlDocument xmlConfig = p.Save();
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Close">
+            <summary>
+              Releases the underlying resources of the <see cref="T:Utilities.GenericParser"/>.
+            </summary>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParser p = new GenericParser())
+                {
+                  p.SetDataSource(@"C:\MyData.txt");
+                
+                  while(p.Read())
+                  {
+                    // Put code here to retrieve results of the read.
+                  }
+                }
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.GetColumnIndex(System.String)">
+            <summary>
+              Returns the index of the column based on its name.
+            </summary>
+            <remarks>
+              <para>
+                <see langword="null"/> column name is not a valid name for a column.
+              </para>
+              <para>
+                If the column is not found, the column index will be -1.
+              </para>
+            </remarks>
+            <param name="strColumnName">The name of the column to get the index for.</param>
+            <returns>The index of the column with the name strColumnName. If none exists, -1 will be returned.</returns>
+            <example>
+              <code lang="C#" escaped="true">
+                int intID, intPrice;
+                bool blnGotIndices = false;
+                
+                using (GenericParser p = new GenericParser())
+                {
+                  p.SetDataSource(@"C:\MyData.txt");
+                  p.FirstRowHasHeader = true;
+                
+                  while(p.Read())
+                  {
+                    if (!blnGotIndices)
+                    {
+                      blnGotIndices = true;
+                      intID = p.GetColumnIndex("ID");
+                      intPrice = p.GetColumnIndex("Price");
+                    }
+                  
+                    // Put code here to retrieve results of the read.
+                  }
+                }
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.GetColumnName(System.Int32)">
+            <summary>
+              Returns the name of the column based on its index.
+            </summary>
+            <param name="intColumnIndex">The column index to return the name for.</param>
+            <remarks>
+              If the column is not found or the index is outside the range
+              of possible columns, <see langword="null"/> will be returned.
+            </remarks>
+            <returns>The name of the column at the given index, if none exists <see langword="null"/> is returned.</returns>
+            <example>
+              <code lang="C#" escaped="true">
+                string strColumn1, strColumn2;
+                bool blnGotColumnNames = false;
+                
+                using (GenericParser p = new GenericParser())
+                {
+                  p.SetDataSource(@"C:\MyData.txt");
+                  p.FirstRowHasHeader = true;
+                
+                  while(p.Read())
+                  {
+                    if (!blnGotColumnNames)
+                    {
+                      blnGotColumnNames = true;
+                      strColumn1 = p.GetColumnIndex(0);
+                      strColumn2 = p.GetColumnIndex(1);
+                    }
+                  
+                    // Put code here to retrieve results of the read.
+                  }
+                }
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParser.Dispose">
+            <summary>
+              Releases all of the underlying resources used by this instance.
+            </summary>
+            <remarks>
+              Calls <see cref="M:Utilities.GenericParser.Dispose(System.Boolean)"/> with blnDisposing set to <see langword="true"/>
+              to free unmanaged and managed resources.
+            </remarks>
+        </member>
+        <member name="E:Utilities.GenericParser.Disposed">
+            <summary>
+            Occurs when this instance is diposed of.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.m_ParserState">
+            <summary>
+              The current <see cref="T:Utilities.ParserState"/> of the parser.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.m_lstData">
+            <summary>
+              The current values of all the parsed columns within the row.
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParser.m_lstColumnNames">
+            <summary>
+              The current values of all the parsed column headers within the row.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser.OnDisposed">
+            <summary>
+            Raises the <see cref="E:Utilities.GenericParser.Disposed"/> Event.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser.Dispose(System.Boolean)">
+            <summary>
+              Releases the all unmanaged resources used by this instance and optionally releases the managed resources.
+            </summary>
+            <param name="blnDisposing">
+              <see langword="true"/> to release both managed and unmanaged resources; <see langword="false"/> to release only unmanaged resources.
+            </param>
+        </member>
+        <member name="M:Utilities.GenericParser._InitializeParse">
+            <summary>
+              Initializes internal variables that are maintained for internal tracking
+              of state during parsing.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+              In the event that the <see cref="T:Utilities.GenericParser"/> wasn't setup properly, this exception will be thrown.
+            </exception>
+        </member>
+        <member name="M:Utilities.GenericParser._GetNextCharacter">
+            <summary>
+              Gets the next character from the input buffer (and refills it if necessary and possible).
+            </summary>
+            <returns>
+              <para>
+                <see langword="true"/> - A new character was read from the data source.
+              </para>
+              <para>
+                <see langword="false"/> - No more characters are available in the data source.
+              </para>
+            </returns>
+        </member>
+        <member name="M:Utilities.GenericParser._SkipCommentRows">
+            <summary>
+              Reads till a non-comment row is found.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser._SkipToEndOfText">
+            <summary>
+              Reads till the end of the text is found.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser._CleanUpParser(System.Boolean)">
+            <summary>
+              Removes all references to internally allocated resources.  Depending on
+              <paramref name="blnCompletely"/>, it will free up all of the internal resources
+              to prepare the instance for disposing.
+            </summary>
+            <param name="blnCompletely">
+              <para>
+                <see langword="true"/> - Clean-up the entire parser (used for disposing the instance).
+              </para>
+              <para>
+                <see langword="false"/> - Clean-up the parser to all it to be reused later.
+              </para>
+            </param>
+        </member>
+        <member name="M:Utilities.GenericParser._ParseRowType">
+            <summary>
+              Examines the beginning of the row and the current state information
+              to determine how the parser will interpret the next line and updates
+              the internal RowType accordingly.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser._SetColumnNames">
+            <summary>
+              Takes the data parsed from the row and places it into the ColumnNames collection.
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParser._HandleEndOfRow(System.Int32)">
+            <summary>
+              Handles the logic necessary for updating state due to a row ending.
+            </summary>
+            <param name="intEndOfDataIndex">The index of the last character in the column.</param>
+            <exception cref="T:Utilities.ParsingException">
+              If parsing a fixed width format and the number of columns found differs
+              what was expected, this exception will be thrown.
+            </exception>
+        </member>
+        <member name="M:Utilities.GenericParser._ExtractColumn(System.Int32)">
+            <summary>
+              Takes a range within the character buffer and extracts the desired
+              string from within it and places it into the DataArray.  If an escape
+              character has been set, the escape characters are stripped out and the
+              unescaped string is returned.
+            </summary>
+            <param name="intEndOfDataIndex">The index of the last character in the column.</param>
+            <exception cref="T:Utilities.ParsingException">
+              In the event that the <see cref="P:Utilities.GenericParser.ExpectedColumnCount"/> is set to a value of greater
+              than zero (which is by default for a fixed width format) and the number of columns
+              found differs from what's expected, this exception will be thrown.
+            </exception>
+        </member>
+        <member name="M:Utilities.GenericParser._CopyRemainingDataToFront(System.Int32)">
+            <summary>
+              When the buffer has reached the end of its parsing and there are no more
+              complete columns to be parsed, the remaining data must be moved up to the
+              front of the buffer so that the next batch of data can be appended to
+              the end.
+            </summary>
+            <param name="intStartIndex">The index that starts the beginning of the data to be moved.</param>
+            <exception cref="T:Utilities.ParsingException">In the event that the entire buffer is full and a single
+            column cannot be parsed from it, parsing can no longer continue.</exception>
+        </member>
+        <member name="M:Utilities.GenericParser._GetColumnName(System.Int32)">
+            <summary>
+              Returns the name of the Column based on its ColumnIndex.
+            </summary>
+            <param name="intColumnIndex">The column index to return the name for.</param>
+            <remarks>
+              If the column is not found or the index is outside the range
+              of possible columns, <see langword="null"/> will be returned.
+            </remarks>
+            <returns>The name of the column at the given ColumnIndex, if
+            none exists <see langword="null"/> is returned.</returns>
+        </member>
+        <member name="M:Utilities.GenericParser._GetColumnIndex(System.String)">
+            <summary>
+              Returns the index of the Column based on its Name.
+            </summary>
+            <remarks>
+              <para>
+                <see langword="null"/> column name is not a valid name for a column.
+              </para>
+              <para>
+                If the column is not found, the column index will be -1.
+              </para>  
+            </remarks>
+            <param name="strColumnName">The name of the column to find the index for.</param>
+            <returns>The index of the column with the name strColumnName.
+            If none exists, -1 will be returned.</returns>
+        </member>
+        <member name="M:Utilities.GenericParser._CreateParsingException(System.String)">
+            <summary>
+              Creates a detailed message for a parsing exception and then throws it.
+            </summary>
+            <param name="strMessage">The exception specific information to go into the <see cref="T:Utilities.ParsingException"/>.</param>
+            <returns>The <see cref="T:Utilities.ParsingException"/> with the provided message.</returns>
+        </member>
+        <member name="M:Utilities.GenericParser._InitializeConfigurationVariables">
+            <summary>
+              Initializes the parsing variables for the GenericParser.
+            </summary>
+        </member>
+        <member name="T:Utilities.GenericParserAdapter">
+            <summary>
+              The <see cref="T:Utilities.GenericParserAdapter"/> is used to modify the <see cref="T:Utilities.GenericParser"/>
+              to allow it parse a file and place them into various formats.
+            </summary>
+            <threadsafety static="false" instance="false"/>
+        </member>
+        <member name="F:Utilities.GenericParserAdapter.DefaultIncludeFileLineNumber">
+            <summary>
+              Defines the default value for including the file line number (false).
+            </summary>
+        </member>
+        <member name="F:Utilities.GenericParserAdapter.DefaultSkipEndingDataRows">
+            <summary>
+              Defines the number of skip ending data rows (0).
+            </summary>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.AddColumnToTable(System.Data.DataTable,System.String)">
+            <summary>
+              Adds a column name to the given <see cref="T:System.Data.DataTable"/>, such that
+              it ensures a unique column name.
+            </summary>
+            <param name="dtData">The <see cref="T:System.Data.DataTable"/> to add the column to.</param>
+            <param name="strColumnName">The desired column name to add.</param>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.#ctor">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParserAdapter"/>
+              with the default settings.
+            </summary>
+            <remarks>
+              When using this constructor, the datasource must be set prior to using the parser
+              (using <see cref="M:Utilities.GenericParser.SetDataSource(System.String)"/>), otherwise an exception will be thrown.
+            </remarks>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.#ctor(System.String)">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParserAdapter"/> and sets
+              the initial datasource as the file referenced by the string passed in.
+            </summary>
+            <param name="strFileName">The file name to set as the initial datasource.</param>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.#ctor(System.String,System.Text.Encoding)">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParserAdapter"/> and sets
+              the initial datasource as the file referenced by the string passed in with
+              the provided encoding.
+            </summary>
+            <param name="strFileName">The file name to set as the initial datasource.</param>
+            <param name="encoding">The <see cref="T:System.Text.Encoding"/> of the file being referenced.</param>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.#ctor(System.IO.TextReader)">
+            <summary>
+              Constructs an instance of a <see cref="T:Utilities.GenericParserAdapter"/> and sets
+              the initial datasource as the <see cref="T:System.IO.TextReader"/> passed in.
+            </summary>
+            <param name="txtReader">
+              The <see cref="T:System.IO.TextReader"/> containing the data to be parsed.
+            </param>
+        </member>
+        <member name="P:Utilities.GenericParserAdapter.IncludeFileLineNumber">
+            <summary>
+              Gets or sets whether or not the <see cref="P:Utilities.GenericParser.FileRowNumber"/> from where
+              the data was retrieved should be included as part of the result set.
+            </summary>
+            <remarks>
+              <para>
+                Default: <see langword="false"/> 
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="P:Utilities.GenericParserAdapter.SkipEndingDataRows">
+            <summary>
+              Gets or sets the number of rows of data to ignore at the end of the file.
+            </summary>
+            <value>The number of data rows to skip at the end of the datasource</value>
+            <remarks>
+              <para>
+                A value of zero will ensure no rows are ignored.
+              </para>
+              <para>
+                Default: 0 
+              </para>
+              <para>
+                If parsing has started, this value cannot be updated.
+              </para>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.GetXml">
+            <summary>
+              Generates an <see cref="T:System.Xml.XmlDocument"/> based on the data stored within
+              the entire data source after it was parsed.
+            </summary>
+            <returns>
+              The <see cref="T:System.Xml.XmlDocument"/> containing all of the data in the data
+              source.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+              Attempting to read without properly setting up the <see cref="T:Utilities.GenericParserAdapter"/>.
+            </exception>
+            <exception cref="T:Utilities.ParsingException">
+              Thrown in the situations where the <see cref="T:Utilities.GenericParserAdapter"/> cannot continue
+              due to a conflict between the setup and the data being parsed.
+            </exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParserAdapter p = new GenericParserAdapter(@"C:\MyData.txt"))
+                  XmlDocument xmlDoc = p.GetXml();
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.GetDataSet">
+            <summary>
+              Generates a <see cref="T:System.Data.DataSet"/> based on the data stored within
+              the entire data source after it was parsed.
+            </summary>
+            <returns>
+              The <see cref="T:System.Data.DataSet"/> containing all of the data in the
+              data source.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+              Attempting to read without properly setting up the <see cref="T:Utilities.GenericParserAdapter"/>.
+            </exception>
+            <exception cref="T:Utilities.ParsingException">
+              Thrown in the situations where the <see cref="T:Utilities.GenericParserAdapter"/> cannot continue
+              due to a conflict between the setup and the data being parsed.
+            </exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParserAdapter p = new GenericParserAdapter(@"C:\MyData.txt"))
+                  DataSet dsResults = p.GetDataSet();
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.GetDataTable">
+            <summary>
+              Generates a <see cref="T:System.Data.DataTable"/> based on the data stored within
+              the entire data source after it was parsed.
+            </summary>
+            <returns>
+              The <see cref="T:System.Data.DataTable"/> containing all of the data in the data
+              source.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+              Attempting to read without properly setting up the <see cref="T:Utilities.GenericParserAdapter"/>.
+            </exception>
+            <exception cref="T:Utilities.ParsingException">
+              Thrown in the situations where the <see cref="T:Utilities.GenericParserAdapter"/> cannot continue
+              due to a conflict between the setup and the data being parsed.
+            </exception>
+            <example>
+              <code lang="C#" escaped="true">
+                using (GenericParserAdapter p = new GenericParserAdapter(@"C:\MyData.txt"))
+                  DataTable dtResults = p.GetDataTable();
+              </code>
+            </example>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.Load(System.Xml.XmlDocument)">
+            <summary>
+              Loads the base <see cref="T:Utilities.GenericParser"/> class from the
+              <see cref="T:System.Xml.XmlDocument"/> and then retrieves additional information
+               from the Xml that is specific to the <see cref="T:Utilities.GenericParserAdapter"/>.
+            </summary>
+            <param name="xmlConfig">
+              The <see cref="T:System.Xml.XmlDocument"/> containing the configuration information.
+            </param>
+            <exception cref="T:System.ArgumentException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentNullException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentNullException"/> could be thrown.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">In the event that the XmlConfig file contains a value that is invalid,
+            an <see cref="T:System.ArgumentOutOfRangeException"/> could be thrown.</exception>
+            <exception cref="T:System.InvalidOperationException">Attempting to modify the configuration, while parsing.</exception>
+        </member>
+        <member name="M:Utilities.GenericParserAdapter.Save">
+            <summary>
+              Saves the configuration of the <see cref="T:Utilities.GenericParserAdapter"/>
+              to an <see cref="T:System.Xml.XmlDocument"/>.
+            </summary>
+            <returns>
+              The <see cref="T:System.Xml.XmlDocument"/> that will store the configuration
+              information of the current setup of the <see cref="T:Utilities.GenericParserAdapter"/>.
+            </returns>
+        </member>
+        <member name="T:Utilities.ParserState">
+            <summary>
+            The current internal state of the parser.
+            </summary>
+        </member>
+        <member name="F:Utilities.ParserState.NoDataSource">
+            <summary>
+              Indicates that the parser has no datasource and is not properly setup.
+            </summary>
+        </member>
+        <member name="F:Utilities.ParserState.Ready">
+            <summary>
+              Indicates that the parser is ready to begin parsing.
+            </summary>
+        </member>
+        <member name="F:Utilities.ParserState.Parsing">
+            <summary>
+              Indicates that the parser is currently parsing the datasource.
+            </summary>
+        </member>
+        <member name="F:Utilities.ParserState.Finished">
+            <summary>
+              Indicates that the parser has finished parsing the datasource.
+            </summary>
+        </member>
+        <member name="T:Utilities.ParsingException">
+            <summary>
+              <see cref="T:Utilities.ParsingException"/> is an exception class meant for states where
+              the parser can no longer continue parsing due to the data found in the
+              data-source.
+            </summary>
+        </member>
+        <member name="M:Utilities.ParsingException.#ctor">
+            <summary>
+              Creates a new <see cref="T:Utilities.ParsingException"/> with default values.
+            </summary>
+        </member>
+        <member name="M:Utilities.ParsingException.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+              Creates a new <see cref="T:Utilities.ParsingException"/> containing a message and the
+              file line number that the error occured.
+            </summary>
+            <param name="strMessage">
+              The message indicating the root cause of the error.
+            </param>
+            <param name="intFileRowNumber">The file line number the error occured on.</param>
+            <param name="intColumnNumber">The column number the error occured on.</param>
+        </member>
+        <member name="M:Utilities.ParsingException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              Creates a new <see cref="T:Utilities.ParsingException"/> with seralized data.
+            </summary>
+            <param name="sInfo">
+              The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that contains information
+              about the exception.
+            </param>
+            <param name="sContext">
+              The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains information
+              about the source/destination of the exception.
+            </param>
+        </member>
+        <member name="P:Utilities.ParsingException.FileRowNumber">
+            <summary>
+              The line number in the file that the exception was thrown at.
+            </summary>
+        </member>
+        <member name="P:Utilities.ParsingException.ColumnNumber">
+            <summary>
+              The column number in the file that the exception was thrown at.
+            </summary>
+        </member>
+        <member name="M:Utilities.ParsingException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+              When overridden in a derived class, sets the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> 
+              with information about the exception.
+            </summary>
+            <param name="info">
+              The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data
+              about the exception being thrown.
+            </param>
+            <param name="context">
+              The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source
+              or destination.
+            </param>
         </member>
     </members>
 </doc>
