@@ -7,7 +7,7 @@ using System.Collections.Specialized;
 
 using Utilities;
 
-namespace TestPDF
+namespace TestUtilities
 {
   public static class GlobalApp
   {

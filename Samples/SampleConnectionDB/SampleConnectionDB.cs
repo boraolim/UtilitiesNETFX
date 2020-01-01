@@ -1,51 +1,65 @@
-﻿// Ejemplo de generación de conexión a Base de Datos por medio de la librería Utilities.dll (NETFX40/NETFX45).
-// Autor: Olimpo Bonilla Ramirez.
-// Fecha: 2019-04-18.
-// Correo electrónico: boraolim@hotmail.com
-
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-
-using System.Data.SqlClient;
-using System.Data.SqlTypes;
-
-using Utilities;
-using System.Linq;
-
-namespace TestPDF
+﻿namespace TestUtilities
 {
-  public class Equipo
-  {
-    public int IdEquipo { get; set; }
-    public string Nombre { get; set; }
-    public decimal Valor { get; set; }
-    public bool Estatus { get; set; }
-    public DateTime FechaAlta { get; set; }
-  }
-  class Program
-  {
-    private static DateTime _oScheduledTime = DateTime.Now;                                                    // Fecha actual.
-    private static DateTime _oTime0;                                                                           // Tiempo inicial para escribir el log.
-    private static DateTime _oTime1;                                                                           // Tiempo final para escribir el log.
-    private static TimeSpan _oTimeTotal;                                                                       // La diferencia entre el tiempo inicial y el tiempo final.
-    private static StringBuilder _oSb = null;                                                                  // Objeto StringBuilder.
+  using System;
+  using System.IO;
+  using System.Text;
 
+  using Utilities;
+  
+public class mtClases
+  {
+    public int Id_clase;
+    public int Id_tipoact;
+    public string Descripcion;
+    public bool IsDeleted;
+    public DateTime Fech_alt;
+    public DateTime? Fech_act;
+  }
+
+  public class ListaBD
+  {
+    [DataNames("Database", "Database")]
+    public string Database { get; set;}
+  }
+
+  [Serializable]
+  public class Person
+  {
+    [DataNames("first_name", "firstName")]
+    public string FirstName { get; set; }
+
+    [DataNames("last_name", "lastName")]
+    public string LastName { get; set; }
+
+    [DataNames("dob", "dateOfBirth")]
+    public DateTime DateOfBirth { get; set; }
+
+    [DataNames("job_title", "jobTitle")]
+    public string JobTitle { get; set; }
+
+    [DataNames("taken_name", "nickName")]
+    public string TakenName { get; set; }
+
+    [DataNames("is_american", "isAmerican")]
+    public bool IsAmerican { get; set; }
+  }
+  
+
+  public class Program
+  {
+    [STAThread()]
     static void Main(string[] args)
     {
-      // Inicializamos el objeto StringBuilder.
-      _oSb = new StringBuilder();
-
       try
       {
-        // Aqui creamos las lineas del archivo LOG que se guardar al final de la ejecucion de este programa.
-        GlobalApp.oLog = new LOGFiles(GlobalApp.FolderLog.Trim(), "TestPDF", "Program.cs", "Main", "TestPDF", AssemblyInfo.Company.Trim());
+        GlobalApp.oLog = new LOGFiles(GlobalApp.FolderLog.Trim(), "TestConsole", "Program.cs", "Main", "TestConsole", AssemblyInfo.Company.Trim());
         GlobalApp.DetailLog = new List<DetailLOG>(); GlobalApp.iCount = 1; GlobalApp.Numero = 0; GlobalApp.Mensaje = string.Empty; GlobalApp.FechaActual = DateTime.Now; _oTime0 = DateTime.Now;
         if (Directory.Exists(GlobalApp.FolderLog.Trim()) == false) { Directory.CreateDirectory(GlobalApp.FolderLog.Trim()); }                  // Carpeta de los archivos LOG de la aplicación.
-        if (Directory.Exists(GlobalApp.FolderRpt.Trim()) == false) { Directory.CreateDirectory(GlobalApp.FolderRpt.Trim()); }                  // Carpeta de archivo de reportes finales.
+        if (Directory.Exists(GlobalApp.FolderTemporal.Trim()) == false) { Directory.CreateDirectory(GlobalApp.FolderTemporal.Trim()); }        // Carpeta de archivo de reportes finales.
         if (Directory.Exists(GlobalApp.FolderLayOut.Trim()) == false) { Directory.CreateDirectory(GlobalApp.FolderLayOut.Trim()); }            // Carpeta de archivo de layout.
-        if (Directory.Exists(GlobalApp.FolderLayOutEnd.Trim()) == false) { Directory.CreateDirectory(GlobalApp.FolderLayOutEnd.Trim()); }      // Carpeta de archivo de layoutEnd.
+
+        Console.WriteLine("Consola de aplicación en .NET Core.\nVersión " + AssemblyInfo.Version.ToString());
+        Console.WriteLine("México " + DateTime.Now.Year.ToString() + ".\n");
 
         Console.WriteLine("Fecha de inicio: " + _oTime0.ToString());
 
@@ -55,48 +69,80 @@ namespace TestPDF
           Fecha = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'hh':'mm':'ss'.'fff' 'tt"),
           TipoEvento = TipoInformacion.Informacion,
           Numero = 0,
-          Comentario = _oSb.Clear().AppendFormat("Fecha de inicio: {0}.", _oTime0.ToString()).ToString()
+          Comentario = "Fecha de inicio: " + _oTime0.ToString()
         });
 
-        // Creamos una sentencia SQL con un array de parametros.
-        var Valor1 = "America";
-        var Valor2 = 1;
-        var _oParam = new List<SqlParameter>();
-        _oParam.Add(new SqlParameter("@P1", System.Data.SqlDbType.VarChar, 255, Valor1));
-        _oParam.Add(new SqlParameter("@P2", System.Data.SqlDbType.Int, Valor2));
+        // Inicializamos las variables.
+        InitVars();
 
-        _oSb.Clear().AppendFormat("SELECT * FROM mtEquipos t1 Where (t1.Nombre = @P1) and (t1.IdEquipo = @P2);");
+        Console.WriteLine("Fecha universal: {0}", Tool.ToDateUniversal(DateTime.Now));
 
-        // Aqui establezco:
-        // * Nombre de la cadena de conexión a Base de Datos.
-        // * La sentencia SQL con los parametros de entrada.
-        // * El array de parametros para SQL Server (Para MySQL, seria el objeto MySQLParameter.
-        // * Tiempo de respuesta de Base de Datos.
-        // * Numero de intentos.
-        // Si la salida del set de datos es correcta, convierte el resultado de la consulta en un List<T>. De lo contrario, lanzará una excepción.
-        // Si solo se desean ver X número de columnas, los atributos de la clase deben ser iguales a los nombres de las columnas de la sentencia SQL
-        // que se va a mandar a Base de Datos.
-        var _Ret = SQLServerConnectionDB.GetData<Equipo>("Cadena_Conexion_Base_Datos", _oSb.ToString(), _oParam, 60, 5).ToList();
-        GlobalApp.DetailLog.Add(new DetailLOG()
+        var _ValoraCifrar = "Que_Chingue_A_Su_Mother_AMLO_Y_EL_AMERICA";
+        var _strNewGUID = Guid.NewGuid().ToString();
+        Console.WriteLine("Valor a cifrar: {0}. Valor cifrado: {1}.", _ValoraCifrar, RijndaelManagedEncryption.EncryptRijndael(_ValoraCifrar, _strNewGUID));
+        Console.WriteLine("Valor desencriptado: {0}.", RijndaelManagedEncryption.DecryptRijndael(RijndaelManagedEncryption.EncryptRijndael(_ValoraCifrar, _strNewGUID), _strNewGUID));
+
+        // Mapeo de DataTables.
+        var priestsDataSet = DataSetGenerator.Priests();
+        DataNamesMapper<Person> mapper = new DataNamesMapper<Person>();
+        List<Person> persons = mapper.Map(priestsDataSet.Tables[0]).ToList();
+
+        var ranchersDataSet = DataSetGenerator.Ranchers();
+        persons.AddRange(mapper.Map(ranchersDataSet.Tables[0]));
+
+        foreach (var person in persons)
         {
-          Id = GlobalApp.iCount++,
-          Fecha = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'hh':'mm':'ss'.'fff' 'tt"),
-          TipoEvento = TipoInformacion.Informacion,
-          Numero = 0,
-          Comentario = _oSb.Clear().AppendFormat("Total de registros cargados: {0}.", _Ret.Count).ToString()
-        });
+          Console.WriteLine("First Name: " + person.FirstName + ", Last Name: " + person.LastName
+                            + ", Date of Birth: " + person.DateOfBirth.ToShortDateString()
+                            + ", Job Title: " + person.JobTitle + ", Nickname: " + person.TakenName
+                            + ", Is American: " + person.IsAmerican);
+        }
 
-        // Teniendo aqui el set de datos, se puede manipular al gusto del desarrollador.
+        Console.WriteLine("Fecha universal: {0}", Tool.ToDateUniversal(DateTime.Now));
 
-        // Se aplica del mismo modo los mismos parametros para la funcion 'SQLServerConnectionDB.ExecuteQuery()' para ejecutar 
-        // otras operaciones del tipo INSERT, UPDATE, DELETE o bien un stored procedure sin retorno de datos.
-        // De la misma manera tambien las funciones antes mencionadas existen en las clases 'MySQLConnectionDB' y 'PostgreSQLConnectionDB'.
+        var strDato = "CapMax = ((DepositoConceptoJubilacionPension - CargosDomiciliados - CargosConceptoCreditos) * 0.4);nnCapMax=n((DepositoConceptoJubilacionPension - CargosDomiciliados - CargosConceptoCreditos) - CapMax) n> (NúmeroCasasComerciales < 2 ? 400 : 800)? CapMax : (NúmeroCasasComerciales < 2 ? 400 : 800);nnCapMax = CapMax > 0 ? CapMax : 0;tnnCapMax = NúmeroCasasComerciales >= 3 ? 0 : CapMax;";
+        Console.WriteLine("Dato anterior: {0}", strDato);
+        strDato = Regex.Replace(strDato, Patrones.PatronAlphaLatino.Trim(), string.Empty);
+        Console.WriteLine("Dato nuevo: {0}", strDato);		  
+		  	  
+        var _oSb = new StringBuilder();
 
+        // _oSb.Clear().AppendFormat("SELECT trim(t1.userguid) as Id, trim(t1.username) as UserName, ");
+        // _oSb.AppendFormat("trim(t1.descusuario) as Usuario, trim(t1.Email) as Email, trim(t1.hash) as Hash, trim(t1.keyrol) as KeyRol, ");
+        // _oSb.AppendFormat("trim(t1.descrol) as DescRol, TRIM(t1.keysucursal) as KeySucursal, TRIM(t1.keyclas) as KeyClas, t1.fechaalta, (1::int) as Status ");
+        // _oSb.AppendFormat("FROM public.\"schema-identityusers-keops\" t1 WHERE (t1.userguid = '{0}');", id);
+
+        // Si se desea restringir cuentas de usuario que tengan asignados reportes personalizados solamente, entonces descomentar las siguientes lineas.
+        _oSb.Clear().AppendFormat("SELECT trim(t1.userguid) as Id, trim(t1.username) as UserName, trim(t1.descusuario) as Usuario, trim(t1.Email) as Email,  ");
+        _oSb.AppendFormat("trim(t1.hash) as Hash, trim(t1.keyrol) as KeyRol, trim(t1.descrol) as DescRol, ");
+        _oSb.AppendFormat("TRIM(t1.keysucursal) as KeySucursal, TRIM(t1.keyclas) as KeyClas, t1.fechaalta, (1::int) as Status ");
+        _oSb.AppendFormat("FROM public.\"schema-identityusers-keops\" t1 ");
+        _oSb.AppendFormat("INNER JOIN public.\"schema-relacionusuarioreporte-keops\" t2 ON (t2.keyusuario = t1.username) AND (t2.keyrol = t1.keyrol) ");
+        _oSb.AppendFormat("WHERE (t1.username = 'OBONILLA') ");
+        _oSb.AppendFormat("GROUP BY t1.userguid, t1.username, t1.descusuario,t1.Email, t1.hash, t1.keyrol, t1.descrol, t1.keysucursal, t1.keyclas, t1.fechaalta;");
+
+        // Uso de DbManager.
+        using (var oDb = new DBManager("Nombre_Cadena_Conexión_desde_archivo_Configuracion"))
+        {
+          var strJSONTemplate = oDb.GetDataTojqGridJSONTakeToCount("Prueba", 100, _oSb.ToString(), System.Data.CommandType.Text, null);
+
+          Console.WriteLine("Consulta ejecutada correctamente: {0}.", strJSONTemplate.Trim());
+
+          // Carpeta de archivo de reportes finales.
+          if (Directory.Exists(GlobalApp.FolderTemp.Trim()) == false) { Directory.CreateDirectory(GlobalApp.FolderTemp.Trim()); }
+
+          // Si la carpeta no existe, la creamos.
+          var _strArchivoExcel = Path.Combine(GlobalApp.FolderTemp.Trim(), string.Format("{0}.csv", Guid.NewGuid().ToString()));
+          var UrlSourceDrive = string.Empty; var IdKeyGoogleDrive = string.Empty;
+
+          oDb.ExportDataToGoogleSheetsInFolderWithPermissions(_strArchivoExcel, ",", "ClientId", "SecretId", GlobalApp.FolderPersonal.Trim(), "AplicacionGoogleAPI", "Identificador_Google_Drive", "correo@gmail.com", 
+                                                              GoogleDrivePermissions.Reader, GoogleDriveGroups.User, false, false, true, out UrlSourceDrive, out IdKeyGoogleDrive, _oSb.ToString(), System.Data.CommandType.Text, null);
+
+          Console.WriteLine("Identificadores de Google Drive: {0} y {1}", UrlSourceDrive, IdKeyGoogleDrive);
+        } // Fin del objeto DbManager.
       }
-      catch (Exception oEx)
+      catch(Exception oEx)
       {
-
-        // Cuando ocurre una excepcion, tambien guardamos el detalle del mismo.
         GlobalApp.Numero = 100; GlobalApp.Mensaje = string.Concat(((oEx.InnerException == null) ? oEx.Message.Trim() : oEx.InnerException.Message.ToString()));
         GlobalApp.DetailLog.Add(new DetailLOG()
         {
@@ -106,12 +152,12 @@ namespace TestPDF
           Numero = GlobalApp.Numero,
           Comentario = GlobalApp.Mensaje
         });
-        Console.WriteLine("Ocurrió un error: {0}", oEx.Message.Trim());
+        Console.WriteLine("Ocurrieron errores al ejecutar este proceso: " + GlobalApp.Mensaje.Trim() + ". Seguimiento de pila: " + oEx.StackTrace.Trim());
       }
       finally
       {
         // Limpiamos variables.
-        _oTime1 = DateTime.Now; _oTimeTotal = new TimeSpan(_oTime1.Ticks - _oTime0.Ticks); _oSb = null;
+        _oTime1 = DateTime.Now; _oTimeTotal = new TimeSpan(_oTime1.Ticks - _oTime0.Ticks); DestroyVars();
 
         // Obtengo la fecha de termino.
         GlobalApp.DetailLog.Add(new DetailLOG()
@@ -136,15 +182,27 @@ namespace TestPDF
         Console.WriteLine("Tiempo transcurrido en ejecutarse este proceso: " + _oTimeTotal.ToString());
 
         // Guardamos los mensajes en el log y limpiamos las variables.
-        GlobalApp.oLog.ListEvents = GlobalApp.DetailLog;
-        XMLSerializacion<LOGFiles>.WriteToXmlFile(GlobalApp.FolderLog + @"\LOGTestPDF_" + DateTime.Now.ToString("yyyy''MM''dd''hh''mm''ss''fff") + ".xml", GlobalApp.oLog, false);
+        GlobalApp.oLog.ListEvents = GlobalApp.DetailLog; XMLSerializacion<LOGFiles>.WriteToXmlFile(Path.Combine(GlobalApp.FolderLog, string.Concat("LOGTestConsole_", DateTime.Now.ToString("yyyy''MM''dd''hh''mm''ss''fff"), ".xml")), GlobalApp.oLog, false);
         GlobalApp.DetailLog = null; GlobalApp.oLog = null;
 
-        Console.WriteLine("Presione cualquier tecla para salir..."); Console.ReadKey();
+        Console.WriteLine("Pulse cualquier tecla para salir..."); Console.ReadLine();
       }
+    }
+
+    /// <summary>
+    /// Inicialización de variables.
+    /// </summary>
+    private static void InitVars()
+    {
+      _oSb = new StringBuilder(); _oSb.Clear();
+    }
+
+    /// <summary>
+    /// Destrucción de variables.
+    /// </summary>
+    private static void DestroyVars()
+    {
+      _oSb = null;
     }
   }
 }
-
-// NOTAS: Siempre se necesita el archivo GlobalApp.cs para tener la carpeta raiz de la aplicacion y el objeto DetailLog para guardar informacion en el
-// archivo LOG final. Cuando se haya terminado de guardar el LOG, se procede a guardar fisicamente el LOG en un archivo XML de la carpeta de la aplicacion.
