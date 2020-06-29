@@ -742,6 +742,49 @@
              <remarks>Escribe de manera directa la información en una linea de texto dentro del archivo Log (sin parámetros).</remarks>
             
         </member>
+        <member name="T:Utilities.MessagerSMS">
+            <summary>
+            Clase 'MessagerSMS' para realizar envíos de correo electrónico y mensajes de texto a disposivitos móviles.
+            </summary>	
+        </member>
+        <member name="F:Utilities.MessagerSMS.smsProviderLink">
+            <summary>
+            Proveedor de servicios. Generalmente es una API de envío de SMS.
+            </summary>
+        </member>
+        <member name="F:Utilities.MessagerSMS.smsParametersLink">
+            <summary>
+            Parámetros de envío hacia el servicio.
+            </summary>
+        </member>
+        <member name="F:Utilities.MessagerSMS.smsUser">
+            <summary>
+            Usuario.
+            </summary>
+        </member>
+        <member name="F:Utilities.MessagerSMS.smsSecretKey">
+            <summary>
+            Contraseña.
+            </summary>
+        </member>
+        <member name="F:Utilities.MessagerSMS.smsConfirmationSucessFull">
+            <summary>
+            Texto o flag que indica si el mensaje fue realizado.
+            </summary>
+        </member>
+        <member name="F:Utilities.MessagerSMS.smsProxy">
+            <summary>
+            Objeto proxy.
+            </summary>
+        </member>
+        <member name="M:Utilities.MessagerSMS.SendSmsMessage(System.String,System.String)">
+            <summary>
+            Función que envía un mensaje de texto a un número móvil.
+            </summary>
+            <param name="numberMobile">Número de telefono móvil.</param>
+            <param name="messageText">Mensaje de texto.</param>
+            <remarks>Si el envío de SMS se realizó de manera correcta, fue satisfactorio. En caso contrario, lanza una excepción. Esto se debe a un error del servicio de mensajería donde se realiza el proceso de envío.</remarks>
+        </member>
         <member name="T:Utilities.MimeTypes">
             <summary>
             Provides utilities for mapping file names and extensions to MIME-types.
@@ -1158,6 +1201,16 @@
             <param name="Carpeta">Nombre de la carpeta.</param>
             <param name="Filtro">Filtro de extensión de archivo.</param>
             <returns>Devuelve una lista generica del tipo string con los nombres de los archivos contenidos en la carpeta seleccionada.</returns>
+        </member>
+        <member name="M:Utilities.Tool.ExecuteRequestToReadTask(System.String,Utilities.EnumRequestType,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.String)">
+            <summary>
+            Función que ejecuta una petición HTTP con salida en formato texto plano.
+            </summary>
+            <param name="URLSource">URL de origen.</param>
+            <param name="TypeRequest">Tipo de petición: GET, POST, PUT, DELETE.</param>
+            <param name="Headers">Encabezados, si existen.</param>
+            <param name="ParametersToJSONString">Parametro de entrada en formato JSON string.</param>
+            <returns>Devuelve un resultado si la petición es satisfactoria. En caso contrario, lanza una excepción del tipo 404 o 500.</returns>
         </member>
         <member name="T:Utilities.XMLSerializacion`1">
             <summary>
@@ -2864,6 +2917,16 @@
             <param name="parameters">Lista de parámetros (opcional).</param>
             <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
+        <member name="M:Utilities.DBManager.GetDataToMappingToSingle``1(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
+            <summary>
+            Función que devuelve una función que devuelve el resultado de un query del tipo SELECT de un solo registro, o un stored procedure que devuelve un solo registro de datos en un objeto genérico.
+            </summary>
+            <typeparam name="T">Tipo de dato genérico.</typeparam>
+            <param name="commandText">Sentencia SQL.</param>
+            <param name="commandType">Tipo de comando: sentencia de texto, stored procedure o vista.</param>
+            <param name="parameters">Lista de parámetros (opcional).</param>
+            <returns>Devuelve un objeto de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
         <member name="M:Utilities.DBManager.GetDataToMapping``1(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
             <summary>
             Función que devuelve una función que devuelve el resultado de un query del tipo SELECT, o un stored procedure que devuelve un conjunto de datos en una lista mapeada genérica.
@@ -3055,6 +3118,16 @@
             <param name="parameters">Lista de parámetros (opcional).</param>
             <returns>Devuelve un set de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
         </member>
+        <member name="M:Utilities.DBManager.GetDataToMappingToSingleAsync``1(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
+            <summary>
+            Función que devuelve una función que devuelve el resultado de un query del tipo SELECT de un solo registro, o un stored procedure que devuelve un solo registro de datos en un objeto genérico (asíncrono).
+            </summary>
+            <typeparam name="T">Tipo de dato genérico.</typeparam>
+            <param name="commandText">Sentencia SQL.</param>
+            <param name="commandType">Tipo de comando: sentencia de texto, stored procedure o vista.</param>
+            <param name="parameters">Lista de parámetros (opcional).</param>
+            <returns>Devuelve un objeto de datos si la consulta se ejecutó correctamente. En caso contrario, lanza una excepción.</returns>
+        </member>
         <member name="M:Utilities.DBManager.GetDataToMappingAsync``1(System.String,System.Data.CommandType,System.Data.IDbDataParameter[])">
             <summary>
             Función que devuelve una función que devuelve el resultado de un query del tipo SELECT, o un stored procedure que devuelve un conjunto de datos en una lista mapeada genérica (asíncronico).
@@ -3216,6 +3289,41 @@
             <param name="commandType">Tipo de comando: sentencia de texto, stored procedure o vista.</param>
             <param name="parameters">Lista de parámetros (opcional).</param>
             <returns>Solo recupera un único valor (por ejemplo, un valor agregado) de una base de datos</returns>
+        </member>
+        <member name="T:Utilities.EnumRequestType">
+            <summary>
+            Enumeración 'EnumRequestType' para la enumeración de tipos de verbos HTTP.
+            </summary>
+        </member>
+        <member name="F:Utilities.EnumRequestType.GET">
+            <summary>
+            Petición GET
+            </summary>
+        </member>
+        <member name="F:Utilities.EnumRequestType.POST">
+            <summary>
+            Petición POST
+            </summary>
+        </member>
+        <member name="F:Utilities.EnumRequestType.PUT">
+            <summary>
+            Petición PUT
+            </summary>
+        </member>
+        <member name="F:Utilities.EnumRequestType.DELETE">
+            <summary>
+            Petición DELETE
+            </summary>
+        </member>
+        <member name="F:Utilities.EnumRequestType.PATCH">
+            <summary>
+            Petición PATCH
+            </summary>
+        </member>
+        <member name="F:Utilities.EnumRequestType.HEADER">
+            <summary>
+            Petición HEADER
+            </summary>
         </member>
         <member name="T:Utilities.GroupOp">
             <summary>
@@ -4753,6 +4861,18 @@
               The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source
               or destination.
             </param>
+        </member>
+        <member name="T:Utilities.ISMSService">
+            <summary>
+            Interface 'ISmsService' para el manejo de envío de mensajes a dispositivos móviles y correos electrónicos.
+            </summary>
+        </member>
+        <member name="M:Utilities.ISMSService.SendSmsMessage(System.String,System.String)">
+            <summary>
+            Función que envía un mensaje de texto a un número móvil.
+            </summary>
+            <param name="numberMobile">Número de telefono móvil.</param>
+            <param name="messageText">Mensaje de texto.</param>
         </member>
         <member name="T:Utilities.AttributeHelper">
             <summary>
