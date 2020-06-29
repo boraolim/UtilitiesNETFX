@@ -1,4 +1,4 @@
-<h1>Utilities.dll - Programmer functions library for .NET Core (source code).</h1>
+<h1>Utilities.dll - Programmer functions library for .NET Framework 4.5 (Samples).</h1>
 Generic library for the functions of the exclusive programmer for the Microsoft .NET 4.5 platform onwards.
 
 <h2>Spanish</h2>
