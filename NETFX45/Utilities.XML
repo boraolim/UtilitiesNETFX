@@ -2023,6 +2023,88 @@
             <remarks>Fuente: https://stackoverflow.com/questions/25164257/how-to-convert-html-to-pdf-using-itextsharp </remarks>
             <returns>Devuelve el arreglo en bytes del molde previo al archivo PDF.</returns>
         </member>
+        <member name="T:Utilities.MetaDataRoute">
+            <summary>
+            Clase 'MetaDataRoute' para documentación de las Web API o aplicaciones Web.
+            </summary>
+        </member>
+        <member name="P:Utilities.MetaDataRoute.Description">
+            <summary>
+            Descripción del atributo.
+            </summary>
+        </member>
+        <member name="P:Utilities.MetaDataRoute.UrlParamProperties">
+            <summary>
+            Arreglo del tipo 'UrlParamProperties' para almacenar las propiedades del objeto.
+            </summary>
+        </member>
+        <member name="P:Utilities.MetaDataRoute.BodySchema">
+            <summary>
+            Esquema del cuerpo del objeto.
+            </summary>
+        </member>
+        <member name="M:Utilities.MetaDataRoute.#ctor(System.String,System.Type,Utilities.UrlParamProperties[])">
+            <summary>
+            Constructor de la clase 'MetaDataRoute'.
+            </summary>
+            <param name="description">Descripción de la función o método Web API.</param>
+            <param name="bindModel">Modelo de entrada por Body.</param>
+            <param name="urlParamProperties">Parámetros adicionales.</param>
+        </member>
+        <member name="T:Utilities.UrlParamProperties">
+            <summary>
+            Clase 'UrlParamProperties' para documentar parámetros de peticiones URL. 
+            </summary>
+        </member>
+        <member name="P:Utilities.UrlParamProperties.Description">
+            <summary>
+            Descripción del atributo.
+            </summary>
+        </member>
+        <member name="P:Utilities.UrlParamProperties.Key">
+            <summary>
+            Clave del la función.
+            </summary>
+        </member>
+        <member name="P:Utilities.UrlParamProperties.DefaultValue">
+            <summary>
+            Valor por defecto.
+            </summary>
+        </member>
+        <member name="P:Utilities.UrlParamProperties.Required">
+            <summary>
+            Flag que indica si el campo es obligatorio.
+            </summary>
+        </member>
+        <member name="P:Utilities.UrlParamProperties.AllowMultiples">
+            <summary>
+            Si el atributo es una enumeración, indicar que acepta uno o cualquier valor de la enumeración.
+            </summary>
+        </member>
+        <member name="P:Utilities.UrlParamProperties.AcceptedValues">
+            <summary>
+            Valores aceptados si es por defecto.
+            </summary>
+        </member>
+        <member name="M:Utilities.UrlParamProperties.#ctor(System.String,System.String,System.String,System.Boolean,System.String[])">
+            <summary>
+            Constructor de la clase 'UrlParamProperties'.
+            </summary>
+            <param name="key">Nombre del atributo.</param>
+            <param name="description">Descripción del atributo.</param>
+            <param name="defaultValue">Valor por defecto, si existe.</param>
+            <param name="allowMultiples">Valor de opción múltiple.</param>
+            <param name="acceptedValues">Lista de valores posibles, si es valor de opción múltiple.</param>
+        </member>
+        <member name="M:Utilities.UrlParamProperties.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.String[])">
+            <summary>
+            Constructor de la clase 'UrlParamProperties'.
+            </summary>
+            <param name="key">Nombre del atributo.</param>
+            <param name="description">Descripción del atributo.</param>
+            <param name="allowMultiples">Valor de opción múltiple.</param>
+            <param name="acceptedValues">Lista de valores posibles, si es valor de opción múltiple.</param>
+        </member>
         <member name="T:Utilities.bootgridResults`1">
             <summary>
             Estructura 'bootgridResults' para el componente web 'bootgrid'.
