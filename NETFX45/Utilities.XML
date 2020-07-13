@@ -70,6 +70,44 @@
             <param name="stackTraceLevel">The stack trace level.</param>
             <returns></returns>
         </member>
+        <member name="T:Utilities.ContainsSwitch">
+            <summary>
+            Clase 'ContainsSwitch' para emular bloques de decisión.
+            </summary>
+        </member>
+        <member name="F:Utilities.ContainsSwitch.actionList">
+            <summary>
+            Lista generica de acciones.
+            </summary>
+        </member>
+        <member name="P:Utilities.ContainsSwitch.Value">
+            <summary>
+            Valor.
+            </summary>
+        </member>
+        <member name="P:Utilities.ContainsSwitch.Action">
+            <summary>
+            Acción a ejecutar.
+            </summary>
+        </member>
+        <member name="P:Utilities.ContainsSwitch.SingleCaseExecution">
+            <summary>
+            Flag que indica si solo será un caso único.
+            </summary>
+        </member>
+        <member name="M:Utilities.ContainsSwitch.Perform(System.String)">
+            <summary>
+            Performance de la ejecución.
+            </summary>
+            <param name="target">Objetivo.</param>
+        </member>
+        <member name="M:Utilities.ContainsSwitch.AddCase(System.String,System.Action)">
+            <summary>
+            Función pública que agrega dinámicamente una condición.
+            </summary>
+            <param name="value">Valor.</param>
+            <param name="act">Acción a ejecutar.</param>
+        </member>
         <member name="T:Utilities.DbContexto">
             <summary>
             Objeto interno 'DbContexto' del tipo Entity Framework CodeFirst para la ejecución de consultas SQL nativas en Base de Datos.
@@ -126,42 +164,47 @@
             Valor. Si el evento realiza una función que devuelve datos, colocar el valor devuelto a este atributo en formato de cadena de texto.
             </summary>
         </member>
-        <member name="T:Utilities.ApplicationWebInfo">
+        <member name="T:Utilities.ApplicationInfo">
             <summary>
-            Clase 'ApplicationWebInfo que muestra la información de la aplicación Web.
+            Clase 'ApplicationInfo que muestra la información de la aplicación Web.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.AbsoluteRootApp">
+        <member name="P:Utilities.ApplicationInfo.AbsoluteRootApp">
             <summary>
             Ruta URL absoluta de la aplicación web.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.Author">
+        <member name="P:Utilities.ApplicationInfo.Author">
             <summary>
             Autor del proyecto.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.VersionWebApp">
+        <member name="P:Utilities.ApplicationInfo.VersionWebApp">
             <summary>
             Versión de la aplicación web.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.WebAppName">
+        <member name="P:Utilities.ApplicationInfo.WebAppName">
             <summary>
             Nombre de la aplicación web.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.Company">
+        <member name="P:Utilities.ApplicationInfo.Company">
             <summary>
             Compañía.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.FechaActual">
+        <member name="P:Utilities.ApplicationInfo.URLCompany">
+            <summary>
+            Dirección web de la compañía.
+            </summary>
+        </member>
+        <member name="P:Utilities.ApplicationInfo.FechaActual">
             <summary>
             Fecha actual.
             </summary>
         </member>
-        <member name="P:Utilities.ApplicationWebInfo.Annio">
+        <member name="P:Utilities.ApplicationInfo.Annio">
             <summary>
             Año de publicación.
             </summary>
@@ -554,6 +597,42 @@
             <param name="info"></param>
             <param name="context"></param>
         </member>
+        <member name="T:Utilities.DescriptionStatusCodes">
+            <summary>
+            Clase 'DescriptionStatusCodes' que almacena los detalles de los códigos HTTP.
+            </summary>
+        </member>
+        <member name="P:Utilities.DescriptionStatusCodes.StatusEnglishMessage">
+            <summary>
+            Mensaje corto en inglés del código HTTP.
+            </summary>
+        </member>
+        <member name="P:Utilities.DescriptionStatusCodes.StatusMessage">
+            <summary>
+            Mentaje corto del código HTTP.
+            </summary>
+        </member>
+        <member name="P:Utilities.DescriptionStatusCodes.DescriptionMessage">
+            <summary>
+            Mensaje completo del código HTTP.
+            </summary>
+        </member>
+        <member name="T:Utilities.StatusCodeDictionary">
+            <summary>
+            Clase 'StatusCodeDictionary' que muestra la lista de los códigos HTTP, en forma de objeto Diccionario.
+            </summary>
+        </member>
+        <member name="F:Utilities.StatusCodeDictionary.ListHTTPCodes">
+            <summary>
+            Variable local del tipo Dictionary.
+            </summary>
+        </member>
+        <member name="M:Utilities.StatusCodeDictionary.GetStatusHTTPCodes">
+            <summary>
+            Función que muestra un listado de códigos HTTP.
+            </summary>
+            <returns>Objeto del tipo Dictionary que muestra los códigos HTTP.</returns>
+        </member>
         <member name="T:Utilities.JSONSerializacion`1">
             <summary>
             Clase 'JSONSerializacion' para el manejo de conversion de tipos genericos a JSON.
@@ -687,7 +766,7 @@
             <returns>Obtiene el nombre del módulo de la aplicación que maneja el archivo Log.</returns>
             <remarks></remarks>
         </member>
-        <member name="P:Utilities.LOGFiles.Funcion">
+        <member name="P:Utilities.LOGFiles.Función">
             <summary>
             Propiedad que obtiene el nombre de la función que maneja el archivo Log.
             </summary>
@@ -856,7 +935,7 @@
         </member>
         <member name="M:Utilities.RijndaelManagedEncryption.DecryptRijndael(System.String,System.String)">
             <summary>
-            Funcion que desencripta un valor cifrado por Rijndael y que lo regresa a su cadena original.
+            Función que desencripta un valor cifrado por Rijndael y que lo regresa a su cadena original.
             </summary>
             <param name="Cadena">Cadena cifrada en Base64.</param>
             <param name="SemillaGUID">La semilla GUID.</param>
@@ -1090,6 +1169,14 @@
             Obtiene una cadena aleatoria de caracteres.
             </summary>
             <param name="length">Longitud de la cadena.</param>
+            <returns>Devuelve un string con una cadena aleatoria de caracteres.</returns>
+        </member>
+        <member name="M:Utilities.Tool.RandomString(System.Int32,System.String)">
+            <summary>
+            Obtiene una cadena aleatoria de caracteres.
+            </summary>
+            <param name="length">Longitud de la cadena.</param>
+            <param name="ListChars">Conjunto de caractéres alfanúmericos.</param>
             <returns>Devuelve un string con una cadena aleatoria de caracteres.</returns>
         </member>
         <member name="M:Utilities.Tool.SelectWeeksYear(System.Int16,System.Int16)">
@@ -1960,7 +2047,7 @@
         </member>
         <member name="M:Utilities.PdfHelper.SaveImageAsPdf(Utilities.InformacionArchivoPDF,System.String,System.String,System.Int32,System.Boolean)">
             <summary>
-            Funcion interna que guarda una imagen como PDF.
+            Función interna que guarda una imagen como PDF.
             </summary>
             <param name="InfoPDF">Objeto del tipo 'InformacionArchivoPDF'.</param>
             <param name="imageFileName">Nombre del archivo de imagen.</param>
